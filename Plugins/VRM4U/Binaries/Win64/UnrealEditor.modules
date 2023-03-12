@@ -1,0 +1,12 @@
+{
+	"BuildId": "23058290",
+	"Modules": 
+	{
+		"VRM4U": "UnrealEditor-VRM4U.dll",
+		"VRM4UCapture": "UnrealEditor-VRM4UCapture.dll",
+		"VRM4UEditor": "UnrealEditor-VRM4UEditor.dll",
+		"VRM4UImporter": "UnrealEditor-VRM4UImporter.dll",
+		"VRM4ULoader": "UnrealEditor-VRM4ULoader.dll",
+		"VRM4UMisc": "UnrealEditor-VRM4UMisc.dll"
+	}
+}
