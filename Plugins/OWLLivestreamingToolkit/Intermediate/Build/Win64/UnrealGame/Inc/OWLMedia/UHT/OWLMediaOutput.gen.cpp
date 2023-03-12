@@ -18,6 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeOWLMediaOutput() {}
 	OWLMEDIA_API UClass* Z_Construct_UClass_AOWLMediaOutput_NoRegister();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLDestinationFormat();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLMediaOutputType();
+	OWLMEDIA_API UFunction* Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature();
+	OWLMEDIA_API UFunction* Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature();
 	OWLMEDIA_API UScriptStruct* Z_Construct_UScriptStruct_FOWLFFmpegSettings();
 	OWLMEDIA_API UScriptStruct* Z_Construct_UScriptStruct_FOWLRTMPSettings();
 	OWLMEDIA_API UScriptStruct* Z_Construct_UScriptStruct_FOWLRTSPSettings();
@@ -26,6 +28,65 @@ void EmptyLinkFunctionForGeneratedCodeOWLMediaOutput() {}
 	OWLMEDIA_API UScriptStruct* Z_Construct_UScriptStruct_FOWLSRTSettings();
 	UPackage* Z_Construct_UPackage__Script_OWLMedia();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_OWLMedia, nullptr, "OnMediaOutputStart__DelegateSignature", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics
+	{
+		struct _Script_OWLMedia_eventOnMediaOutputStop_Parms
+		{
+			bool bGraceful;
+		};
+		static void NewProp_bGraceful_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bGraceful;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::NewProp_bGraceful_SetBit(void* Obj)
+	{
+		((_Script_OWLMedia_eventOnMediaOutputStop_Parms*)Obj)->bGraceful = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::NewProp_bGraceful = { "bGraceful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(_Script_OWLMedia_eventOnMediaOutputStop_Parms), &Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::NewProp_bGraceful_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::NewProp_bGraceful,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_OWLMedia, nullptr, "OnMediaOutputStop__DelegateSignature", nullptr, nullptr, sizeof(Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::_Script_OWLMedia_eventOnMediaOutputStop_Parms), Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_OWLSaveToFileSettings;
 class UScriptStruct* FOWLSaveToFileSettings::StaticStruct()
 {
@@ -373,6 +434,13 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		*(bool*)Z_Param__Result=P_THIS->Start();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AOWLMediaOutput::execStartWhenAuthReady)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StartWhenAuthReady();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AOWLMediaOutput::execOnAuthChanged)
 	{
 		P_FINISH;
@@ -386,6 +454,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnAuthChanged", &AOWLMediaOutput::execOnAuthChanged },
 			{ "Start", &AOWLMediaOutput::execStart },
+			{ "StartWhenAuthReady", &AOWLMediaOutput::execStartWhenAuthReady },
 			{ "Stop", &AOWLMediaOutput::execStop },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -449,6 +518,28 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AOWLMediaOutput_Start_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AOWLMediaOutput_StartWhenAuthReady_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AOWLMediaOutput_StartWhenAuthReady_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AOWLMediaOutput_StartWhenAuthReady_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AOWLMediaOutput, nullptr, "StartWhenAuthReady", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AOWLMediaOutput_StartWhenAuthReady_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AOWLMediaOutput_StartWhenAuthReady_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AOWLMediaOutput_StartWhenAuthReady()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AOWLMediaOutput_StartWhenAuthReady_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -556,6 +647,14 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		static void NewProp_LoadingMinutesRemaining_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_LoadingMinutesRemaining;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_OnStop_MetaData[];
+#endif
+		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnStop;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_OnStart_MetaData[];
+#endif
+		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnStart;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Watermark_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_Watermark;
@@ -570,6 +669,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 	const FClassFunctionLinkInfo Z_Construct_UClass_AOWLMediaOutput_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AOWLMediaOutput_OnAuthChanged, "OnAuthChanged" }, // 269876075
 		{ &Z_Construct_UFunction_AOWLMediaOutput_Start, "Start" }, // 3176851834
+		{ &Z_Construct_UFunction_AOWLMediaOutput_StartWhenAuthReady, "StartWhenAuthReady" }, // 2391243290
 		{ &Z_Construct_UFunction_AOWLMediaOutput_Stop, "Stop" }, // 193134206
 	};
 #if WITH_METADATA
@@ -626,7 +726,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_SRTSettings = { "SRTSettings", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, SRTSettings), Z_Construct_UScriptStruct_FOWLSRTSettings, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_SRTSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_SRTSettings_MetaData)) }; // 1929658736
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_APIKey_MetaData[] = {
-		{ "Category", "Media Output|Authentication" },
+		{ "Category", "Metered License Auth" },
 		{ "Comment", "/* Optional API Key */" },
 		{ "EditCondition", "bOverrideAPIKey && !bHideAPIOptions" },
 		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
@@ -636,7 +736,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 	const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_APIKey = { "APIKey", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, APIKey), METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_APIKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_APIKey_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bOverrideAPIKey_MetaData[] = {
-		{ "Category", "Media Output|Authentication" },
+		{ "Category", "Metered License Auth" },
 		{ "EditCondition", "!bHideAPIOptions" },
 		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
 	};
@@ -648,7 +748,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bOverrideAPIKey = { "bOverrideAPIKey", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(AOWLMediaOutput), &Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bOverrideAPIKey_SetBit, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bOverrideAPIKey_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bOverrideAPIKey_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bHideAPIOptions_MetaData[] = {
-		{ "Category", "Media Output|Authentication" },
+		{ "Category", "Metered License Auth" },
 		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
 	};
 #endif
@@ -723,6 +823,22 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_LoadingMinutesRemaining = { "LoadingMinutesRemaining", nullptr, (EPropertyFlags)0x0010000000022015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(AOWLMediaOutput), &Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_LoadingMinutesRemaining_SetBit, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_LoadingMinutesRemaining_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_LoadingMinutesRemaining_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStop_MetaData[] = {
+		{ "Category", "OWL Media Output" },
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+		{ "ToolTip", "Triggered whenever the stream stopped. Graceful is false when the stream is not stopped by the user" },
+	};
+#endif
+	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStop = { "OnStop", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, OnStop), Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStop_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStop_MetaData)) }; // 3550015988
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart_MetaData[] = {
+		{ "Category", "OWL Media Output" },
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+		{ "ToolTip", "Triggered whenever the stream has started. When starting on BeginPlay this may happen after the start function has returned" },
+	};
+#endif
+	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart = { "OnStart", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, OnStart), Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart_MetaData)) }; // 3792492496
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_Watermark_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
@@ -746,6 +862,8 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_IsMeteredPricing,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_MinutesRemaining,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_LoadingMinutesRemaining,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStop,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_Watermark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AOWLMediaOutput_Statics::StaticCppClassTypeInfo = {
@@ -791,9 +909,9 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		{ FOWLSRTSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLSRTSettings_Statics::NewStructOps, TEXT("OWLSRTSettings"), &Z_Registration_Info_UScriptStruct_OWLSRTSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLSRTSettings), 1929658736U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLMediaOutput, AOWLMediaOutput::StaticClass, TEXT("AOWLMediaOutput"), &Z_Registration_Info_UClass_AOWLMediaOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLMediaOutput), 1673449551U) },
+		{ Z_Construct_UClass_AOWLMediaOutput, AOWLMediaOutput::StaticClass, TEXT("AOWLMediaOutput"), &Z_Registration_Info_UClass_AOWLMediaOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLMediaOutput), 4057468876U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_3991837709(TEXT("/Script/OWLMedia"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_3409994405(TEXT("/Script/OWLMedia"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ScriptStructInfo),
 		nullptr, 0);

@@ -68,8 +68,9 @@
 #define UE_PROJECT_NAME BuildTemp
 #define UE_TARGET_NAME BuildTempEditor
 #define OWL_AUTH_URL "https://plugin-api.offworld.live"
-#define RELEASE_DATE 2023-01-25T11:56:53.000Z
+#define RELEASE_DATE 2023-02-08T23:10:55.000Z
 #define OFFWORLDLIVE_DEBUG 0
+#define DEBUG_APP_LICENCE 0
 #define AUTH_APP_NAME owl-licensing-utility.exe
 #define UE_MODULE_NAME "LivestreamingToolkit"
 #define UE_PLUGIN_NAME "OWLLivestreamingToolkit"
@@ -381,7 +382,8 @@
 #define ANIMATIONDATACONTROLLER_API DLLIMPORT
 #define LIVESTREAMINGTOOLKITSHADERS_API DLLIMPORT
 #define OWL_AUTH_URL "https://plugin-api.offworld.live"
-#define RELEASE_DATE 2023-01-25T11:56:53.000Z
+#define RELEASE_DATE 2023-02-08T23:10:55.000Z
 #define OFFWORLDLIVE_DEBUG 0
+#define DEBUG_APP_LICENCE 0
 #define AUTH_APP_NAME owl-licensing-utility.exe
 #define LIVESTREAMINGTOOLKIT_API DLLEXPORT

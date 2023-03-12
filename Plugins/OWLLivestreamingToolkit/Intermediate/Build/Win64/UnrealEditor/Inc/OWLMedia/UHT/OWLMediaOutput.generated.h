@@ -14,51 +14,73 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define OWLMEDIA_OWLMediaOutput_generated_h
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_22_GENERATED_BODY \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_19_DELEGATE \
+static inline void FOnMediaOutputStart_DelegateWrapper(const FMulticastScriptDelegate& OnMediaOutputStart) \
+{ \
+	OnMediaOutputStart.ProcessMulticastDelegate<UObject>(NULL); \
+}
+
+
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_20_DELEGATE \
+struct _Script_OWLMedia_eventOnMediaOutputStop_Parms \
+{ \
+	bool bGraceful; \
+}; \
+static inline void FOnMediaOutputStop_DelegateWrapper(const FMulticastScriptDelegate& OnMediaOutputStop, bool bGraceful) \
+{ \
+	_Script_OWLMedia_eventOnMediaOutputStop_Parms Parms; \
+	Parms.bGraceful=bGraceful ? true : false; \
+	OnMediaOutputStop.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_25_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOWLSaveToFileSettings_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> OWLMEDIA_API UScriptStruct* StaticStruct<struct FOWLSaveToFileSettings>();
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_37_GENERATED_BODY \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_40_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOWLRTMPSettings_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> OWLMEDIA_API UScriptStruct* StaticStruct<struct FOWLRTMPSettings>();
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_49_GENERATED_BODY \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_52_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOWLRTSPSettings_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> OWLMEDIA_API UScriptStruct* StaticStruct<struct FOWLRTSPSettings>();
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_59_GENERATED_BODY \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_62_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOWLSRTSettings_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> OWLMEDIA_API UScriptStruct* StaticStruct<struct FOWLSRTSettings>();
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_SPARSE_DATA
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_RPC_WRAPPERS \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_SPARSE_DATA
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execStop); \
 	DECLARE_FUNCTION(execStart); \
+	DECLARE_FUNCTION(execStartWhenAuthReady); \
 	DECLARE_FUNCTION(execOnAuthChanged);
 
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execStop); \
 	DECLARE_FUNCTION(execStart); \
+	DECLARE_FUNCTION(execStartWhenAuthReady); \
 	DECLARE_FUNCTION(execOnAuthChanged);
 
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_ACCESSORS
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_INCLASS_NO_PURE_DECLS \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_ACCESSORS
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAOWLMediaOutput(); \
 	friend struct Z_Construct_UClass_AOWLMediaOutput_Statics; \
@@ -67,7 +89,7 @@ public: \
 	DECLARE_SERIALIZER(AOWLMediaOutput)
 
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_INCLASS \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_INCLASS \
 private: \
 	static void StaticRegisterNativesAOWLMediaOutput(); \
 	friend struct Z_Construct_UClass_AOWLMediaOutput_Statics; \
@@ -76,7 +98,7 @@ public: \
 	DECLARE_SERIALIZER(AOWLMediaOutput)
 
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_STANDARD_CONSTRUCTORS \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AOWLMediaOutput(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AOWLMediaOutput) \
@@ -89,7 +111,7 @@ private: \
 public:
 
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_ENHANCED_CONSTRUCTORS \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AOWLMediaOutput(AOWLMediaOutput&&); \
@@ -100,27 +122,27 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AOWLMediaOutput)
 
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_70_PROLOG
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_GENERATED_BODY_LEGACY \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_71_PROLOG
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_SPARSE_DATA \
-	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_RPC_WRAPPERS \
-	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_ACCESSORS \
-	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_INCLASS \
-	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_STANDARD_CONSTRUCTORS \
+	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_SPARSE_DATA \
+	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_RPC_WRAPPERS \
+	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_ACCESSORS \
+	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_INCLASS \
+	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_GENERATED_BODY \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_SPARSE_DATA \
-	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_ACCESSORS \
-	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_INCLASS_NO_PURE_DECLS \
-	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_73_ENHANCED_CONSTRUCTORS \
+	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_SPARSE_DATA \
+	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_ACCESSORS \
+	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_INCLASS_NO_PURE_DECLS \
+	FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_74_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

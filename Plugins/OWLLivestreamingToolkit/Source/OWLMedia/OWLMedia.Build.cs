@@ -52,6 +52,7 @@ public class OWLMedia : ModuleRules
                 "FFmpeg",
                 "LivestreamingToolkit",
                 "LivestreamingToolkitShaders",
+                "OWLCamera",
                 "Projects",
                 "RenderCore",
                 "RHI",

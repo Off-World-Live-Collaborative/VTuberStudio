@@ -228,9 +228,8 @@ public:
 
 public:
 	bool CaptureAudio = true;
-	bool Shutdown = false;
-	bool ShuttingDown = false;
-	bool StreamDisconnected = false;
+	TAtomic<bool> ShutdownRequested;
+	TAtomic<bool> StreamDisconnected;
 	FShutdownDelegate ShutdownDelegate;
 
 private:
@@ -312,6 +311,7 @@ private:
 	void OnShutdownRequested(bool TryReconnect);
 	uint64_t GetAVAudioChannelLayout(EOWLAudioChannelLayout Layout);
 	int GetNumChannelsFromLayout(EOWLAudioChannelLayout Layout);
+	void CheckPacketLossTimeout();
 
 private:
 	class FFFmpegRunnable* FFmpegRunnable = nullptr;
@@ -406,5 +406,12 @@ private:
 	// must be written to the `extradata` before the ending
 	// for mp4 format to work
 	bool ExtraDataWritten = false;
+	int WriteQueueDropTimeoutSeconds = 2;
+
+	TAtomic<bool> bWriteQueueIsFull;
+	FDateTime WriteQueueFullStart;
+	TAtomic<bool> bInitiatingReconnection;
+
+	TAtomic<bool> bShutdownInProgress;
 
 };

@@ -16,6 +16,9 @@ extern "C"
 
 class UOWLWatermark;
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMediaOutputStart);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnMediaOutputStop, bool, bGraceful);
+
 USTRUCT(BlueprintType)
 struct OWLMEDIA_API FOWLSaveToFileSettings
 {
@@ -65,8 +68,6 @@ struct OWLMEDIA_API FOWLSRTSettings
 	FOWLSRTOptions Options;
 };
 
-DECLARE_MULTICAST_DELEGATE(FFFmpegNeedsRecconect);
-
 UCLASS()
 class OWLMEDIA_API AOWLMediaOutput : public AActor
 {
@@ -82,7 +83,12 @@ public:
 private:
 	OWLImageInput* Input = nullptr;
 	FOWLFFmpegOutput* Output = nullptr;
-	FFFmpegNeedsRecconect ReconnectDelegate;
+	TAtomic<bool> ShutdownRequested;
+	TAtomic<bool> ReconnectRequested;
+	TAtomic<bool> ShuttingDown;
+	// if the shutdown was not initiated by the user
+	// this is set to true
+	bool bShutdownForced = false;
 
 public:
 	/* Media Output Type */
@@ -102,13 +108,13 @@ public:
 	FOWLSRTSettings SRTSettings;
 
 	/* Optional API Key */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Media Output|Authentication", meta=(EditCondition = "bOverrideAPIKey && !bHideAPIOptions"  ))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Metered License Auth", meta=(EditCondition = "bOverrideAPIKey && !bHideAPIOptions"  ))
 	FString APIKey;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Media Output|Authentication", meta=(EditCondition = "!bHideAPIOptions"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Metered License Auth", meta=(EditCondition = "!bHideAPIOptions"))
 	bool bOverrideAPIKey;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Media Output|Authentication")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Metered License Auth")
 	bool bHideAPIOptions = false;
 
 	/* The render target to record from.
@@ -134,12 +140,18 @@ public:
 	UPROPERTY(VisibleAnywhere, Transient, BlueprintReadOnly, Category = "Output Settings")
 	bool LoadingMinutesRemaining = false;
 
+	UPROPERTY(BlueprintAssignable, Category="OWL Media Output", meta=(ToolTip="Triggered whenever the stream stopped. Graceful is false when the stream is not stopped by the user"))
+	FOnMediaOutputStop OnStop;
+
+	UPROPERTY(BlueprintAssignable, Category="OWL Media Output", meta=(ToolTip="Triggered whenever the stream has started. When starting on BeginPlay this may happen after the start function has returned"))
+	FOnMediaOutputStart OnStart;
 
 public:
 #if WITH_EDITOR
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
 #endif // WITH_EDITOR
 	virtual void PostLoad() override;
+	virtual void PostInitProperties() override;
 
 public:
 	virtual void Tick(float DeltaTime) override;
@@ -150,6 +162,7 @@ private:
 
 	UFUNCTION()
 	void OnAuthChanged();
+	void BindToAuthChanged();
 	bool CheckRunnableQueue(float Delta);
 	bool ValidateAuth();
 	void ReportFailedAuth();
@@ -165,6 +178,11 @@ private:
 	/* Tries the current file name, if it exists, adds an auto increment
 	 * Keeps doing this until a filename is free */
 	bool FindFreeFileName();
+	/* Returns true if viewport dimensions non-zero */
+	bool ViewportDimensionsSet();
+	/* Attempts to find an OWL Viewport Actor in the scene */
+	bool ViewportActorInScene() const;
+	bool bStartWhenViewportReady = false;
 	FDateTime WhenMinutesWentNegative;
 	bool bMinutesHaveGoneNegative;
 	int MinutesAtStart = 0;
@@ -208,6 +226,8 @@ private:
 	bool CheckMinutesRemaining();
 	void OnMeteredRunnableStopped();
 
+	UFUNCTION()
+	void StartWhenAuthReady();
 public:
 	/* Start recording / streaming
 	 * @return bool has recording been successful

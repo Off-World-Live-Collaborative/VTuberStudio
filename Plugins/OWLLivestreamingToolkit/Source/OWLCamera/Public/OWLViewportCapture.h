@@ -39,10 +39,13 @@ public:
 
 private:
 	void FindSceneViewport(TWeakPtr<FSceneViewport>& OutSceneViewport);
+	void UpdateTextureTargetResolution(FIntPoint ExpectedResolution);
+private:
 	FCriticalSection AccessingCapturingSource;
 	UPROPERTY()
 	UOWLWatermark* Watermark;
 
 	UPROPERTY()
 	UTextureRenderTarget2D* IntermediateTarget = nullptr;
+
 };

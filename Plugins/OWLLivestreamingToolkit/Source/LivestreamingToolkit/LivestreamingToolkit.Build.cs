@@ -41,6 +41,9 @@ public class LivestreamingToolkit : ModuleRules
 
 		PublicDefinitions.Add("OFFWORLDLIVE_DEBUG=" + (GetOffWorldBoolean("Debug", false) ? "1" : "0"));
 
+		bool debugAppLicence = GetOffWorldBoolean("DebugAppLicence", false);
+		PublicDefinitions.Add("DEBUG_APP_LICENCE=" + (debugAppLicence ? '1' : '0'));
+
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
