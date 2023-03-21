@@ -20,7 +20,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMesh_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UTextureRenderTarget2D_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FEngineShowFlagsSetting();
-	LIVESTREAMINGTOOLKIT_API UClass* Z_Construct_UClass_UOWLWatermark_NoRegister();
 	OWLCAMERA_API UClass* Z_Construct_UClass_UOWLCaptureComponent();
 	OWLCAMERA_API UClass* Z_Construct_UClass_UOWLCaptureComponent_NoRegister();
 	OWLCAMERA_API UEnum* Z_Construct_UEnum_OWLCamera_EOWLOutputBufferVisualisation();
@@ -805,10 +804,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_OverrideCameraComponent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_OverrideCameraComponent;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Watermark_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Watermark;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -1108,13 +1103,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_OverrideCameraComponent = { "OverrideCameraComponent", nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, OverrideCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_OverrideCameraComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_OverrideCameraComponent_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_Watermark_MetaData[] = {
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/OWLCaptureComponent.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_Watermark = { "Watermark", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, Watermark), Z_Construct_UClass_UOWLWatermark_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_Watermark_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_Watermark_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UOWLCaptureComponent_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_TextureTarget,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_VisualisationType_Underlying,
@@ -1149,7 +1137,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_CineCameraMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_OverrideRT,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_OverrideCameraComponent,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_Watermark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UOWLCaptureComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UOWLCaptureComponent>::IsAbstract,
@@ -1192,9 +1179,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		{ EOWLOutputBufferVisualisation_StaticEnum, TEXT("EOWLOutputBufferVisualisation"), &Z_Registration_Info_UEnum_EOWLOutputBufferVisualisation, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1489488013U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWLCaptureComponent, UOWLCaptureComponent::StaticClass, TEXT("UOWLCaptureComponent"), &Z_Registration_Info_UClass_UOWLCaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLCaptureComponent), 2297003991U) },
+		{ Z_Construct_UClass_UOWLCaptureComponent, UOWLCaptureComponent::StaticClass, TEXT("UOWLCaptureComponent"), &Z_Registration_Info_UClass_UOWLCaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLCaptureComponent), 3013402486U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_2166814698(TEXT("/Script/OWLCamera"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_2872379154(TEXT("/Script/OWLCamera"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::EnumInfo));

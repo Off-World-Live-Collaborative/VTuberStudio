@@ -13,7 +13,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLPlaneTransformPass() {}
 	COMPOSURE_API UClass* Z_Construct_UClass_UCompositingElementTransform();
 	COMPOSURE_API UScriptStruct* Z_Construct_UScriptStruct_FCompositingMaterial();
 	ENGINE_API UClass* Z_Construct_UClass_ACameraActor_NoRegister();
-	LIVESTREAMINGTOOLKIT_API UClass* Z_Construct_UClass_UOWLWatermark_NoRegister();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_AOWLVideoPlanePlacement_NoRegister();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_UOWLPlaneTransformPass();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_UOWLPlaneTransformPass_NoRegister();
@@ -53,10 +52,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLPlaneTransformPass() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_TransformMaterial_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_TransformMaterial;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Watermark_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Watermark;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -130,20 +125,12 @@ void EmptyLinkFunctionForGeneratedCodeOWLPlaneTransformPass() {}
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_TransformMaterial = { "TransformMaterial", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLPlaneTransformPass, TransformMaterial), Z_Construct_UScriptStruct_FCompositingMaterial, METADATA_PARAMS(Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_TransformMaterial_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_TransformMaterial_MetaData)) }; // 3535646560
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_Watermark_MetaData[] = {
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/OWLPlaneTransformPass.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_Watermark = { "Watermark", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLPlaneTransformPass, Watermark), Z_Construct_UClass_UOWLWatermark_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_Watermark_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_Watermark_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UOWLPlaneTransformPass_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_RenderScale,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_Plane,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_CameraOverride,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_FrameDelay,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_TransformMaterial,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLPlaneTransformPass_Statics::NewProp_Watermark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UOWLPlaneTransformPass_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UOWLPlaneTransformPass>::IsAbstract,
@@ -160,7 +147,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLPlaneTransformPass() {}
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_UOWLPlaneTransformPass_Statics::PropPointers),
 		0,
-		0x009010A0u,
+		0x001010A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UOWLPlaneTransformPass_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLPlaneTransformPass_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UOWLPlaneTransformPass()
@@ -181,9 +168,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLPlaneTransformPass() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLPlaneTransformPass_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWLPlaneTransformPass, UOWLPlaneTransformPass::StaticClass, TEXT("UOWLPlaneTransformPass"), &Z_Registration_Info_UClass_UOWLPlaneTransformPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLPlaneTransformPass), 541271946U) },
+		{ Z_Construct_UClass_UOWLPlaneTransformPass, UOWLPlaneTransformPass::StaticClass, TEXT("UOWLPlaneTransformPass"), &Z_Registration_Info_UClass_UOWLPlaneTransformPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLPlaneTransformPass), 1161439658U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLPlaneTransformPass_h_1929678201(TEXT("/Script/OWLComposure"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLPlaneTransformPass_h_2244886925(TEXT("/Script/OWLComposure"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLPlaneTransformPass_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLPlaneTransformPass_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

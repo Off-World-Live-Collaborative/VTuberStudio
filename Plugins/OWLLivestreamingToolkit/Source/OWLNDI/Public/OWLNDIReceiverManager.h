@@ -52,6 +52,7 @@ private:
 	class UOWLNDISoundWave* ActiveNDISoundWave = nullptr;
 };
 
+
 UCLASS(BlueprintType)
 class OWLNDI_API AOWLNDIReceiverManager : public AActor
 {
@@ -68,8 +69,6 @@ public:
 	AOWLNDIReceiverManager(const FObjectInitializer& ObjectInitializer);
 
 private:
-	UPROPERTY()
-	class UOWLWatermark* Watermark;
 	static bool ClosedEditorReceivers;
 
 private:

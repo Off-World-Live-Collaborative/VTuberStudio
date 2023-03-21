@@ -64,8 +64,6 @@ public:
 	AOWLNDISenderManager(const FObjectInitializer& ObjectInitializer);
 
 private:
-	UPROPERTY()
-	class UOWLWatermark* Watermark;
 	static bool ClosedEditorSenders;
 
 private:

@@ -68,6 +68,16 @@ int InvertAlpha;
 float Angle;
 float3x3 DomeRotMat;
 
+// mirror dome params
+// focal length = 1 - cos((360 - totalAngle) /2) -- only needs to be calculated once
+float MD_FocalLength;
+float3 MD_RayOffset;
+float3 MD_RayForward;
+float3 MD_RayRight;
+float3 MD_RayUp;
+float MD_PixelAspectRatio;
+
+
 //////////////////////////////////////////////////////////////////////////
 
 // find relavent angle
@@ -482,5 +492,84 @@ void DomeMasterOutputPS(
     if (InvertAlpha)
     {
         OutColor.a = (1.0 - OutColor.a);
+    }
+}
+float rayTraceSphere(float3 rayOrigin, float3 rayDirection, float3 centre,float radius, inout float3 intersection, inout float3 normal)
+{
+    radius = radius * radius;
+	float dt = dot(rayDirection, centre - rayOrigin);
+	if (dt < 0.0) {
+		return dt;
+	}
+	float3 tmp = rayOrigin - centre;
+	tmp.x = dot(tmp, tmp);
+	tmp.x = tmp.x - dt*dt;
+	if (tmp.x >= radius) {
+		return -1.0;
+	}
+	dt = dt - sqrt(radius - tmp.x);
+	intersection = rayOrigin + rayDirection * dt;
+	normal = normalize(intersection - centre);
+	return dt;
+}
+
+float4 sampleMirrorDomeReflected(float2 uv)
+{
+    const float3 reflectingSphereCenter = float3(0.0, 0.0, 1.0);
+    const float cameraLocation = 0.2;
+    const float reflectingSphereRadius = 0.1;
+    float3 intersectionPoint;
+    float3 mirrorNormal;
+    float3 rayOrigin = MD_RayOffset + float3(0, 0, 1- cameraLocation);
+    float2 resizedUv = uv * reflectingSphereRadius;
+    float3x3 rayRotation = float3x3(
+        MD_RayForward,
+        MD_RayRight,
+        MD_RayUp
+        );
+    float3 rayDirection = mul(rayRotation, normalize(float3(-resizedUv.x, resizedUv.y , MD_FocalLength / 10)));
+    // two spheres to calculate intersection.
+    // 1. intersect with mirror sphere
+    float t = rayTraceSphere(
+        rayOrigin,
+        rayDirection,
+       reflectingSphereCenter,
+       reflectingSphereRadius,
+       intersectionPoint,
+       mirrorNormal);
+
+    // calculate ray reflection
+    const float3 mainSphereCenter = float3(0,0,0);
+    const float sphereRadius = 1.0;
+    float3 reflection = 2.0 * dot(mirrorNormal, rayDirection) * mirrorNormal - rayDirection;
+
+    float3 mainDomeIntersection;
+    float3 mainDomeNormal;
+
+    float t2 = rayTraceSphere(
+        intersectionPoint,
+        reflection,
+        mainSphereCenter,
+        sphereRadius,
+        mainDomeIntersection,
+        mainDomeNormal);
+    float4 sampledColour = SampleCube(mul(DomeRotMat, mainDomeNormal));
+    sampledColour.w = 1.0;
+    return smoothstep(-0.5, 0.001, t) * sampledColour;
+}
+
+void MirrorDomeOutputPS(
+    in float2 uv : TEXCOORD0,
+	out float4 OutColor : SV_Target0
+)
+{
+    float2 remappedUV;
+
+    remappedUV.x = (2 * (1.- uv.x) - 1.f) / MD_PixelAspectRatio;
+    remappedUV.y = (1. - uv.y);
+    OutColor = sampleMirrorDomeReflected(remappedUV);
+    if (InvertAlpha)
+    {
+        OutColor.w = 1.0 - OutColor.w;
     }
 }

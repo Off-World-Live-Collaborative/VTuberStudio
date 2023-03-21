@@ -36,6 +36,7 @@ public class OWLComposure : ModuleRules
 				"CinematicCamera",
 				"OWLSpout",
 				"OWLNDI",
+				"OWLScreenCapture",
 				"UMG",
 				"Slate",
 				"SlateCore",

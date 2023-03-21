@@ -7,5 +7,6 @@
 #include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/LivestreamingToolkitShaders/Private/Camera360/Cube2EquiShaderDeclaration.cpp"
 #include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/LivestreamingToolkitShaders/Private/Camera360/CubeMapOutputDeclaration.cpp"
 #include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/LivestreamingToolkitShaders/Private/Camera360/DomeShaderDeclaration.cpp"
+#include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/LivestreamingToolkitShaders/Private/Camera360/MirrorDomeShaderDeclaration.cpp"
 #include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/LivestreamingToolkitShaders/Private/LivestreamingToolkitShaders.cpp"
 #include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/LivestreamingToolkitShaders/Private/OWLMediaUtils.cpp"

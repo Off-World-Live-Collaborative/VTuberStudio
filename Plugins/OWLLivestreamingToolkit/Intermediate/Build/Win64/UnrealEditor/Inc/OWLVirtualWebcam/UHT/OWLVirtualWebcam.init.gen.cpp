@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLVirtualWebcam_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x63F8F7FE,
+				0xEEBD064A,
 				0x232F34B7,
 				METADATA_PARAMS(nullptr, 0)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeOWLVirtualWebcam_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_OWLVirtualWebcam.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_OWLVirtualWebcam(Z_Construct_UPackage__Script_OWLVirtualWebcam, TEXT("/Script/OWLVirtualWebcam"), Z_Registration_Info_UPackage__Script_OWLVirtualWebcam, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x63F8F7FE, 0x232F34B7));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_OWLVirtualWebcam(Z_Construct_UPackage__Script_OWLVirtualWebcam, TEXT("/Script/OWLVirtualWebcam"), Z_Registration_Info_UPackage__Script_OWLVirtualWebcam, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xEEBD064A, 0x232F34B7));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

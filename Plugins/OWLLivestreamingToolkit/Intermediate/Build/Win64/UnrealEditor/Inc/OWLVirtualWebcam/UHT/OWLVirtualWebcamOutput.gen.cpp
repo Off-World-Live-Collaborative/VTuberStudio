@@ -11,7 +11,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLVirtualWebcamOutput() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_UTextureRenderTarget2D_NoRegister();
-	LIVESTREAMINGTOOLKIT_API UClass* Z_Construct_UClass_UOWLWatermark_NoRegister();
 	OWLVIRTUALWEBCAM_API UClass* Z_Construct_UClass_AOWLVirtualWebcamOutput();
 	OWLVIRTUALWEBCAM_API UClass* Z_Construct_UClass_AOWLVirtualWebcamOutput_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_OWLVirtualWebcam();
@@ -44,10 +43,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLVirtualWebcamOutput() {}
 #endif
 		static void NewProp_LaunchInstallerWhenRequired_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_LaunchInstallerWhenRequired;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Watermark_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Watermark;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -96,18 +91,10 @@ void EmptyLinkFunctionForGeneratedCodeOWLVirtualWebcamOutput() {}
 		((AOWLVirtualWebcamOutput*)Obj)->LaunchInstallerWhenRequired = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_LaunchInstallerWhenRequired = { "LaunchInstallerWhenRequired", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(AOWLVirtualWebcamOutput), &Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_LaunchInstallerWhenRequired_SetBit, METADATA_PARAMS(Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_LaunchInstallerWhenRequired_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_LaunchInstallerWhenRequired_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_Watermark_MetaData[] = {
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/OWLVirtualWebcamOutput.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_Watermark = { "Watermark", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLVirtualWebcamOutput, Watermark), Z_Construct_UClass_UOWLWatermark_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_Watermark_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_Watermark_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_InputRenderTarget,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_Active,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_LaunchInstallerWhenRequired,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::NewProp_Watermark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AOWLVirtualWebcamOutput_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AOWLVirtualWebcamOutput>::IsAbstract,
@@ -145,9 +132,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLVirtualWebcamOutput() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLVirtualWebcam_Public_OWLVirtualWebcamOutput_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLVirtualWebcamOutput, AOWLVirtualWebcamOutput::StaticClass, TEXT("AOWLVirtualWebcamOutput"), &Z_Registration_Info_UClass_AOWLVirtualWebcamOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLVirtualWebcamOutput), 1642869414U) },
+		{ Z_Construct_UClass_AOWLVirtualWebcamOutput, AOWLVirtualWebcamOutput::StaticClass, TEXT("AOWLVirtualWebcamOutput"), &Z_Registration_Info_UClass_AOWLVirtualWebcamOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLVirtualWebcamOutput), 625977210U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLVirtualWebcam_Public_OWLVirtualWebcamOutput_h_1945140320(TEXT("/Script/OWLVirtualWebcam"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLVirtualWebcam_Public_OWLVirtualWebcamOutput_h_1871307136(TEXT("/Script/OWLVirtualWebcam"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLVirtualWebcam_Public_OWLVirtualWebcamOutput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLVirtualWebcam_Public_OWLVirtualWebcamOutput_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

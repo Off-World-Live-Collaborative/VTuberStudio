@@ -16,5 +16,7 @@ public:
 
 private:
 	FDelegateHandle OnFEngineLoopInitCompleteHandle;
+	FDelegateHandle OnWorldAddedHandle;
+	FDelegateHandle OnWorldDestroyedHandle;
 	void OnFEngineLoopInitComplete();
 };

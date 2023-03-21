@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "OWLComposure/Private/OWLUIInputPass.h"
+#include "OWLComposure/Public/OWLUIInputPass.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 // Cross Module References
@@ -13,14 +13,66 @@ void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntPoint();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
-	LIVESTREAMINGTOOLKIT_API UClass* Z_Construct_UClass_UOWLWatermark_NoRegister();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_UOWLUIInputPass();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_UOWLUIInputPass_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_OWLComposure();
 // End Cross Module References
+	DEFINE_FUNCTION(UOWLUIInputPass::execGetWidget)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UUserWidget**)Z_Param__Result=P_THIS->GetWidget();
+		P_NATIVE_END;
+	}
 	void UOWLUIInputPass::StaticRegisterNativesUOWLUIInputPass()
 	{
+		UClass* Class = UOWLUIInputPass::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GetWidget", &UOWLUIInputPass::execGetWidget },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics
+	{
+		struct OWLUIInputPass_eventGetWidget_Parms
+		{
+			UUserWidget* ReturnValue;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(OWLUIInputPass_eventGetWidget_Parms, ReturnValue), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::NewProp_ReturnValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::NewProp_ReturnValue_MetaData)) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::Function_MetaDataParams[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "Public/OWLUIInputPass.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOWLUIInputPass, nullptr, "GetWidget", nullptr, nullptr, sizeof(Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::OWLUIInputPass_eventGetWidget_Parms), Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOWLUIInputPass_GetWidget()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UOWLUIInputPass_GetWidget_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UOWLUIInputPass);
 	UClass* Z_Construct_UClass_UOWLUIInputPass_NoRegister()
@@ -30,6 +82,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 	struct Z_Construct_UClass_UOWLUIInputPass_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -49,10 +102,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_WidgetToRender_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_WidgetToRender;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Watermark_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Watermark;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -61,55 +110,50 @@ void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 		(UObject* (*)())Z_Construct_UClass_UCompositingElementInput,
 		(UObject* (*)())Z_Construct_UPackage__Script_OWLComposure,
 	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_UOWLUIInputPass_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UOWLUIInputPass_GetWidget, "GetWidget" }, // 2716320712
+	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLUIInputPass_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
 		{ "IncludePath", "OWLUIInputPass.h" },
 		{ "IsBlueprintBase", "true" },
-		{ "ModuleRelativePath", "Private/OWLUIInputPass.h" },
+		{ "ModuleRelativePath", "Public/OWLUIInputPass.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_WidgetType_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Private/OWLUIInputPass.h" },
+		{ "ModuleRelativePath", "Public/OWLUIInputPass.h" },
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_WidgetType = { "WidgetType", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLUIInputPass, WidgetType), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_WidgetType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_WidgetType_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_RenderResolution_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Private/OWLUIInputPass.h" },
+		{ "ModuleRelativePath", "Public/OWLUIInputPass.h" },
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_RenderResolution = { "RenderResolution", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLUIInputPass, RenderResolution), Z_Construct_UScriptStruct_FIntPoint, METADATA_PARAMS(Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_RenderResolution_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_RenderResolution_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_ClearColour_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Private/OWLUIInputPass.h" },
+		{ "ModuleRelativePath", "Public/OWLUIInputPass.h" },
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_ClearColour = { "ClearColour", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLUIInputPass, ClearColour), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_ClearColour_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_ClearColour_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_WidgetToRender_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/OWLUIInputPass.h" },
+		{ "ModuleRelativePath", "Public/OWLUIInputPass.h" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_WidgetToRender = { "WidgetToRender", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLUIInputPass, WidgetToRender), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_WidgetToRender_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_WidgetToRender_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_Watermark_MetaData[] = {
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Private/OWLUIInputPass.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_Watermark = { "Watermark", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLUIInputPass, Watermark), Z_Construct_UClass_UOWLWatermark_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_Watermark_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_Watermark_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UOWLUIInputPass_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_WidgetType,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_RenderResolution,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_ClearColour,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_WidgetToRender,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLUIInputPass_Statics::NewProp_Watermark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UOWLUIInputPass_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UOWLUIInputPass>::IsAbstract,
@@ -119,11 +163,11 @@ void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_UOWLUIInputPass_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_UOWLUIInputPass_Statics::PropPointers),
 		0,
 		0x009010A0u,
@@ -143,15 +187,15 @@ void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UOWLUIInputPass);
 	UOWLUIInputPass::~UOWLUIInputPass() {}
-	struct Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Private_OWLUIInputPass_h_Statics
+	struct Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Private_OWLUIInputPass_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWLUIInputPass, UOWLUIInputPass::StaticClass, TEXT("UOWLUIInputPass"), &Z_Registration_Info_UClass_UOWLUIInputPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLUIInputPass), 4015344194U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_UOWLUIInputPass, UOWLUIInputPass::StaticClass, TEXT("UOWLUIInputPass"), &Z_Registration_Info_UClass_UOWLUIInputPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLUIInputPass), 528433657U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Private_OWLUIInputPass_h_1419459148(TEXT("/Script/OWLComposure"),
-		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Private_OWLUIInputPass_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Private_OWLUIInputPass_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_1431132571(TEXT("/Script/OWLComposure"),
+		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

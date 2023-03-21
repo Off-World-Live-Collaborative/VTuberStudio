@@ -11,7 +11,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLSpoutReceiverManager() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_UTextureRenderTarget2D_NoRegister();
-	LIVESTREAMINGTOOLKIT_API UClass* Z_Construct_UClass_UOWLWatermark_NoRegister();
 	OWLSPOUT_API UClass* Z_Construct_UClass_AOWLSpoutReceiverManager();
 	OWLSPOUT_API UClass* Z_Construct_UClass_AOWLSpoutReceiverManager_NoRegister();
 	OWLSPOUT_API UScriptStruct* Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface();
@@ -223,10 +222,6 @@ template<> OWLSPOUT_API UScriptStruct* StaticStruct<FOWLSpoutReceiverInterface>(
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpoutReceivers_MetaData[];
 #endif
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_SpoutReceivers;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Watermark_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Watermark;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -253,17 +248,9 @@ template<> OWLSPOUT_API UScriptStruct* StaticStruct<FOWLSpoutReceiverInterface>(
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers = { "SpoutReceivers", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLSpoutReceiverManager, SpoutReceivers), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers_MetaData)) }; // 1031672370
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_Watermark_MetaData[] = {
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/OWLSpoutReceiverManager.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_Watermark = { "Watermark", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLSpoutReceiverManager, Watermark), Z_Construct_UClass_UOWLWatermark_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_Watermark_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_Watermark_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_Watermark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AOWLSpoutReceiverManager>::IsAbstract,
@@ -305,9 +292,9 @@ template<> OWLSPOUT_API UScriptStruct* StaticStruct<FOWLSpoutReceiverInterface>(
 		{ FOWLSpoutReceiverInterface::StaticStruct, Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewStructOps, TEXT("OWLSpoutReceiverInterface"), &Z_Registration_Info_UScriptStruct_OWLSpoutReceiverInterface, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLSpoutReceiverInterface), 1031672370U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLSpoutReceiverManager, AOWLSpoutReceiverManager::StaticClass, TEXT("AOWLSpoutReceiverManager"), &Z_Registration_Info_UClass_AOWLSpoutReceiverManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLSpoutReceiverManager), 2344033471U) },
+		{ Z_Construct_UClass_AOWLSpoutReceiverManager, AOWLSpoutReceiverManager::StaticClass, TEXT("AOWLSpoutReceiverManager"), &Z_Registration_Info_UClass_AOWLSpoutReceiverManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLSpoutReceiverManager), 1529098098U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_3530371540(TEXT("/Script/OWLSpout"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_3199565168(TEXT("/Script/OWLSpout"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ScriptStructInfo),
 		nullptr, 0);

@@ -11,7 +11,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOWLNDIInputPass() {}
 // Cross Module References
 	COMPOSURE_API UClass* Z_Construct_UClass_UCompositingElementInput();
-	LIVESTREAMINGTOOLKIT_API UClass* Z_Construct_UClass_UOWLWatermark_NoRegister();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_UOWLNDIInputPass();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_UOWLNDIInputPass_NoRegister();
 	OWLNDI_API UScriptStruct* Z_Construct_UScriptStruct_FOWLNDIReceiverInterface();
@@ -35,10 +34,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLNDIInputPass() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Receiver_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_Receiver;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Watermark_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Watermark;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -62,16 +57,8 @@ void EmptyLinkFunctionForGeneratedCodeOWLNDIInputPass() {}
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOWLNDIInputPass_Statics::NewProp_Receiver = { "Receiver", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLNDIInputPass, Receiver), Z_Construct_UScriptStruct_FOWLNDIReceiverInterface, METADATA_PARAMS(Z_Construct_UClass_UOWLNDIInputPass_Statics::NewProp_Receiver_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLNDIInputPass_Statics::NewProp_Receiver_MetaData)) }; // 3444417469
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLNDIInputPass_Statics::NewProp_Watermark_MetaData[] = {
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/OWLNDIInputPass.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWLNDIInputPass_Statics::NewProp_Watermark = { "Watermark", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLNDIInputPass, Watermark), Z_Construct_UClass_UOWLWatermark_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWLNDIInputPass_Statics::NewProp_Watermark_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLNDIInputPass_Statics::NewProp_Watermark_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UOWLNDIInputPass_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLNDIInputPass_Statics::NewProp_Receiver,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLNDIInputPass_Statics::NewProp_Watermark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UOWLNDIInputPass_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UOWLNDIInputPass>::IsAbstract,
@@ -88,7 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLNDIInputPass() {}
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_UOWLNDIInputPass_Statics::PropPointers),
 		0,
-		0x009010A0u,
+		0x001010A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UOWLNDIInputPass_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLNDIInputPass_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UOWLNDIInputPass()
@@ -110,9 +97,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLNDIInputPass() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLNDIInputPass_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWLNDIInputPass, UOWLNDIInputPass::StaticClass, TEXT("UOWLNDIInputPass"), &Z_Registration_Info_UClass_UOWLNDIInputPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLNDIInputPass), 1248075557U) },
+		{ Z_Construct_UClass_UOWLNDIInputPass, UOWLNDIInputPass::StaticClass, TEXT("UOWLNDIInputPass"), &Z_Registration_Info_UClass_UOWLNDIInputPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLNDIInputPass), 1103177274U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLNDIInputPass_h_3015833839(TEXT("/Script/OWLComposure"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLNDIInputPass_h_1933174057(TEXT("/Script/OWLComposure"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLNDIInputPass_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLNDIInputPass_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

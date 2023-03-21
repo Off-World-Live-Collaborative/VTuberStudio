@@ -12,6 +12,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 // Cross Module References
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntPoint();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
@@ -19,7 +21,6 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMesh_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UTextureRenderTarget2D_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FEngineShowFlagsSetting();
-	LIVESTREAMINGTOOLKIT_API UClass* Z_Construct_UClass_UOWLWatermark_NoRegister();
 	OWL360CAMERA_API UClass* Z_Construct_UClass_UOWL360CaptureComponent();
 	OWL360CAMERA_API UClass* Z_Construct_UClass_UOWL360CaptureComponent_NoRegister();
 	OWL360CAMERA_API UEnum* Z_Construct_UEnum_OWL360Camera_E360PostProcessPipeline();
@@ -144,6 +145,7 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 		{ "E360ProjectionType::CT_CubeMap", (int64)E360ProjectionType::CT_CubeMap },
 		{ "E360ProjectionType::CT_EquiRectangular", (int64)E360ProjectionType::CT_EquiRectangular },
 		{ "E360ProjectionType::CT_DomeMaster", (int64)E360ProjectionType::CT_DomeMaster },
+		{ "E360ProjectionType::CT_MirrorDome", (int64)E360ProjectionType::CT_MirrorDome },
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_OWL360Camera_E360ProjectionType_Statics::Enum_MetaDataParams[] = {
@@ -155,6 +157,10 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 		{ "CT_DomeMaster.Name", "E360ProjectionType::CT_DomeMaster" },
 		{ "CT_EquiRectangular.DisplayName", "Equirectangular" },
 		{ "CT_EquiRectangular.Name", "E360ProjectionType::CT_EquiRectangular" },
+		{ "CT_MirrorDome.DisplayName", "Mirror Dome (Beta)" },
+		{ "CT_MirrorDome.Experimental", "" },
+		{ "CT_MirrorDome.Name", "E360ProjectionType::CT_MirrorDome" },
+		{ "CT_MirrorDome.ToolTip", "A mirror dome shader for projecting a 2D image on a spherical mirror" },
 		{ "ModuleRelativePath", "Public/OWL360CaptureComponent.h" },
 		{ "ToolTip", "Type of texture output from the 360 cam" },
 	};
@@ -722,6 +728,26 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 #endif
 		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_Angle;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DomeProjectorRotation_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_DomeProjectorRotation;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DomeProjectorLocation_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_DomeProjectorLocation;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DomePixelAspectRatio_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_DomePixelAspectRatio;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DomeRotatorOffset_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_DomeRotatorOffset;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DomeFOV_MetaData[];
+#endif
+		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_DomeFOV;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_CubemapBleedPercent_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_CubemapBleedPercent;
@@ -825,10 +851,6 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_CameraMesh_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraMesh;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Watermark_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Watermark;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -903,7 +925,7 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 		{ "ToolTip", "Output texture format" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ProjectionType360 = { "ProjectionType360", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, ProjectionType360), Z_Construct_UEnum_OWL360Camera_E360ProjectionType, METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ProjectionType360_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ProjectionType360_MetaData)) }; // 1392073394
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ProjectionType360 = { "ProjectionType360", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, ProjectionType360), Z_Construct_UEnum_OWL360Camera_E360ProjectionType, METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ProjectionType360_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ProjectionType360_MetaData)) }; // 844386497
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_Angle_MetaData[] = {
 		{ "Category", "Off World Live Capture Settings" },
@@ -915,6 +937,57 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_Angle = { "Angle", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, Angle), METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_Angle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_Angle_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeProjectorRotation_MetaData[] = {
+		{ "Category", "Off World Live Capture Settings" },
+		{ "EditCondition", "ProjectionType360 == E360ProjectionType::CT_MirrorDome" },
+		{ "EditConditionHides", "" },
+		{ "ModuleRelativePath", "Public/OWL360CaptureComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeProjectorRotation = { "DomeProjectorRotation", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, DomeProjectorRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeProjectorRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeProjectorRotation_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeProjectorLocation_MetaData[] = {
+		{ "Category", "Off World Live Capture Settings" },
+		{ "EditCondition", "ProjectionType360 == E360ProjectionType::CT_MirrorDome" },
+		{ "EditConditionHides", "" },
+		{ "ModuleRelativePath", "Public/OWL360CaptureComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeProjectorLocation = { "DomeProjectorLocation", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, DomeProjectorLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeProjectorLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeProjectorLocation_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomePixelAspectRatio_MetaData[] = {
+		{ "Category", "Off World Live Capture Settings" },
+		{ "EditCondition", "ProjectionType360 == E360ProjectionType::CT_MirrorDome" },
+		{ "EditConditionHides", "" },
+		{ "ModuleRelativePath", "Public/OWL360CaptureComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomePixelAspectRatio = { "DomePixelAspectRatio", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, DomePixelAspectRatio), METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomePixelAspectRatio_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomePixelAspectRatio_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeRotatorOffset_MetaData[] = {
+		{ "Category", "Off World Live Capture Settings" },
+		{ "EditCondition", "ProjectionType360 == E360ProjectionType::CT_MirrorDome" },
+		{ "EditConditionHides", "" },
+		{ "ModuleRelativePath", "Public/OWL360CaptureComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeRotatorOffset = { "DomeRotatorOffset", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, DomeRotatorOffset), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeRotatorOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeRotatorOffset_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeFOV_MetaData[] = {
+		{ "Category", "Off World Live Capture Settings" },
+		{ "ClampMax", "150" },
+		{ "ClampMin", "5" },
+		{ "Comment", "/* FOV of the dome mirror */" },
+		{ "EditCondition", "ProjectionType360 == E360ProjectionType::CT_MirrorDome" },
+		{ "EditConditionHides", "" },
+		{ "ModuleRelativePath", "Public/OWL360CaptureComponent.h" },
+		{ "ToolTip", "FOV of the dome mirror" },
+		{ "UIMax", "150" },
+		{ "UIMin", "5" },
+	};
+#endif
+	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeFOV = { "DomeFOV", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, DomeFOV), METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeFOV_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeFOV_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_CubemapBleedPercent_MetaData[] = {
 		{ "Category", "Off World Live Capture Settings" },
@@ -1147,13 +1220,6 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_CameraMesh = { "CameraMesh", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, CameraMesh), Z_Construct_UClass_UStaticMesh_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_CameraMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_CameraMesh_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_Watermark_MetaData[] = {
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/OWL360CaptureComponent.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_Watermark = { "Watermark", nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, Watermark), Z_Construct_UClass_UOWLWatermark_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_Watermark_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_Watermark_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UOWL360CaptureComponent_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_TextureTarget,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_StreamResolution_Underlying,
@@ -1162,6 +1228,11 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ProjectionType360_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ProjectionType360,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_Angle,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeProjectorRotation,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeProjectorLocation,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomePixelAspectRatio,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeRotatorOffset,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_DomeFOV,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_CubemapBleedPercent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_PostProcessPipeline_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_PostProcessPipeline,
@@ -1191,7 +1262,6 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_InternalRTs_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_InternalRTs,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_CameraMesh,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_Watermark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UOWL360CaptureComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UOWL360CaptureComponent>::IsAbstract,
@@ -1232,12 +1302,12 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 	};
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::EnumInfo[] = {
 		{ EStreamResolution_360_StaticEnum, TEXT("EStreamResolution_360"), &Z_Registration_Info_UEnum_EStreamResolution_360, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3006856613U) },
-		{ E360ProjectionType_StaticEnum, TEXT("E360ProjectionType"), &Z_Registration_Info_UEnum_E360ProjectionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1392073394U) },
+		{ E360ProjectionType_StaticEnum, TEXT("E360ProjectionType"), &Z_Registration_Info_UEnum_E360ProjectionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 844386497U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWL360CaptureComponent, UOWL360CaptureComponent::StaticClass, TEXT("UOWL360CaptureComponent"), &Z_Registration_Info_UClass_UOWL360CaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWL360CaptureComponent), 1732486176U) },
+		{ Z_Construct_UClass_UOWL360CaptureComponent, UOWL360CaptureComponent::StaticClass, TEXT("UOWL360CaptureComponent"), &Z_Registration_Info_UClass_UOWL360CaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWL360CaptureComponent), 1062624620U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_3480455709(TEXT("/Script/OWL360Camera"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_3895726915(TEXT("/Script/OWL360Camera"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::EnumInfo));

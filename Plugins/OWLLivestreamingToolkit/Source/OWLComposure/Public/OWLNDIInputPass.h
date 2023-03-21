@@ -4,7 +4,6 @@
 
 #include "OWLNDIInputPass.generated.h"
 
-class UOWLWatermark;
 
 UCLASS(Blueprintable)
 class OWLCOMPOSURE_API UOWLNDIInputPass : public UCompositingElementInput
@@ -21,8 +20,6 @@ public:
 	virtual UTexture* GenerateInput_Implementation() override;
 	virtual void BeginDestroy() override;
 private:
-	UPROPERTY()
-	UOWLWatermark* Watermark;
 
 	void SetupRenderTarget();
 	void ShutdownReceiver();

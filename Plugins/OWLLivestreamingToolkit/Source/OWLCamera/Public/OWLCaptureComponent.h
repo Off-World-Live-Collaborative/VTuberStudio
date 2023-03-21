@@ -16,7 +16,6 @@ class FSceneViewStateInterface;
 class UCameraComponent;
 struct FMinimalViewInfo;
 class FWidgetRenderer;
-class UOWLWatermark;
 class IBlendableInterface;
 class ISceneViewExtension;
 
@@ -280,8 +279,6 @@ private:
 	ESceneCaptureSource SourceFromBufferType(EOWLOutputBufferVisualisation Viz);
 
 private:
-	UPROPERTY()
-	UOWLWatermark* Watermark;
 	bool WrongAttachmentWarningIssued = false;
 	FWidgetRenderer* WidgetRenderer = nullptr;
 	TSharedPtr<SVirtualWindow> Window;

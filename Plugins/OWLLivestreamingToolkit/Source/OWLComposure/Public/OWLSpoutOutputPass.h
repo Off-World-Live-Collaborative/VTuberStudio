@@ -7,7 +7,6 @@
 #include "OWLSpoutOutputPass.generated.h"
 
 class FOWLSpoutSender;
-class UOWLWatermark;
 /**
  *
  */
@@ -39,7 +38,5 @@ public:
 #endif
 
 private:
-	UPROPERTY()
-	UOWLWatermark* Watermark;
 	const FString DefaultSenderName = "Output Pass Sender";
 };

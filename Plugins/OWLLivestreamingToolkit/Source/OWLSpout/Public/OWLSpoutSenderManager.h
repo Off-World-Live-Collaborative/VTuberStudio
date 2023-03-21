@@ -8,7 +8,6 @@
 #include "OWLSpoutSender.h"
 #include "OWLSpoutSenderManager.generated.h"
 
-class UOWLWatermark;
 
 USTRUCT(BlueprintType)
 struct OWLSPOUT_API FOWLSpoutSenderInterface
@@ -55,8 +54,6 @@ public:
 	TArray<FOWLSpoutSenderInterface> SpoutSenders;
 
 private:
-	UPROPERTY()
-	UOWLWatermark* Watermark;
 	TEnumAsByte<EWorldType::Type> StartingWorldType = EWorldType::None;
 	static bool ClosedEditorSenders;
 

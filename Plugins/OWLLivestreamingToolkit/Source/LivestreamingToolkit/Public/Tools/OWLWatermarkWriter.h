@@ -1,23 +1,22 @@
 ﻿// Copyright Off World Live Limited, 2020-2022. All rights reserved.
-
 #pragma once
-
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
-#include "Engine/Texture2D.h"
-#include "OWLWatermark.generated.h"
 
-/**
- *
- */
-UCLASS()
-class LIVESTREAMINGTOOLKIT_API UOWLWatermark : public USceneComponent
+class UTextureRenderTarget2D;
+class UTexture2D;
+class UTexture;
+
+class LIVESTREAMINGTOOLKIT_API FOWLWatermarkWriter
 {
-	GENERATED_BODY()
-
 public:
-	virtual void OnRegister() override;
-
+	FOWLWatermarkWriter();
+	~FOWLWatermarkWriter();
+public:
+	static TSharedPtr<FOWLWatermarkWriter> Get(UWorld* World);
+	// called from shutdown of the module
+	static void Cleanup();
+public:
+	void Initialise(UWorld* World);
 	void Apply(UTextureRenderTarget2D* RT);
 	void Apply(UTexture* Texture);
 	static void UpdateImageArray(UTexture2D* Texture);
@@ -25,12 +24,10 @@ public:
 	void Apply_RenderThread(FRHICommandListImmediate& RHICmdList, FTexture2DRHIRef RT);
 
 private:
-	UPROPERTY(Transient)
-	UTextureRenderTarget2D* TextureTarget = nullptr;
+	UTexture2D* ImageTexture = nullptr;
+	static TMap<UWorld*, TSharedPtr<FOWLWatermarkWriter>> Singletons;
 
 private:
-
 	UTexture2D* CreateImageTexture();
-	void CopyTextureToRenderTargetTexture(UTexture* SourceTexture, UTextureRenderTarget2D* RenderTargetTexture,
-		ERHIFeatureLevel::Type FeatureLevel);
+
 };

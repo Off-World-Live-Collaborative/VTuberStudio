@@ -12,7 +12,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLNDISenderManager() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_UTextureRenderTarget2D_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UWorld_NoRegister();
-	LIVESTREAMINGTOOLKIT_API UClass* Z_Construct_UClass_UOWLWatermark_NoRegister();
 	OWLNDI_API UClass* Z_Construct_UClass_AOWLNDISenderManager();
 	OWLNDI_API UClass* Z_Construct_UClass_AOWLNDISenderManager_NoRegister();
 	OWLNDI_API UEnum* Z_Construct_UEnum_OWLNDI_ENDIVideoConversionFormat();
@@ -193,10 +192,6 @@ template<> OWLNDI_API UScriptStruct* StaticStruct<FOWLNDISenderInterface>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_NDISenders_MetaData[];
 #endif
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_NDISenders;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Watermark_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Watermark;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -221,17 +216,9 @@ template<> OWLNDI_API UScriptStruct* StaticStruct<FOWLNDISenderInterface>()
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders = { "NDISenders", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLNDISenderManager, NDISenders), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders_MetaData)) }; // 1224176795
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_Watermark_MetaData[] = {
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/OWLNDISenderManager.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_Watermark = { "Watermark", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLNDISenderManager, Watermark), Z_Construct_UClass_UOWLWatermark_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_Watermark_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_Watermark_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AOWLNDISenderManager_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_Watermark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AOWLNDISenderManager_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AOWLNDISenderManager>::IsAbstract,
@@ -274,9 +261,9 @@ template<> OWLNDI_API UScriptStruct* StaticStruct<FOWLNDISenderInterface>()
 		{ FOWLNDISenderInterface::StaticStruct, Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewStructOps, TEXT("OWLNDISenderInterface"), &Z_Registration_Info_UScriptStruct_OWLNDISenderInterface, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLNDISenderInterface), 1224176795U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLNDISenderManager, AOWLNDISenderManager::StaticClass, TEXT("AOWLNDISenderManager"), &Z_Registration_Info_UClass_AOWLNDISenderManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLNDISenderManager), 4215219566U) },
+		{ Z_Construct_UClass_AOWLNDISenderManager, AOWLNDISenderManager::StaticClass, TEXT("AOWLNDISenderManager"), &Z_Registration_Info_UClass_AOWLNDISenderManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLNDISenderManager), 3792358314U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_1709291489(TEXT("/Script/OWLNDI"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_637850665(TEXT("/Script/OWLNDI"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ScriptStructInfo),
 		nullptr, 0);

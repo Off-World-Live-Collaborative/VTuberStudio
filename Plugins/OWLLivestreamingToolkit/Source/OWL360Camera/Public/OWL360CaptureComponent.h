@@ -42,6 +42,7 @@ enum class E360ProjectionType : uint8 {
 	CT_CubeMap UMETA(DisplayName = "CubeMap"),
 	CT_EquiRectangular UMETA(DisplayName = "Equirectangular"),
 	CT_DomeMaster UMETA(DisplayName = "DomeMaster"),
+	CT_MirrorDome UMETA(DisplayName = "Mirror Dome (Beta)", ToolTip="A mirror dome shader for projecting a 2D image on a spherical mirror", Experimental)
 };
 
 /*
@@ -93,6 +94,22 @@ public:
 	/* Output texture format */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings", meta=(EditCondition = "ProjectionType360 == E360ProjectionType::CT_DomeMaster", EditConditionHides))
 	int Angle = 180;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings", meta=( EditCondition = "ProjectionType360 == E360ProjectionType::CT_MirrorDome", EditConditionHides))
+	FRotator DomeProjectorRotation = FRotator(0, 0, 0);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings", meta=( EditCondition = "ProjectionType360 == E360ProjectionType::CT_MirrorDome", EditConditionHides))
+	FVector DomeProjectorLocation = FVector(0,0,0);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings", meta=( EditCondition = "ProjectionType360 == E360ProjectionType::CT_MirrorDome", EditConditionHides))
+	float  DomePixelAspectRatio = 1.77777777;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings", meta=( EditCondition = "ProjectionType360 == E360ProjectionType::CT_MirrorDome", EditConditionHides))
+	FRotator DomeRotatorOffset = FRotator(0,0,0);
+
+	/* FOV of the dome mirror */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings", meta=(ClampMin = "5", ClampMax="150", UIMin="5", UIMax="150", EditCondition = "ProjectionType360 == E360ProjectionType::CT_MirrorDome", EditConditionHides))
+	int DomeFOV = 90;
 
 	/* Buffer around image border (requirement for Facebook streaming) */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings", meta = (ClampMin = "0.0", ClampMax = "100.0", UIMin = "0.0", UIMax = "100.0", EditCondition = "ProjectionType360 == E360ProjectionType::CT_CubeMap"))
@@ -267,8 +284,7 @@ protected:
 	TArray<UTextureRenderTarget2D*> InternalRTs;
 	UPROPERTY()
 	UStaticMesh* CameraMesh = nullptr;
-	UPROPERTY()
-	class UOWLWatermark* Watermark;
+
 
 private:
 	E360ProjectionType ActiveProjectionType = E360ProjectionType::CT_CubeMap;
@@ -301,7 +317,6 @@ private:
 		false};
 
 	FRotator DomeShaderRotator = FRotator(0,0,0);
-	FRotator DomeRotatorOffset = FRotator(0,0,0);
 
 	FPostProcessSettings PostProcessSettings;
 	FPostProcessSettings RendererPostProcessSettings;

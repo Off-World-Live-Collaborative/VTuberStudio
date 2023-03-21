@@ -10,7 +10,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOWLSpoutOutputPass() {}
 // Cross Module References
 	COMPOSURE_API UClass* Z_Construct_UClass_UCompositingElementOutput();
-	LIVESTREAMINGTOOLKIT_API UClass* Z_Construct_UClass_UOWLWatermark_NoRegister();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_UOWLSpoutOutputPass();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_UOWLSpoutOutputPass_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_OWLComposure();
@@ -38,10 +37,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLSpoutOutputPass() {}
 #endif
 		static void NewProp_bFixGamma_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_bFixGamma;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Watermark_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Watermark;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -80,17 +75,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLSpoutOutputPass() {}
 		((UOWLSpoutOutputPass*)Obj)->bFixGamma = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UOWLSpoutOutputPass_Statics::NewProp_bFixGamma = { "bFixGamma", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(UOWLSpoutOutputPass), &Z_Construct_UClass_UOWLSpoutOutputPass_Statics::NewProp_bFixGamma_SetBit, METADATA_PARAMS(Z_Construct_UClass_UOWLSpoutOutputPass_Statics::NewProp_bFixGamma_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLSpoutOutputPass_Statics::NewProp_bFixGamma_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLSpoutOutputPass_Statics::NewProp_Watermark_MetaData[] = {
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/OWLSpoutOutputPass.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWLSpoutOutputPass_Statics::NewProp_Watermark = { "Watermark", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLSpoutOutputPass, Watermark), Z_Construct_UClass_UOWLWatermark_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWLSpoutOutputPass_Statics::NewProp_Watermark_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLSpoutOutputPass_Statics::NewProp_Watermark_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UOWLSpoutOutputPass_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLSpoutOutputPass_Statics::NewProp_SenderName,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLSpoutOutputPass_Statics::NewProp_bFixGamma,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLSpoutOutputPass_Statics::NewProp_Watermark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UOWLSpoutOutputPass_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UOWLSpoutOutputPass>::IsAbstract,
@@ -107,7 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLSpoutOutputPass() {}
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_UOWLSpoutOutputPass_Statics::PropPointers),
 		0,
-		0x009010A0u,
+		0x001010A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UOWLSpoutOutputPass_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLSpoutOutputPass_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UOWLSpoutOutputPass()
@@ -129,9 +116,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLSpoutOutputPass() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLSpoutOutputPass_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWLSpoutOutputPass, UOWLSpoutOutputPass::StaticClass, TEXT("UOWLSpoutOutputPass"), &Z_Registration_Info_UClass_UOWLSpoutOutputPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLSpoutOutputPass), 3736933625U) },
+		{ Z_Construct_UClass_UOWLSpoutOutputPass, UOWLSpoutOutputPass::StaticClass, TEXT("UOWLSpoutOutputPass"), &Z_Registration_Info_UClass_UOWLSpoutOutputPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLSpoutOutputPass), 3806588777U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLSpoutOutputPass_h_1904657980(TEXT("/Script/OWLComposure"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLSpoutOutputPass_h_3928954707(TEXT("/Script/OWLComposure"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLSpoutOutputPass_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLSpoutOutputPass_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

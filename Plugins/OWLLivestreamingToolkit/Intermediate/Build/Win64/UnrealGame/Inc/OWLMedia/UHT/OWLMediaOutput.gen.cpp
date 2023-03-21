@@ -13,7 +13,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLMediaOutput() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FDirectoryPath();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_UTextureRenderTarget2D_NoRegister();
-	LIVESTREAMINGTOOLKIT_API UClass* Z_Construct_UClass_UOWLWatermark_NoRegister();
 	OWLMEDIA_API UClass* Z_Construct_UClass_AOWLMediaOutput();
 	OWLMEDIA_API UClass* Z_Construct_UClass_AOWLMediaOutput_NoRegister();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLDestinationFormat();
@@ -654,10 +653,6 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_OnStart_MetaData[];
 #endif
 		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnStart;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Watermark_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_Watermark;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -838,13 +833,6 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 	};
 #endif
 	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart = { "OnStart", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, OnStart), Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart_MetaData)) }; // 3792492496
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_Watermark_MetaData[] = {
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_Watermark = { "Watermark", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, Watermark), Z_Construct_UClass_UOWLWatermark_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_Watermark_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_Watermark_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AOWLMediaOutput_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OutputType_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OutputType,
@@ -864,7 +852,6 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_LoadingMinutesRemaining,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStop,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_Watermark,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AOWLMediaOutput_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AOWLMediaOutput>::IsAbstract,
@@ -909,9 +896,9 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		{ FOWLSRTSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLSRTSettings_Statics::NewStructOps, TEXT("OWLSRTSettings"), &Z_Registration_Info_UScriptStruct_OWLSRTSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLSRTSettings), 2754173353U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLMediaOutput, AOWLMediaOutput::StaticClass, TEXT("AOWLMediaOutput"), &Z_Registration_Info_UClass_AOWLMediaOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLMediaOutput), 1966992665U) },
+		{ Z_Construct_UClass_AOWLMediaOutput, AOWLMediaOutput::StaticClass, TEXT("AOWLMediaOutput"), &Z_Registration_Info_UClass_AOWLMediaOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLMediaOutput), 1244238782U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_1622876631(TEXT("/Script/OWLMedia"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_2820318882(TEXT("/Script/OWLMedia"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ScriptStructInfo),
 		nullptr, 0);

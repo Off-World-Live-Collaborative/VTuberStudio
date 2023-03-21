@@ -13,7 +13,6 @@
 class ACameraActor;
 class UTexture;
 class UComposurePostProcessingPassProxy;
-class UOWLWatermark;
 
 struct FPlaneTransformParameters
 {
@@ -90,6 +89,4 @@ private:
 	TArray<FVector> CameraLocations;
 	TArray<FRotator> CameraRotations;
 	FTransformParameterBackBuffer BackBuffer;
-	UPROPERTY()
-	UOWLWatermark* Watermark;
 };

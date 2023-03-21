@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "OWLWatermark.h"
 #include "RHI.h"
 #include "RHIResources.h"
 #include "Engine/TextureRenderTarget2D.h"
@@ -25,7 +24,6 @@ struct FOutputRenderTextures_RHI
 
 DECLARE_LOG_CATEGORY_EXTERN(LogOWLImageInput, Log, All);
 
-class UOWLWatermark;
 
 class LIVESTREAMINGTOOLKIT_API OWLImageInput
 {
@@ -55,7 +53,7 @@ public:
 	 * wait a render tick before accessing the render target and
 	 * writing data to `OutputData`
 	 */
-	void CaptureFrame_RT(UOWLWatermark* Watermark);
+	void CaptureFrame_RT();
 
 	/* Checks resolution and source of render target. If either has changed,
 	 * recreate the output textures
@@ -65,5 +63,6 @@ public:
 	 * Might be 1px smaller than input RT in each dimension to force even resolution
 	 */
 	FIntPoint GetInputResolution();
+
 
 };

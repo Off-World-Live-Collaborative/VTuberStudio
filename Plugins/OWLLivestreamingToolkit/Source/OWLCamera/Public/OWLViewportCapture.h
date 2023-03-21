@@ -9,7 +9,6 @@
 #include "OWLViewportCapture.generated.h"
 
 class FSceneViewport;
-class UOWLWatermark;
 
 UCLASS(hidecategories = (Collision, Attachment, Actor))
 class OWLCAMERA_API AOWLViewportCapture : public AActor
@@ -42,8 +41,6 @@ private:
 	void UpdateTextureTargetResolution(FIntPoint ExpectedResolution);
 private:
 	FCriticalSection AccessingCapturingSource;
-	UPROPERTY()
-	UOWLWatermark* Watermark;
 
 	UPROPERTY()
 	UTextureRenderTarget2D* IntermediateTarget = nullptr;

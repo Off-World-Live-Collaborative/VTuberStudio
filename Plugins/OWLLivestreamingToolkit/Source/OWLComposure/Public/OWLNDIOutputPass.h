@@ -5,7 +5,6 @@
 #include "OWLNDIOutputPass.generated.h"
 
 class FOWLNDISender;
-class UOWLWatermark;
 
 UCLASS()
 class OWLCOMPOSURE_API UOWLNDIOutputPass : public UCompositingElementOutput
@@ -33,8 +32,6 @@ public:
 protected:
 	bool bActive = false;
 private:
-	UPROPERTY()
-	UOWLWatermark* Watermark;
 
 	TSharedPtr<FOWLNDISender, ESPMode::ThreadSafe> NDISender = nullptr;
 };

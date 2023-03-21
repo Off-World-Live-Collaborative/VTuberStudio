@@ -14,7 +14,6 @@ extern "C"
 
 #include "OWLMediaOutput.generated.h"
 
-class UOWLWatermark;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMediaOutputStart);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnMediaOutputStop, bool, bGraceful);
@@ -157,8 +156,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
-	UPROPERTY()
-	UOWLWatermark* Watermark;
 
 	UFUNCTION()
 	void OnAuthChanged();

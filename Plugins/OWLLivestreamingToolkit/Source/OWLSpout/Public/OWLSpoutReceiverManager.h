@@ -8,7 +8,6 @@
 #include "OWLSpoutReceiver.h"
 #include "OWLSpoutReceiverManager.generated.h"
 
-class UOWLWatermark;
 
 USTRUCT(BlueprintType)
 struct OWLSPOUT_API FOWLSpoutReceiverInterface
@@ -91,7 +90,5 @@ public:
 	TArray<FOWLSpoutReceiverInterface> SpoutReceivers;
 
 private:
-	UPROPERTY()
-	UOWLWatermark* Watermark;
 	static bool ClosedEditorReceivers;
 };

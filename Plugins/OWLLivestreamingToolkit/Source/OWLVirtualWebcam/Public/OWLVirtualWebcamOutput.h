@@ -9,7 +9,6 @@
 #include "Tools/OWLImageInput.h"
 #include "OWLVirtualWebcamOutput.generated.h"
 
-class UOWLWatermark;
 
 UCLASS()
 class OWLVIRTUALWEBCAM_API AOWLVirtualWebcamOutput : public AActor
@@ -44,8 +43,6 @@ private:
 	OWLImageInput* Input = nullptr;
 	scCamera Softcam;
 	bool Initialised = false;
-	UPROPERTY()
-	UOWLWatermark* Watermark;
 	static bool ClosedEditorWebcam;
 
 	const float AR_16_9 = 16.0/9.0;
