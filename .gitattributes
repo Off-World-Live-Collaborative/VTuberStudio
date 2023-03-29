@@ -56,6 +56,8 @@
 *.dll filter=lfs diff=lfs merge=lfs -text
 *.pdb filter=lfs diff=lfs merge=lfs -text
 *.mdb filter=lfs diff=lfs merge=lfs -text
+*.exe filter=lfs diff=lfs merge=lfs -text
+*.ucas filter=lfs diff=lfs merge=lfs -text
 
 # Packaging
 *.zip filter=lfs diff=lfs merge=lfs -text
