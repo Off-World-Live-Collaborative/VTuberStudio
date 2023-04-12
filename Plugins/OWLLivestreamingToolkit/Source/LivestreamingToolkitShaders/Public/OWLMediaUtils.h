@@ -33,13 +33,15 @@ public:
 	FLinearToSrgbPS::FParameters* AllocateAndSetParameters(FRDGBuilder& GraphBuilder, FRDGTextureRef InputTexture, FRDGTextureRef OutputTexture);
 };
 
-class FSrgbToLinearPS : public FGlobalShader
+template <bool ConvertSrgbToLinear>
+class FInputTextureConvertPS : public FGlobalShader
 {
-	DECLARE_GLOBAL_SHADER(FSrgbToLinearPS)
+	DECLARE_GLOBAL_SHADER(FInputTextureConvertPS)
 
-	SHADER_USE_PARAMETER_STRUCT(FSrgbToLinearPS, FGlobalShader);
+	SHADER_USE_PARAMETER_STRUCT(FInputTextureConvertPS, FGlobalShader);
 
 	BEGIN_SHADER_PARAMETER_STRUCT(FParameters, )
+		SHADER_PARAMETER(uint32, DoubleSRGBConversion)
 		SHADER_PARAMETER_RDG_TEXTURE(Texture2D, InputTexture)
 		SHADER_PARAMETER_SAMPLER(SamplerState, InputSampler)
 		RENDER_TARGET_BINDING_SLOTS()
@@ -51,7 +53,13 @@ public:
 		return IsFeatureLevelSupported(Parameters.Platform, ERHIFeatureLevel::ES3_1);
 	}
 
-	FSrgbToLinearPS::FParameters* AllocateAndSetParameters(FRDGBuilder& GraphBuilder, FRDGTextureRef InputTexture, FRDGTextureRef OutputTexture);
+	FInputTextureConvertPS::FParameters* AllocateAndSetParameters(FRDGBuilder& GraphBuilder, FRDGTextureRef InputTexture, FRDGTextureRef OutputTexture, bool bDoubleSRGBConversion=false);
+
+	static void ModifyCompilationEnvironment(const FGlobalShaderPermutationParameters& Parameters, FShaderCompilerEnvironment& OutEnvironment)
+	{
+		FGlobalShader::ModifyCompilationEnvironment(Parameters, OutEnvironment);
+		OutEnvironment.SetDefine(TEXT("CONVERT_SRGB_TO_LINEAR"), ConvertSrgbToLinear);
+	}
 };
 
 class LIVESTREAMINGTOOLKITSHADERS_API FOWLMediaUtils
@@ -65,10 +73,13 @@ public:
 		EOWLPixelLayoutFormat VideoConversionFormat,
 		EPixelFormat ForcedFormat = EPixelFormat::PF_Unknown);
 
-	static bool SrgbToLinear_RenderThread(
+	static bool InputFormatConvert_RenderThread(
 		FRHICommandListImmediate& RHICmdList,
 		const FTexture2DRHIRef& SourceTexture,
-		UTextureRenderTarget2D* DestinationRenderTarget);
+		UTextureRenderTarget2D* DestinationRenderTarget,
+		bool bConvertSrgbToLinear = false,
+		bool bDoubleSrgbConversion = false
+	);
 };
 
 class LIVESTREAMINGTOOLKITSHADERS_API FOWLNDIReceiverShader

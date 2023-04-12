@@ -19,6 +19,7 @@ class UUserWidget;
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_OWLBlueprintFunctionLibrary_h_15_SPARSE_DATA
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_OWLBlueprintFunctionLibrary_h_15_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execLaunchLicenseUtility); \
 	DECLARE_FUNCTION(execInstallLicense); \
 	DECLARE_FUNCTION(execInitOWLApplicationLicense); \
 	DECLARE_FUNCTION(execOWLLogInStatus); \
@@ -35,6 +36,7 @@ class UUserWidget;
 
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_OWLBlueprintFunctionLibrary_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execLaunchLicenseUtility); \
 	DECLARE_FUNCTION(execInstallLicense); \
 	DECLARE_FUNCTION(execInitOWLApplicationLicense); \
 	DECLARE_FUNCTION(execOWLLogInStatus); \

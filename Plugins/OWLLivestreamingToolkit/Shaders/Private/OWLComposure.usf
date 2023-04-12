@@ -1,0 +1,60 @@
+﻿// Copyright Off World Live Limited, 2020-2023. All rights reserved.
+
+#include "/Engine/Public/Platform.ush"
+
+Texture2D InputTexture;
+SamplerState InputSampler;
+float3 PlaneNormal;
+float3 PlaneCenter;
+float3 PlaneRight;
+float3 PlaneUp;
+float CameraFOVExponent;
+float EdgeBlur;
+float AspectRatio;
+float3 CameraForward;
+float3 CameraRight;
+float3 CameraUp;
+
+float3 GetRayDirection(float2 TexCoord, float AspectRatio)
+{
+	// Normalize uv from +1 -1
+	float2 uv = TexCoord * 2.0 -1;
+	float3 RawDirection = float3(CameraFOVExponent, uv.x, uv.y/ AspectRatio);
+	float3x3 CameraMatrix = float3x3(CameraForward, CameraRight, CameraUp);
+	return mul(  normalize(RawDirection), CameraMatrix);
+}
+
+float GetPlaneHit(float3 RayDirection)
+{
+	float de = dot(PlaneNormal,RayDirection);
+	de = sign(de) * max(abs(de), 0.001);
+	return dot(PlaneNormal, PlaneCenter) / de;
+}
+
+float GetQuadTextureUV(float3 RayDirection, float PlaneHit, out float2 UVMatch)
+{
+	float3 pos = (RayDirection * PlaneHit) - PlaneCenter;
+
+	// find UV Map on surface
+	UVMatch = float2(
+	  dot(pos, PlaneRight) / dot(PlaneRight, PlaneRight),
+	  dot(pos, PlaneUp) / dot(PlaneUp, PlaneUp)
+	) + 0.5;
+	// return step( abs(UVMatch.x - 0.5), 0.5) * step(abs(UVMatch.y - .5), 0.5);
+	// smooth edges
+	float SmoothMin = (0.9999999 - EdgeBlur) * 0.5;
+	return smoothstep(0.5, SmoothMin, abs(UVMatch.x - 0.5)) * smoothstep(0.5, SmoothMin, abs(UVMatch.y - 0.5));
+}
+
+void VideoPlaneDistortPS(
+	noperspective float4 UVAndScreenPos : TEXCOORD0,
+	out float4 OutColor : SV_Target0)
+{
+	float2 uv = UVAndScreenPos.xy;
+	float3 rayDir = GetRayDirection(uv, AspectRatio);
+	float planeHit = GetPlaneHit(rayDir);
+	float2 uvMatch;
+	float match = GetQuadTextureUV(rayDir, planeHit, uvMatch);
+	float4 videoSample = InputTexture.Sample(InputSampler, uvMatch);
+	OutColor = videoSample * match;
+}

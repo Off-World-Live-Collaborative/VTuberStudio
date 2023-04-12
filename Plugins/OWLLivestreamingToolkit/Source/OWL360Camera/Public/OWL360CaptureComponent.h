@@ -168,7 +168,7 @@ public:
 	TArray<TWeakObjectPtr<UPrimitiveComponent> > HiddenComponents;
 
 	/** The actors to hide in the scene capture. */
-	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings")
 	TArray<AActor*> HiddenActors;
 
 	/** The only components to be rendered by this scene capture, if PrimitiveRenderMode is set to UseShowOnlyList. */
@@ -176,11 +176,11 @@ public:
 	TArray<TWeakObjectPtr<UPrimitiveComponent> > ShowOnlyComponents;
 
 	/** The only actors to be rendered by this scene capture, if PrimitiveRenderMode is set to UseShowOnlyList.*/
-	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings")
 	TArray<AActor*> ShowOnlyActors;
 
 	/** By default we invert the ue4's default alpha value of captured textures - you can disable it here */
-	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings")
 	bool InvertAlpha = true;
 
 public:

@@ -20,7 +20,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define FOREACH_ENUM_EOWLOUTPUTTYPE(op) \
 	op(EOWLOutputType::OT_Media) \
-	op(EOWLOutputType::OT_MediaGPU) \
 	op(EOWLOutputType::OT_VirtualWebcam) 
 
 enum class EOWLOutputType : uint8;

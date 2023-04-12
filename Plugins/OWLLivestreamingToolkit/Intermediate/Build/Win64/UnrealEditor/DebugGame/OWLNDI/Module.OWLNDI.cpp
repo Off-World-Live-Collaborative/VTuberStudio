@@ -10,5 +10,6 @@
 #include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/OWLNDI/Private/OWLNDIReceiver.cpp"
 #include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/OWLNDI/Private/OWLNDIReceiverManager.cpp"
 #include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/OWLNDI/Private/OWLNDISender.cpp"
+#include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/OWLNDI/Private/OWLNDISenderController.cpp"
 #include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/OWLNDI/Private/OWLNDISenderManager.cpp"
 #include "C:/toolkit-tmp/Plugins/OWLLivestreamingToolkit/Source/OWLNDI/Private/OWLNDISoundWave.cpp"

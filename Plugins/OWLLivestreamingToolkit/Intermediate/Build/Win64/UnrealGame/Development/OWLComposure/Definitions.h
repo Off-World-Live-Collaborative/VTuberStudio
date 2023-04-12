@@ -63,6 +63,9 @@
 #define UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_1 0
 #define UE_MODULE_NAME "OWLComposure"
 #define UE_PLUGIN_NAME "OWLLivestreamingToolkit"
+#define CINEMATICCAMERA_API 
+#define COMPOSURE_API 
+#define CAMERACALIBRATIONCORE_API 
 #define UE_MEMORY_TAGS_TRACE_ENABLED 1
 #define UE_ENABLE_ICU 1
 #define WITH_ADDITIONAL_CRASH_CONTEXTS 1
@@ -80,9 +83,6 @@
 #define CORE_API 
 #define TRACELOG_API 
 #define COREUOBJECT_API 
-#define COMPOSURE_API 
-#define CAMERACALIBRATIONCORE_API 
-#define CINEMATICCAMERA_API 
 #define DEVELOPERSETTINGS_API 
 #define WITH_CLOTH_COLLISION_DETECTION 1
 #define INCLUDE_CHAOS UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
@@ -224,20 +224,20 @@
 #define LOAD_PLUGINS_FOR_TARGET_PLATFORMS 0
 #define PROJECTS_API 
 #define OPENCOLORIO_API 
-#define OWL_AUTH_URL "https://plugin-staging-api.offworld.live"
-#define RELEASE_DATE 2023-03-20T18:17:33.000Z
+#define OWL_AUTH_URL "https://plugin-api.offworld.live"
+#define RELEASE_DATE 2023-04-12T13:13:57.000Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
-#define AUTH_APP_NAME owl-licensing-utility.staging.exe
+#define AUTH_APP_NAME owl-licensing-utility.exe
 #define LIVESTREAMINGTOOLKIT_API 
 #define MATERIALSHADERQUALITYSETTINGS_API 
 #define LIVESTREAMINGTOOLKITSHADERS_API 
 #define OWLCAMERA_API 
 #define RHICORE_API 
+#define OWLSCREENCAPTURE_API 
 #define OWL_SPOUT_DLL_PATH "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/Spout.dll"
 #define OWL_SPOUT_12_DLL_PATH "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/SpoutDX12.dll"
 #define OWLSPOUT_API 
 #define OWLCOMPOSURE_API 
 #define ACTORLAYERUTILITIES_API 
 #define OWLNDI_API 
-#define OWLSCREENCAPTURE_API 

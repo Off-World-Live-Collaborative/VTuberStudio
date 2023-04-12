@@ -44,8 +44,8 @@ public:
 private:
 	bool InitDX();
 
-	void Receive(FString Name, UTextureRenderTarget2D* DestRenderTarget, bool useFirstAvailableSender);
-	bool Receive_DX12(FString name, UTextureRenderTarget2D* DestRenderTarget);
+	void Receive(FString Name, UTextureRenderTarget2D* DestRenderTarget, bool useFirstAvailableSender, bool bFixGamma);
+	bool Receive_DX12(FString name, UTextureRenderTarget2D* DestRenderTarget, bool bFixGamma);
 	bool Receive_DX11_RT(FString name, HANDLE Handle, UTextureRenderTarget2D* DestRenderTarget);
 
 	bool InitD3D12(FRHICommandListImmediate& RHICmdList);
@@ -53,12 +53,14 @@ private:
 	FString GetFirstAvailableName_DX12() const;
 	FString GetFirstAvailableName_DX11() const;
 	FTextureRHIRef CreateRHITexture(ID3D12Resource* Resource, EPixelFormat Format);
-	ETextureRenderTargetFormat GetRTFormatFromDX(DXGI_FORMAT DxFormat);
-	void UpdateDestRenderTargetIfNeeded(int Width, int Height, ETextureRenderTargetFormat Format, UTextureRenderTarget2D* Target);
+	bool UpdateDestRenderTargetIfNeeded(int Width, int Height, ETextureRenderTargetFormat Format,
+	                                    UTextureRenderTarget2D* Target);
+
+	bool bHasLoggedError = false;
 
 public:
 	~FOWLSpoutReceiver();
-	void ReceiveRenderTarget(FString name, UTextureRenderTarget2D* textureRenderTarget2D, bool useFirstAvailableSender);
+	void ReceiveRenderTarget(FString name, UTextureRenderTarget2D* textureRenderTarget2D, bool useFirstAvailableSender, bool bFixGamma = true);
 	void Close();
 };
 

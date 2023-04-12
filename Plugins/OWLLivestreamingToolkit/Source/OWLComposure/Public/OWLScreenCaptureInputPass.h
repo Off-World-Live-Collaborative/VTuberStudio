@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "CompositingElements/CompositingElementPasses.h"
-#include "OWLScreenCapturer.h"
+#include "OWLScreenCapturerOptions.h"
 #include "OWLScreenCaptureInputPass.generated.h"
 
 class FOWLScreenCapturer;
@@ -19,11 +19,12 @@ public:
 	UOWLScreenCaptureInputPass();
 	~UOWLScreenCaptureInputPass();
 
-	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category=OWLScreenCapture, meta =(AllowPrivateAccess = "true", DisplayName="Capture Settings"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=OWLScreenCapture, meta =(AllowPrivateAccess = "true", DisplayName="Capture Settings"))
 	FOWLScreenCaptureOptions Options;
 
 
 	virtual UTexture* GenerateInput_Implementation() override;
+	virtual void OnDisabled_Implementation() override;
 
 protected:
 	virtual void BeginDestroy() override;

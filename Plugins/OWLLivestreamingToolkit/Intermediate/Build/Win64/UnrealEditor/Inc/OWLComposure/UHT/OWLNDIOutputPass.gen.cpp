@@ -38,6 +38,11 @@ void EmptyLinkFunctionForGeneratedCodeOWLNDIOutputPass() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_VideoConversionFormat_MetaData[];
 #endif
 		static const UECodeGen_Private::FEnumPropertyParams NewProp_VideoConversionFormat;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bCaptureAudio_MetaData[];
+#endif
+		static void NewProp_bCaptureAudio_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bCaptureAudio;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -67,10 +72,22 @@ void EmptyLinkFunctionForGeneratedCodeOWLNDIOutputPass() {}
 	};
 #endif
 	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_VideoConversionFormat = { "VideoConversionFormat", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLNDIOutputPass, VideoConversionFormat), Z_Construct_UEnum_OWLNDI_ENDIVideoConversionFormat, METADATA_PARAMS(Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_VideoConversionFormat_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_VideoConversionFormat_MetaData)) }; // 1521069760
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_bCaptureAudio_MetaData[] = {
+		{ "Category", "NDI" },
+		{ "ModuleRelativePath", "Public/OWLNDIOutputPass.h" },
+	};
+#endif
+	void Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_bCaptureAudio_SetBit(void* Obj)
+	{
+		((UOWLNDIOutputPass*)Obj)->bCaptureAudio = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_bCaptureAudio = { "bCaptureAudio", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(UOWLNDIOutputPass), &Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_bCaptureAudio_SetBit, METADATA_PARAMS(Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_bCaptureAudio_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_bCaptureAudio_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UOWLNDIOutputPass_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_SenderName,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_VideoConversionFormat_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_VideoConversionFormat,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLNDIOutputPass_Statics::NewProp_bCaptureAudio,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UOWLNDIOutputPass_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UOWLNDIOutputPass>::IsAbstract,
@@ -109,9 +126,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLNDIOutputPass() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLNDIOutputPass_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWLNDIOutputPass, UOWLNDIOutputPass::StaticClass, TEXT("UOWLNDIOutputPass"), &Z_Registration_Info_UClass_UOWLNDIOutputPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLNDIOutputPass), 523247379U) },
+		{ Z_Construct_UClass_UOWLNDIOutputPass, UOWLNDIOutputPass::StaticClass, TEXT("UOWLNDIOutputPass"), &Z_Registration_Info_UClass_UOWLNDIOutputPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLNDIOutputPass), 3641038422U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLNDIOutputPass_h_4103793453(TEXT("/Script/OWLComposure"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLNDIOutputPass_h_3914476441(TEXT("/Script/OWLComposure"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLNDIOutputPass_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLNDIOutputPass_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

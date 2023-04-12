@@ -28,6 +28,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = OWLSpoutReceiver, meta=(EditCondition="!bUnderExternalControl", EditConditionHides))
 	UTextureRenderTarget2D* RenderTarget = nullptr;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = OWLSpoutReceiver)
+	bool bFixGamma = true;
+
 	UPROPERTY(VisibleAnywhere, Category = OWLSpoutReceiver, AdvancedDisplay)
 	bool bUnderExternalControl = false;
 
@@ -41,7 +44,7 @@ public:
 		{
 			SpoutReceiver = new FOWLSpoutReceiver;
 		}
-		SpoutReceiver->ReceiveRenderTarget(Name, RenderTarget, UseFirstAvailableSender);
+		SpoutReceiver->ReceiveRenderTarget(Name, RenderTarget, UseFirstAvailableSender,bFixGamma);
 	}
 
 	void TryClose(bool KeepActive)

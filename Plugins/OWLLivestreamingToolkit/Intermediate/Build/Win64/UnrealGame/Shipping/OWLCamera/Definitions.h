@@ -208,11 +208,11 @@
 #define READ_TARGET_ENABLED_PLUGINS_FROM_RECEIPT 0
 #define LOAD_PLUGINS_FOR_TARGET_PLATFORMS 0
 #define PROJECTS_API 
-#define OWL_AUTH_URL "https://plugin-staging-api.offworld.live"
-#define RELEASE_DATE 2023-03-20T18:17:33.000Z
+#define OWL_AUTH_URL "https://plugin-api.offworld.live"
+#define RELEASE_DATE 2023-04-12T13:13:57.000Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
-#define AUTH_APP_NAME owl-licensing-utility.staging.exe
+#define AUTH_APP_NAME owl-licensing-utility.exe
 #define LIVESTREAMINGTOOLKIT_API 
 #define MATERIALSHADERQUALITYSETTINGS_API 
 #define LIVESTREAMINGTOOLKITSHADERS_API 

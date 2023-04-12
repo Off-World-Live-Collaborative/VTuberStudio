@@ -15,8 +15,10 @@ public:
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
 private:
+
 	void* NDIDLLHandle = nullptr;
 
-	FDelegateHandle OnFEngineLoopInitCompleteHandle;
-	void OnFEngineLoopInitComplete();
+	FDelegateHandle OnEndFrameHandle;
+
+	void OnEndFrame();
 };

@@ -17,6 +17,7 @@ public class OWLComposure : ModuleRules
 		PrivateIncludePaths.AddRange((new string[]
 		{
 			"LivestreamingToolkit/Private/ServerAuth",
+			"OWLScreenCapture/Private",
 			Path.Combine(EngineDirectory, "Plugins/Compositing/Composure/Source/Composure/Private/"),
 			Path.Combine(EngineDirectory, "Source/Runtime/Engine/"),
 		}));
@@ -46,19 +47,22 @@ public class OWLComposure : ModuleRules
 		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
+				"CinematicCamera",
+				"Composure",
 				"Core",
 				"CoreUObject",
-				"Composure",
-				"RenderCore",
 				"CoreUObject",
-				"MediaAssets",
 				"Engine",
-				"RHI",
 				"LivestreamingToolkit",
 				"LivestreamingToolkitShaders",
+				"MediaAssets",
 				"OWLCamera",
-				"CinematicCamera",
+				"OWLScreenCapture",
 				"OWLSpout",
+				"RHI",
+				"RHICore",
+				"RenderCore",
+				"Renderer",
 			}
 		);
 

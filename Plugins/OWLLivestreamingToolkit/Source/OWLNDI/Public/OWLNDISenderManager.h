@@ -33,24 +33,18 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = OWLNDISender)
 	UTextureRenderTarget2D* SourceRenderTarget = nullptr;
 
-	bool IsRunning = false;
-
 	UPROPERTY()
 	UWorld* World = nullptr;
 
 public:
-	void Start(UWorld* InWorld);
 	void End();
 	void SendFrame();
-	FString GetActiveName();
-	FString GetWorldTypeName();
+	bool UseStandaloneName() const;
 
 private:
-	TSharedPtr<FOWLNDISender, ESPMode::ThreadSafe> OWLNDISender = nullptr;
-	FString ActiveName = "";
+	FString GUID = FGuid::NewGuid().ToString();
+	FString StandaloneGUID = FGuid::NewGuid().ToString();
 
-private:
-	bool CheckNameChanged();
 };
 
 UCLASS(BlueprintType)

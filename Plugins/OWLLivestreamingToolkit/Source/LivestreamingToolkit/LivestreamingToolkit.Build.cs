@@ -55,6 +55,7 @@ public class LivestreamingToolkit : ModuleRules
 				"Projects",
 				"Json",
 				"JsonUtilities",
+				"DeveloperSettings",
 				"HTTP",
 				// ... add other public dependencies that you statically link with here ...
 			}
@@ -83,7 +84,7 @@ public class LivestreamingToolkit : ModuleRules
 		}
 
 		string AuthAppBase = "owl-licensing-utility";
-		
+
 		string StagingExecutable = AuthAppBase + ".staging.exe";
 		string ProductionExecutable = AuthAppBase + ".exe";
 
@@ -123,6 +124,14 @@ public class LivestreamingToolkit : ModuleRules
 			throw new Exception("Virtual Webcam installer not found");
 		}
 		RuntimeDependencies.Add(WebcamInstallerPath, StagedFileType.NonUFS);
+
+		// Ensure that virtual webcam installer is bundled
+		string NDIInstallerScript = Path.Combine(PluginDirectory, "Utils", "InstallNDISDK.ps1");
+		if (!File.Exists(NDIInstallerScript))
+		{
+			throw new Exception("NDI Installer script not found");
+		}
+		RuntimeDependencies.Add(NDIInstallerScript, StagedFileType.NonUFS);
 	}
 
 	public JsonObject GetOffWorldSettings()
