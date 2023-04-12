@@ -382,11 +382,11 @@
 #define MEDIAASSETS_API DLLIMPORT
 #define MEDIAUTILS_API DLLIMPORT
 #define LEVELSEQUENCE_API DLLIMPORT
-#define OWL_AUTH_URL "https://plugin-staging-api.offworld.live"
-#define RELEASE_DATE 2023-03-20T18:17:33.000Z
+#define OWL_AUTH_URL "https://plugin-api.offworld.live"
+#define RELEASE_DATE 2023-04-12T13:13:57.000Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
-#define AUTH_APP_NAME owl-licensing-utility.staging.exe
+#define AUTH_APP_NAME owl-licensing-utility.exe
 #define LIVESTREAMINGTOOLKIT_API DLLIMPORT
 #define LIVESTREAMINGTOOLKITSHADERS_API DLLIMPORT
 #define OWLCAMERA_API DLLEXPORT

@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "OWLVideoPlaneShader.h"
 #include "VideoPlanePlacement.h"
 #include "CompositingElements/CompositingElementPasses.h"
 #include "CompositingElements/CompositingMaterialPass.h"
@@ -14,20 +15,6 @@ class ACameraActor;
 class UTexture;
 class UComposurePostProcessingPassProxy;
 
-struct FPlaneTransformParameters
-{
-	float FOVExponent =1;
-	FVector CameraForward;
-	FVector CameraRight;
-	FVector CameraUp;
-	FVector PlaneNormal;
-	FVector PlaneRight;
-	FVector PlaneUp;
-	FVector PlaneCenter;
-
-	void SetParams(FCompositingMaterial &Material);
-};
-
 struct FTransformParameterBackBuffer
 {
 	int Size = 0;
@@ -35,12 +22,12 @@ struct FTransformParameterBackBuffer
 	int InitialFillCount = -1;
 	int LastWriteIndex = -1;
 	int FramesBehind = 0;
-	TArray<FPlaneTransformParameters> Data;
+	TArray<FOWLVideoPlaneDistortParams> Data;
 
 	void Init(int Size, int FramesBehind);
 
-	void Add(FPlaneTransformParameters Params);
-	bool Read(FPlaneTransformParameters &Output);
+	void Add(FOWLVideoPlaneDistortParams Params);
+	bool Read(FOWLVideoPlaneDistortParams &Output);
 };
 /**
  *
@@ -52,7 +39,6 @@ class OWLCOMPOSURE_API UOWLPlaneTransformPass : public UCompositingElementTransf
 
 public:
 	UOWLPlaneTransformPass();
-	~UOWLPlaneTransformPass();
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Compositing Pass", meta = (DisplayAfter = "PassName", EditCondition = "bEnabled"))
@@ -66,16 +52,16 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Compositing Pass", meta = (DisplayAfter = "PassName", EditCondition = "bEnabled"))
 	ACameraActor* CameraOverride = nullptr;
 
+	/* Increase from 0 to soften edges of video */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Compositing Pass", meta = (DisplayAfter = "PassName", EditCondition = "bEnabled", ClampMin="0", ClampMax="0.05", UIMin="0", UIMax="0.05"))
+	float EdgeBlur = 0.008;
+
 	/* Number of frames to run behind. By default, with deferred rendering this is 1 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Compositing Pass", meta = (DisplayAfter = "PassName", EditCondition = "bEnabled", UIMin=0, UIMax=10, ClampMin=0, ClampMax=10))
 	int FrameDelay = 0;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Compositing Pass", meta = (ShowOnlyInnerProperties, DisplayAfter = "PassName", EditCondition = "bEnabled"))
-	FCompositingMaterial TransformMaterial;
 
 protected:
-	virtual void OnFrameBegin_Implementation(bool bCameraCutThisFrame) override;
-	virtual void OnFrameEnd_Implementation() override;
 	virtual UTexture* ApplyTransform_Implementation(UTexture* Input, UComposurePostProcessingPassProxy* PostProcessProxy, ACameraActor* TargetCamera) override;
 	virtual void PostInitProperties() override;
 #if WITH_EDITOR
@@ -83,9 +69,9 @@ protected:
 #endif
 
 private:
-	void RecordCameraPlaneInfo(ACameraActor* TargetCamera);
-	void SetPlaneParameters(ACameraActor* TargetCamera, FPlaneTransformParameters& Params);
-	void SetCameraParameters(ACameraActor* TargetCamera, FPlaneTransformParameters& Params);
+	bool GetCurrentParams(ACameraActor* TargetCamera, FOWLVideoPlaneDistortParams& OutParams);
+	void SetPlaneParameters(ACameraActor* TargetCamera, FOWLVideoPlaneDistortParams& Params);
+	void SetCameraParameters(ACameraActor* TargetCamera, FOWLVideoPlaneDistortParams& Params);
 	TArray<FVector> CameraLocations;
 	TArray<FRotator> CameraRotations;
 	FTransformParameterBackBuffer BackBuffer;

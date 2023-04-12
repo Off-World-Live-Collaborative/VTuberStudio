@@ -13,11 +13,20 @@ void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntPoint();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
+	ENGINE_API UClass* Z_Construct_UClass_UWorld_NoRegister();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_UOWLUIInputPass();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_UOWLUIInputPass_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_OWLComposure();
 // End Cross Module References
+	DEFINE_FUNCTION(UOWLUIInputPass::execOnWorldDestroy)
+	{
+		P_GET_OBJECT(UWorld,Z_Param_World);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnWorldDestroy(Z_Param_World);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UOWLUIInputPass::execGetWidget)
 	{
 		P_FINISH;
@@ -30,6 +39,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 		UClass* Class = UOWLUIInputPass::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetWidget", &UOWLUIInputPass::execGetWidget },
+			{ "OnWorldDestroy", &UOWLUIInputPass::execOnWorldDestroy },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -74,6 +84,38 @@ void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics
+	{
+		struct OWLUIInputPass_eventOnWorldDestroy_Parms
+		{
+			UWorld* World;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_World;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics::NewProp_World = { "World", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(OWLUIInputPass_eventOnWorldDestroy_Parms, World), Z_Construct_UClass_UWorld_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics::NewProp_World,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/OWLUIInputPass.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOWLUIInputPass, nullptr, "OnWorldDestroy", nullptr, nullptr, sizeof(Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics::OWLUIInputPass_eventOnWorldDestroy_Parms), Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UOWLUIInputPass);
 	UClass* Z_Construct_UClass_UOWLUIInputPass_NoRegister()
 	{
@@ -112,6 +154,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UOWLUIInputPass_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UOWLUIInputPass_GetWidget, "GetWidget" }, // 2716320712
+		{ &Z_Construct_UFunction_UOWLUIInputPass_OnWorldDestroy, "OnWorldDestroy" }, // 219957003
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLUIInputPass_Statics::Class_MetaDataParams[] = {
@@ -186,15 +229,14 @@ void EmptyLinkFunctionForGeneratedCodeOWLUIInputPass() {}
 		return UOWLUIInputPass::StaticClass();
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UOWLUIInputPass);
-	UOWLUIInputPass::~UOWLUIInputPass() {}
 	struct Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWLUIInputPass, UOWLUIInputPass::StaticClass, TEXT("UOWLUIInputPass"), &Z_Registration_Info_UClass_UOWLUIInputPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLUIInputPass), 528433657U) },
+		{ Z_Construct_UClass_UOWLUIInputPass, UOWLUIInputPass::StaticClass, TEXT("UOWLUIInputPass"), &Z_Registration_Info_UClass_UOWLUIInputPass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLUIInputPass), 254970946U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_1431132571(TEXT("/Script/OWLComposure"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_1120487807(TEXT("/Script/OWLComposure"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -74,6 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		{ "EOWLOutputBufferVisualisation::BV_PreTonemapHDRColor", (int64)EOWLOutputBufferVisualisation::BV_PreTonemapHDRColor },
 		{ "EOWLOutputBufferVisualisation::BV_PostTonemapHDRColor", (int64)EOWLOutputBufferVisualisation::BV_PostTonemapHDRColor },
 		{ "EOWLOutputBufferVisualisation::BV_MattePass", (int64)EOWLOutputBufferVisualisation::BV_MattePass },
+		{ "EOWLOutputBufferVisualisation::BV_MattePassInverted", (int64)EOWLOutputBufferVisualisation::BV_MattePassInverted },
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_OWLCamera_EOWLOutputBufferVisualisation_Statics::Enum_MetaDataParams[] = {
@@ -94,8 +95,10 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		{ "BV_FinalImage.Name", "EOWLOutputBufferVisualisation::BV_FinalImage" },
 		{ "BV_MaterialAO.DisplayName", "Material Ambient Occlusion" },
 		{ "BV_MaterialAO.Name", "EOWLOutputBufferVisualisation::BV_MaterialAO" },
-		{ "BV_MattePass.DisplayName", "Matte Pass" },
+		{ "BV_MattePass.DisplayName", "Matte Pass (Hold Out)" },
 		{ "BV_MattePass.Name", "EOWLOutputBufferVisualisation::BV_MattePass" },
+		{ "BV_MattePassInverted.DisplayName", "Matte Pass (Garbage)" },
+		{ "BV_MattePassInverted.Name", "EOWLOutputBufferVisualisation::BV_MattePassInverted" },
 		{ "BV_Metallic.DisplayName", "Metallic" },
 		{ "BV_Metallic.Name", "EOWLOutputBufferVisualisation::BV_Metallic" },
 		{ "BV_None.DisplayName", "None" },
@@ -785,6 +788,14 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_AlphaOnlyMID;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_AlphaOnlyMaterialInverted_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_AlphaOnlyMaterialInverted;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_AlphaOnlyInvertedMID_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_AlphaOnlyInvertedMID;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_InternalRT_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_InternalRT;
@@ -856,7 +867,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		{ "ModuleRelativePath", "Public/OWLCaptureComponent.h" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_VisualisationType = { "VisualisationType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, VisualisationType), Z_Construct_UEnum_OWLCamera_EOWLOutputBufferVisualisation, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_VisualisationType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_VisualisationType_MetaData)) }; // 1489488013
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_VisualisationType = { "VisualisationType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, VisualisationType), Z_Construct_UEnum_OWLCamera_EOWLOutputBufferVisualisation, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_VisualisationType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_VisualisationType_MetaData)) }; // 3729483045
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ResolutionX_MetaData[] = {
 		{ "Category", "Off World Live Capture Settings" },
@@ -966,7 +977,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		{ "ToolTip", "The actors to hide in the scene capture." },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_HiddenActors = { "HiddenActors", nullptr, (EPropertyFlags)0x0010000000000805, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, HiddenActors), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_HiddenActors_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_HiddenActors_MetaData)) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_HiddenActors = { "HiddenActors", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, HiddenActors), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_HiddenActors_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_HiddenActors_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bRenderSceneViewExtensions_MetaData[] = {
 		{ "Category", "Off World Live Capture Settings|Render Settings" },
@@ -1000,7 +1011,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		{ "ToolTip", "The only actors to be rendered by this scene capture, if PrimitiveRenderMode is set to UseShowOnlyList." },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ShowOnlyActors = { "ShowOnlyActors", nullptr, (EPropertyFlags)0x0010000000000805, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, ShowOnlyActors), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ShowOnlyActors_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ShowOnlyActors_MetaData)) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ShowOnlyActors = { "ShowOnlyActors", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, ShowOnlyActors), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ShowOnlyActors_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ShowOnlyActors_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InvertAlpha_MetaData[] = {
 		{ "Category", "Off World Live Capture Settings|Alpha Settings" },
@@ -1013,7 +1024,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 	{
 		((UOWLCaptureComponent*)Obj)->InvertAlpha = 1;
 	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InvertAlpha = { "InvertAlpha", nullptr, (EPropertyFlags)0x0010000000000805, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(UOWLCaptureComponent), &Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InvertAlpha_SetBit, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InvertAlpha_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InvertAlpha_MetaData)) };
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InvertAlpha = { "InvertAlpha", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(UOWLCaptureComponent), &Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InvertAlpha_SetBit, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InvertAlpha_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InvertAlpha_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_LODDistanceFactor_MetaData[] = {
 		{ "Category", "Off World Live Capture Settings|Advanced" },
@@ -1070,6 +1081,18 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyMID = { "AlphaOnlyMID", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, AlphaOnlyMID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyMID_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyMID_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyMaterialInverted_MetaData[] = {
+		{ "ModuleRelativePath", "Public/OWLCaptureComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyMaterialInverted = { "AlphaOnlyMaterialInverted", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, AlphaOnlyMaterialInverted), Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyMaterialInverted_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyMaterialInverted_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyInvertedMID_MetaData[] = {
+		{ "ModuleRelativePath", "Public/OWLCaptureComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyInvertedMID = { "AlphaOnlyInvertedMID", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, AlphaOnlyInvertedMID), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyInvertedMID_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyInvertedMID_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InternalRT_MetaData[] = {
 		{ "ModuleRelativePath", "Public/OWLCaptureComponent.h" },
@@ -1132,6 +1155,8 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bHideBufferOption,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyMaterial,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyMID,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyMaterialInverted,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyInvertedMID,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InternalRT,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_CameraMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_CineCameraMesh,
@@ -1176,12 +1201,12 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::EnumInfo[] = {
-		{ EOWLOutputBufferVisualisation_StaticEnum, TEXT("EOWLOutputBufferVisualisation"), &Z_Registration_Info_UEnum_EOWLOutputBufferVisualisation, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1489488013U) },
+		{ EOWLOutputBufferVisualisation_StaticEnum, TEXT("EOWLOutputBufferVisualisation"), &Z_Registration_Info_UEnum_EOWLOutputBufferVisualisation, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3729483045U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWLCaptureComponent, UOWLCaptureComponent::StaticClass, TEXT("UOWLCaptureComponent"), &Z_Registration_Info_UClass_UOWLCaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLCaptureComponent), 3013402486U) },
+		{ Z_Construct_UClass_UOWLCaptureComponent, UOWLCaptureComponent::StaticClass, TEXT("UOWLCaptureComponent"), &Z_Registration_Info_UClass_UOWLCaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLCaptureComponent), 3273164349U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_2872379154(TEXT("/Script/OWLCamera"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_410470174(TEXT("/Script/OWLCamera"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::EnumInfo));

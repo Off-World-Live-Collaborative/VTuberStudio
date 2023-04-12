@@ -6,7 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "OWLScreenCapture/Public/OWLScreenCapture.h"
-#include "OWLScreenCapture/Public/OWLScreenCapturer.h"
+#include "OWLScreenCapture/Public/OWLScreenCapturerOptions.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOWLScreenCapture() {}
 // Cross Module References
@@ -59,7 +59,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLScreenCapture() {}
 		{ "ToolTip", "TODO: we should probably add an option for disabling the annoying yellow boarder" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLScreenCapture_Statics::NewProp_Options = { "Options", nullptr, (EPropertyFlags)0x0010000000000805, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLScreenCapture, Options), Z_Construct_UScriptStruct_FOWLScreenCaptureOptions, METADATA_PARAMS(Z_Construct_UClass_AOWLScreenCapture_Statics::NewProp_Options_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLScreenCapture_Statics::NewProp_Options_MetaData)) }; // 4124855380
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLScreenCapture_Statics::NewProp_Options = { "Options", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLScreenCapture, Options), Z_Construct_UScriptStruct_FOWLScreenCaptureOptions, METADATA_PARAMS(Z_Construct_UClass_AOWLScreenCapture_Statics::NewProp_Options_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLScreenCapture_Statics::NewProp_Options_MetaData)) }; // 1712815089
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AOWLScreenCapture_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLScreenCapture_Statics::NewProp_Options,
 	};
@@ -99,9 +99,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLScreenCapture() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapture_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLScreenCapture, AOWLScreenCapture::StaticClass, TEXT("AOWLScreenCapture"), &Z_Registration_Info_UClass_AOWLScreenCapture, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLScreenCapture), 171327251U) },
+		{ Z_Construct_UClass_AOWLScreenCapture, AOWLScreenCapture::StaticClass, TEXT("AOWLScreenCapture"), &Z_Registration_Info_UClass_AOWLScreenCapture, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLScreenCapture), 443537522U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapture_h_3520765386(TEXT("/Script/OWLScreenCapture"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapture_h_1344893530(TEXT("/Script/OWLScreenCapture"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapture_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapture_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

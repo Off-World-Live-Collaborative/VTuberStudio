@@ -3,11 +3,13 @@
 class FOWLSpoutSender;
 class UTextureRenderTarget2D;
 
-struct RegisteredSpoutSenderName
+struct FOWLRegisteredSpoutSender
 {
-	int64 Frame;
-	FString Name;
-	FOWLSpoutSender* Sender;
+	int64 Frame =0;
+	FString Name = "";
+	TSharedPtr<FOWLSpoutSender, ESPMode::ThreadSafe> Sender = nullptr;
+	bool bHasPriority = false;
+	void Send(UTextureRenderTarget2D* RT, bool bFixGamma);
 };
 
 /**
@@ -23,15 +25,14 @@ public:
 	/* Removes a spout sender name -- must be called from game thread */
 	static void Remove(FString UUID);
 	/* Either returns the original name, or generates a unique name for this sender */
-	static FString ValidateNameAndCreate(FString InName, FString UUID);
-	static void Send(FString UUID, UTextureRenderTarget2D* RenderTarget, bool bFixGamma);
-	/* Returns the spout sender for this particular name */
-	static FOWLSpoutSender* GetSender(FString UUID);
+	static FString Send(FString UUID, FString InName, UTextureRenderTarget2D* RenderTarget, bool bFixGamma, bool bHasPriority);
 	static void Shutdown();
 	static void TickFrame();
 private:
+	static FOWLRegisteredSpoutSender CreateNew(FString UUID, FString Name, bool bHasPriority);
+	static void UpdateExisting(FOWLRegisteredSpoutSender& Existing, FString UUID, FString Name, bool bHasPriority);
 	static FString GetFirstFreeName(FString InName);
-	static TMap<FString, RegisteredSpoutSenderName> SendersByUUID;
+	static TMap<FString, FOWLRegisteredSpoutSender> SendersByUUID;
 	static TMap<FString, FString> NameToUUID;
 	static int64 FrameCount;
 };

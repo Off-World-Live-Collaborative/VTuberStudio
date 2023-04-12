@@ -27,6 +27,7 @@ public:
 	void LogInButtonClicked();
 	void LogOutButtonClicked();
 	void MyAccountButtonClicked();
+	void LicenseUtiltyClicked();
 	void OnEditorViewportRendering();
 	bool IsEditorViewportRenderingEnabled();
 	void OnRuntimeViewportRendering();

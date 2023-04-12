@@ -58,6 +58,7 @@ private:
 		HANDLE& Handle,
 		ID3D11Texture2D*& Texture);
 
+	bool bHasLogged32BitRGIssue = false;
 	bool SetupSendingTextureRHI(UTextureRenderTarget2D* srcRenderTarget, FRHICommandListImmediate& RHICmdList, bool bFixGamma);
 	void SetSendingTextureRHIResolution(FIntPoint NewResolution, EPixelFormat Format);
 };

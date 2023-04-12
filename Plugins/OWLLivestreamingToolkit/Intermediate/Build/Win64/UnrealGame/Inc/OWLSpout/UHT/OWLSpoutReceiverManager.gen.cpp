@@ -54,6 +54,11 @@ template<> OWLSPOUT_API UScriptStruct* StaticStruct<FOWLSpoutReceiverInterface>(
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_RenderTarget;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bFixGamma_MetaData[];
+#endif
+		static void NewProp_bFixGamma_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bFixGamma;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_bUnderExternalControl_MetaData[];
 #endif
 		static void NewProp_bUnderExternalControl_SetBit(void* Obj);
@@ -114,6 +119,17 @@ template<> OWLSPOUT_API UScriptStruct* StaticStruct<FOWLSpoutReceiverInterface>(
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_RenderTarget = { "RenderTarget", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLSpoutReceiverInterface, RenderTarget), Z_Construct_UClass_UTextureRenderTarget2D_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_RenderTarget_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_RenderTarget_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_bFixGamma_MetaData[] = {
+		{ "Category", "OWLSpoutReceiver" },
+		{ "ModuleRelativePath", "Public/OWLSpoutReceiverManager.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_bFixGamma_SetBit(void* Obj)
+	{
+		((FOWLSpoutReceiverInterface*)Obj)->bFixGamma = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_bFixGamma = { "bFixGamma", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(FOWLSpoutReceiverInterface), &Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_bFixGamma_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_bFixGamma_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_bFixGamma_MetaData)) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_bUnderExternalControl_MetaData[] = {
 		{ "Category", "OWLSpoutReceiver" },
 		{ "ModuleRelativePath", "Public/OWLSpoutReceiverManager.h" },
@@ -129,6 +145,7 @@ template<> OWLSPOUT_API UScriptStruct* StaticStruct<FOWLSpoutReceiverInterface>(
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_UseFirstAvailableSender,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_Name,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_RenderTarget,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_bFixGamma,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewProp_bUnderExternalControl,
 	};
 	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::ReturnStructParams = {
@@ -240,14 +257,14 @@ template<> OWLSPOUT_API UScriptStruct* StaticStruct<FOWLSpoutReceiverInterface>(
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers_Inner = { "SpoutReceivers", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface, METADATA_PARAMS(nullptr, 0) }; // 1031672370
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers_Inner = { "SpoutReceivers", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface, METADATA_PARAMS(nullptr, 0) }; // 297295365
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers_MetaData[] = {
 		{ "Category", "Off World Live Spout Receiver Settings" },
 		{ "ModuleRelativePath", "Public/OWLSpoutReceiverManager.h" },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers = { "SpoutReceivers", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLSpoutReceiverManager, SpoutReceivers), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers_MetaData)) }; // 1031672370
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers = { "SpoutReceivers", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLSpoutReceiverManager, SpoutReceivers), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers_MetaData)) }; // 297295365
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLSpoutReceiverManager_Statics::NewProp_SpoutReceivers,
@@ -289,12 +306,12 @@ template<> OWLSPOUT_API UScriptStruct* StaticStruct<FOWLSpoutReceiverInterface>(
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ScriptStructInfo[] = {
-		{ FOWLSpoutReceiverInterface::StaticStruct, Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewStructOps, TEXT("OWLSpoutReceiverInterface"), &Z_Registration_Info_UScriptStruct_OWLSpoutReceiverInterface, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLSpoutReceiverInterface), 1031672370U) },
+		{ FOWLSpoutReceiverInterface::StaticStruct, Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewStructOps, TEXT("OWLSpoutReceiverInterface"), &Z_Registration_Info_UScriptStruct_OWLSpoutReceiverInterface, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLSpoutReceiverInterface), 297295365U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLSpoutReceiverManager, AOWLSpoutReceiverManager::StaticClass, TEXT("AOWLSpoutReceiverManager"), &Z_Registration_Info_UClass_AOWLSpoutReceiverManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLSpoutReceiverManager), 1529098098U) },
+		{ Z_Construct_UClass_AOWLSpoutReceiverManager, AOWLSpoutReceiverManager::StaticClass, TEXT("AOWLSpoutReceiverManager"), &Z_Registration_Info_UClass_AOWLSpoutReceiverManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLSpoutReceiverManager), 709667727U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_3199565168(TEXT("/Script/OWLSpout"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_1433725892(TEXT("/Script/OWLSpout"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ScriptStructInfo),
 		nullptr, 0);

@@ -27,13 +27,13 @@ public class FFmpeg : ModuleRules
 			//---------------------------------------------------------------------------
 			string[] libs =
 			{
-				"avutil.lib",
-				"avdevice.lib",
-				"swresample.lib",
 				"avcodec.lib",
-				"swscale.lib",
+				"avdevice.lib",
 				"avfilter.lib",
 				"avformat.lib",
+				"avutil.lib",
+				"swresample.lib",
+				"swscale.lib",
 
 				"libcrypto.lib",
 				"libssl.lib",
@@ -52,16 +52,16 @@ public class FFmpeg : ModuleRules
 			string[] dlls = {
 				"libcrypto-3-x64.dll",
 				"libssl-3-x64.dll",
-				"avutil-56.dll",
-				"avdevice-58.dll",
-				"swresample-3.dll",
-				"avcodec-58.dll",
-				"swscale-5.dll",
-				"avfilter-7.dll",
-				"avformat-58.dll",
+				"avutil-57.dll",
+				"avdevice-59.dll",
+				"swresample-4.dll",
+				"avcodec-59.dll",
+				"swscale-6.dll",
+				"avfilter-8.dll",
+				"avformat-59.dll",
 
-				"libcrypto-1_1-x64.dll",
-				"libssl-1_1-x64.dll",
+				"libcrypto-3-x64.dll",
+				"libssl-3-x64.dll",
 				"srt.dll",
 			};
 

@@ -98,4 +98,10 @@ public:
 	UFUNCTION(Category = "OWL Livestreaming Toolkit", BlueprintCallable)
 	static bool InstallLicense(FString LicenseCode);
 
+	/**
+	* Launch the Licensing Utility to manage your licenses
+	*/
+	UFUNCTION(Category = "OWL Livestreaming Toolkit", BlueprintCallable)
+	static bool LaunchLicenseUtility();
+
 };

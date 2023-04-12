@@ -59,6 +59,7 @@ public class LivestreamingToolkitEditor : ModuleRules
 				"BlueprintGraph",
 				"OWLVirtualWebcam",
 				"OWLScreenCapture",
+				"GameProjectGeneration",
 				// ... add private dependencies that you statically link with here ...
 			}
 		);

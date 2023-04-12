@@ -47,7 +47,8 @@ enum class EOWLOutputBufferVisualisation : uint8
 	BV_Velocity UMETA(DisplayName="Velocity"),
 	BV_PreTonemapHDRColor UMETA(DisplayName="Pre-Tonemap HDR Color"),
 	BV_PostTonemapHDRColor UMETA(DisplayName="Post-Tonemap HDR Color"),
-	BV_MattePass UMETA(DisplayName="Matte Pass"),
+	BV_MattePass UMETA(DisplayName="Matte Pass (Hold Out)"),
+	BV_MattePassInverted UMETA(DisplayName="Matte Pass (Garbage)"),
 };
 
 
@@ -106,7 +107,7 @@ public:
 	TArray<TWeakObjectPtr<UPrimitiveComponent> > HiddenComponents;
 
 	/** The actors to hide in the scene capture. */
-	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings", meta=(EditCondition="!bUseRTOverride", EditConditionHides))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings", meta=(EditCondition="!bUseRTOverride", EditConditionHides))
 	TArray<AActor*> HiddenActors;
 
 	/** Rendering Scene view extensions can be important for correctly rendering landscapes etc, but can often cause unnecessary re-renders
@@ -119,11 +120,11 @@ public:
 	TArray<TWeakObjectPtr<UPrimitiveComponent> > ShowOnlyComponents;
 
 	/** The only actors to be rendered by this scene capture, if PrimitiveRenderMode is set to UseShowOnlyList.*/
-	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings", meta=(EditCondition="!bUseRTOverride", EditConditionHides))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings", meta=(EditCondition="!bUseRTOverride", EditConditionHides))
 	TArray<AActor*> ShowOnlyActors;
 
 	/** By default we invert the ue4's default alpha value of captured textures - you can disable it here */
-	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings")
 	bool InvertAlpha = true;
 
 	/** Scales the distance used by LOD. Set to values greater than 1 to cause the scene capture to use lower LODs than the main view to speed up the scene capture pass. */
@@ -236,11 +237,19 @@ protected:
 
 	void UpdateShowFlags();
 
+	bool bUsesComposureLicence = false;
+
+	bool bIgnoreConstrainAspectRatio = false;
+
 	UPROPERTY()
 	UMaterial* AlphaOnlyMaterial = nullptr;
 	UPROPERTY()
 	UMaterialInstanceDynamic* AlphaOnlyMID = nullptr;
 
+	UPROPERTY()
+	UMaterial* AlphaOnlyMaterialInverted = nullptr;
+	UPROPERTY()
+	UMaterialInstanceDynamic* AlphaOnlyInvertedMID = nullptr;
 
 	FDelegateHandle PostOpaqueRenderHandle;
 	bool bOnResolvedBound = false;

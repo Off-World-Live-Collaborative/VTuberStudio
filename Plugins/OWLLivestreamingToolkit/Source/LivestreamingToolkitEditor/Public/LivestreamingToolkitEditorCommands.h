@@ -25,6 +25,7 @@ public:
 	TSharedPtr<FUICommandInfo> WaitingForLogin;
 	TSharedPtr<FUICommandInfo> CancelLogin;
 	TSharedPtr<FUICommandInfo> MyAccount;
+	TSharedPtr<FUICommandInfo> LicenseUtility;
 	TSharedPtr<FUICommandInfo> AffiliateScheme;
 	TSharedPtr<FUICommandInfo> EditorViewportRendering;
 	TSharedPtr<FUICommandInfo> RuntimeViewportRendering;

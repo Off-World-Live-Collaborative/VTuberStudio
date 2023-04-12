@@ -2,7 +2,7 @@
 	"OutputFiles": [
 		"OWLScreenCapture.gen.cpp.obj",
 		"OWLScreenCapture.init.gen.cpp.obj",
-		"OWLScreenCapturer.gen.cpp.obj",
+		"OWLScreenCapturerOptions.gen.cpp.obj",
 		"FScreenCaptureHelpers.cpp.obj",
 		"OWLScreenCapture.cpp.obj",
 		"OWLScreenCaptureModule.cpp.obj",

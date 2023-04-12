@@ -17,6 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeOWLBlueprintFunctionLibrary() {}
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_LivestreamingToolkit();
 // End Cross Module References
+	DEFINE_FUNCTION(UOWLBlueprintFunctionLibrary::execLaunchLicenseUtility)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOWLBlueprintFunctionLibrary::LaunchLicenseUtility();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UOWLBlueprintFunctionLibrary::execInstallLicense)
 	{
 		P_GET_PROPERTY(FStrProperty,Z_Param_LicenseCode);
@@ -118,6 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLBlueprintFunctionLibrary() {}
 			{ "GetIsRuntimeViewportRendering", &UOWLBlueprintFunctionLibrary::execGetIsRuntimeViewportRendering },
 			{ "InitOWLApplicationLicense", &UOWLBlueprintFunctionLibrary::execInitOWLApplicationLicense },
 			{ "InstallLicense", &UOWLBlueprintFunctionLibrary::execInstallLicense },
+			{ "LaunchLicenseUtility", &UOWLBlueprintFunctionLibrary::execLaunchLicenseUtility },
 			{ "OWLLogIn", &UOWLBlueprintFunctionLibrary::execOWLLogIn },
 			{ "OWLLogInStatus", &UOWLBlueprintFunctionLibrary::execOWLLogInStatus },
 			{ "OWLLogOut", &UOWLBlueprintFunctionLibrary::execOWLLogOut },
@@ -348,6 +356,46 @@ void EmptyLinkFunctionForGeneratedCodeOWLBlueprintFunctionLibrary() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_InstallLicense_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics
+	{
+		struct OWLBlueprintFunctionLibrary_eventLaunchLicenseUtility_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OWLBlueprintFunctionLibrary_eventLaunchLicenseUtility_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(OWLBlueprintFunctionLibrary_eventLaunchLicenseUtility_Parms), &Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OWL Livestreaming Toolkit" },
+		{ "Comment", "/**\n\x09* Launch the Licensing Utility to manage your licenses\n\x09*/" },
+		{ "ModuleRelativePath", "Public/OWLBlueprintFunctionLibrary.h" },
+		{ "ToolTip", "Launch the Licensing Utility to manage your licenses" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOWLBlueprintFunctionLibrary, nullptr, "LaunchLicenseUtility", nullptr, nullptr, sizeof(Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::OWLBlueprintFunctionLibrary_eventLaunchLicenseUtility_Parms), Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -596,6 +644,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLBlueprintFunctionLibrary() {}
 		{ &Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_GetIsRuntimeViewportRendering, "GetIsRuntimeViewportRendering" }, // 3413107495
 		{ &Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_InitOWLApplicationLicense, "InitOWLApplicationLicense" }, // 1071317374
 		{ &Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_InstallLicense, "InstallLicense" }, // 1416184355
+		{ &Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_LaunchLicenseUtility, "LaunchLicenseUtility" }, // 1390547261
 		{ &Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_OWLLogIn, "OWLLogIn" }, // 2699291757
 		{ &Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_OWLLogInStatus, "OWLLogInStatus" }, // 2378169863
 		{ &Z_Construct_UFunction_UOWLBlueprintFunctionLibrary_OWLLogOut, "OWLLogOut" }, // 2931701807
@@ -648,9 +697,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLBlueprintFunctionLibrary() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_OWLBlueprintFunctionLibrary_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWLBlueprintFunctionLibrary, UOWLBlueprintFunctionLibrary::StaticClass, TEXT("UOWLBlueprintFunctionLibrary"), &Z_Registration_Info_UClass_UOWLBlueprintFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLBlueprintFunctionLibrary), 1169878862U) },
+		{ Z_Construct_UClass_UOWLBlueprintFunctionLibrary, UOWLBlueprintFunctionLibrary::StaticClass, TEXT("UOWLBlueprintFunctionLibrary"), &Z_Registration_Info_UClass_UOWLBlueprintFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLBlueprintFunctionLibrary), 1753053717U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_OWLBlueprintFunctionLibrary_h_1225432729(TEXT("/Script/LivestreamingToolkit"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_OWLBlueprintFunctionLibrary_h_1725498825(TEXT("/Script/LivestreamingToolkit"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_OWLBlueprintFunctionLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_OWLBlueprintFunctionLibrary_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

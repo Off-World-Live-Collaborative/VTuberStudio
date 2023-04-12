@@ -5,7 +5,7 @@
 #include "FFastRunningMean.h"
 #include "MediaPacket.h"
 #include "Containers/CircularQueue.h"
-#include "../Private/OWLVideoEncoder.h"
+#include "OWLVideoEncoder.h"
 
 extern "C"
 {
@@ -267,7 +267,7 @@ private:
 	/* Finds the AudioCodec and initialises the AudioCodecContext */
 	bool InitAudioCodec();
 	/* Creates the audio resample context for converting between sample rates */
-	bool InitAudioResampler(uint64_t InChannelLayout);
+	bool InitAudioResampler(AVChannelLayout InChannelLayout);
 	/* Allocates arrays of pointers used for handling audio samplerate conversion */
 	bool AllocateConversionBuffers(int NumChannels);
 	/* Opens the audio codec context */
@@ -310,7 +310,8 @@ private:
 	static int64 GetTimeNow();
 	void SetSRTOptions();
 	void OnShutdownRequested(bool TryReconnect);
-	uint64_t GetAVAudioChannelLayout(EOWLAudioChannelLayout Layout);
+	AVChannelLayout GetAVAudioChannelLayout(EOWLAudioChannelLayout Layout);
+	EOWLAudioChannelLayout GetAVAudioChannelLayoutFromChannels(int NumChannels);
 	int GetNumChannelsFromLayout(EOWLAudioChannelLayout Layout);
 	void CheckPacketLossTimeout();
 	/* Works out whether a fixed frame rate has been applied to this project
@@ -335,7 +336,7 @@ private:
 
 
 	// LibAV Audio State
-	AVCodec *AudioCodec = nullptr;
+	const AVCodec *AudioCodec = nullptr;
 	struct SwrContext *AudioResampleContext = nullptr;
 	bool AudioResamplerChannelChecked = false;
 	AVCodecContext *AudioCodecContext = nullptr;
@@ -373,7 +374,7 @@ private:
 
 	// LibAV Video State
 	TArray<AVHWDeviceType> HardwareDevices;
-	AVCodec *VideoCodec = nullptr;
+	const AVCodec *VideoCodec = nullptr;
 	AVCodecContext *VideoCodecContext = nullptr;
 	AVStream *VideoStream = nullptr;
 	AVFrame *OutputVideoFrame = nullptr;

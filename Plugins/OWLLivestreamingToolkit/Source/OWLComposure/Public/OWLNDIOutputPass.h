@@ -19,19 +19,16 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = OWLNDISender)
 	ENDIVideoConversionFormat VideoConversionFormat = ENDIVideoConversionFormat::NDIVCF_BGRA;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="NDI")
+	bool bCaptureAudio = false;
+
+
 public:
 	virtual void RelayOutput_Implementation(UTexture* FinalResult, UComposurePostProcessingPassProxy* PostProcessProxy) override;
-
-#if WITH_EDITOR
-	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
-#endif
 
 	static bool NDIModuleLoaded();
 
 	virtual void BeginDestroy() override;
-protected:
-	bool bActive = false;
 private:
-
-	TSharedPtr<FOWLNDISender, ESPMode::ThreadSafe> NDISender = nullptr;
+	FString UUID = FGuid::NewGuid().ToString();
 };

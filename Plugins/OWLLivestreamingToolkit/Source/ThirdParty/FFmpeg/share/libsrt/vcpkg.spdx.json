@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libsrt-x64-windows-1.4.4#2-80da4f34-886b-49c8-a803-2abf6650cbdb",
-  "name": "libsrt:x64-windows@1.4.4#2 01e83a619263ac514aa29c39e0922d20d52204ba26215f24ad44852e5492908d",
+  "documentNamespace": "https://spdx.org/spdxdocs/libsrt-x64-windows-1.5.0#2-e2b9b16c-1191-42a6-a635-ffbe01b7c396",
+  "name": "libsrt:x64-windows@1.5.0#2 a251fa065de1c6ddae8643397227919da5016accd182e43cdfc60bec525f3393",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-67e17c1782801cf481be9ac0b3765dff3e4bdeb8"
+      "Tool: vcpkg-105f7f7e8a5ea10dfac9874ff9d1a6bacba5f454"
     ],
-    "created": "2022-05-17T11:04:48Z"
+    "created": "2023-03-28T08:54:42Z"
   },
   "relationships": [
     {
@@ -33,6 +33,11 @@
       "relatedSpdxElement": "SPDXRef-file-2"
     },
     {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-3"
+    },
+    {
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-port"
@@ -53,7 +58,12 @@
       "relatedSpdxElement": "SPDXRef-port"
     },
     {
-      "spdxElementId": "SPDXRef-file-2",
+      "spdxElementId": "SPDXRef-file-3",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-3",
       "relationshipType": "DEPENDENCY_MANIFEST_OF",
       "relatedSpdxElement": "SPDXRef-port"
     }
@@ -62,10 +72,10 @@
     {
       "name": "libsrt",
       "SPDXID": "SPDXRef-port",
-      "versionInfo": "1.4.4#2",
+      "versionInfo": "1.5.0#2",
       "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/libsrt",
       "homepage": "https://github.com/Haivision/srt",
-      "licenseConcluded": "NOASSERTION",
+      "licenseConcluded": "MPL-2.0",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "description": "Secure Reliable Transport (SRT) is an open source transport technology that optimizes streaming performance across unpredictable networks, such as the Internet.",
@@ -74,9 +84,9 @@
     {
       "name": "libsrt:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "01e83a619263ac514aa29c39e0922d20d52204ba26215f24ad44852e5492908d",
+      "versionInfo": "a251fa065de1c6ddae8643397227919da5016accd182e43cdfc60bec525f3393",
       "downloadLocation": "NONE",
-      "licenseConcluded": "NOASSERTION",
+      "licenseConcluded": "MPL-2.0",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
@@ -84,14 +94,14 @@
     {
       "SPDXID": "SPDXRef-resource-1",
       "name": "Haivision/srt",
-      "downloadLocation": "git+https://github.com/Haivision/srt@v1.4.4",
+      "downloadLocation": "git+https://github.com/Haivision/srt@v1.5.0",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "checksums": [
         {
           "algorithm": "SHA512",
-          "checksumValue": "0d51e0ef73f4aa7eb284288cdbbd75b1c161969c2c2fed3a6d4e13a931341ca41dfcf2d6c1b9728f72b43454a9fde3764da67a27af9f0c99a6818682e4f4d4ba"
+          "checksumValue": "68ab5fe316cfbbbba31b5b2354f657e23c90e14674f8dac01df2bf98c4776a7fafcd690a4dfad3a340e6be577a22360ca04ef2397c8a0dd507adebdd54dc22fb"
         }
       ]
     }
@@ -110,12 +120,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./portfile.cmake",
+      "fileName": "./fix-static.patch",
       "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "91c15ab90915bd4c3c8d459bc3bfed0a43cca36496c3836b2146f310f43c75c6"
+          "checksumValue": "a315a046173963f463feaf18ef036b89465644928243ba474f4caa705bbca577"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3fc1648138a3a045413ef2b36f516cb09256dfc1cf4f3239d5b55b32355dd481"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -123,11 +145,11 @@
     },
     {
       "fileName": "./vcpkg.json",
-      "SPDXID": "SPDXRef-file-2",
+      "SPDXID": "SPDXRef-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9d5e4713ce75eebbe8c0a42a9d61afbadb89864e5dbbd0661f553c25a36114bd"
+          "checksumValue": "553905de7c3abdbbedf92b651f32d63271c462ac8582d9fb7d2006befbe52e86"
         }
       ],
       "licenseConcluded": "NOASSERTION",

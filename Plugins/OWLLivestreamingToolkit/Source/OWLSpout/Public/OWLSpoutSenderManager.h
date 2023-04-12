@@ -58,7 +58,6 @@ private:
 	static bool ClosedEditorSenders;
 
 private:
-	void ValidateAndSend(FString UUID, FOWLSpoutSenderInterface& Sender);
 	void CloseAllSenders(bool keepActive);
 	void OnEndFrame();
 	bool ShouldApplyWatermark(const UWorld* World, const UTextureRenderTarget2D* SenderRT) const;

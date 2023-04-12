@@ -10,6 +10,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class UUserWidget;
+class UWorld;
 #ifdef OWLCOMPOSURE_OWLUIInputPass_generated_h
 #error "OWLUIInputPass.generated.h already included, missing '#pragma once' in OWLUIInputPass.h"
 #endif
@@ -18,11 +19,13 @@ class UUserWidget;
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_15_SPARSE_DATA
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_15_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execOnWorldDestroy); \
 	DECLARE_FUNCTION(execGetWidget);
 
 
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execOnWorldDestroy); \
 	DECLARE_FUNCTION(execGetWidget);
 
 
@@ -55,8 +58,7 @@ private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UOWLUIInputPass(UOWLUIInputPass&&); \
 	NO_API UOWLUIInputPass(const UOWLUIInputPass&); \
-public: \
-	NO_API virtual ~UOWLUIInputPass();
+public:
 
 
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_15_ENHANCED_CONSTRUCTORS \
@@ -67,8 +69,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UOWLUIInputPass); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UOWLUIInputPass); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UOWLUIInputPass) \
-	NO_API virtual ~UOWLUIInputPass();
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UOWLUIInputPass)
 
 
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLUIInputPass_h_12_PROLOG

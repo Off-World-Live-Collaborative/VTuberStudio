@@ -11,7 +11,6 @@ UENUM()
 enum class EOWLOutputType : uint8
 {
 	OT_Media,
-	OT_MediaGPU,
 	OT_VirtualWebcam,
 	// todo : we should implement a version for NDI here as well as now we're copying the code
 };
@@ -45,6 +44,7 @@ private:
 
 private:
 	void EmptyOutputTextures();
+	EPixelFormat PixelFormatFromType(EOWLOutputType Type);
 
 public:
 	/* Uses alternating readback textures `OutputTextures` to

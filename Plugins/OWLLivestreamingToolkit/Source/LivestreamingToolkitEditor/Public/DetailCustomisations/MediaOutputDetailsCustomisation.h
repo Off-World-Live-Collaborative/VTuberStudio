@@ -34,6 +34,8 @@ private:
 	bool IsStartEnabled() const;
 	bool IsStopEnabled() const;
 
+	bool IsHardwareEncodingEnabled() const;
+
 	EVisibility GetMeteredTextVisibility() const;
 	EVisibility GetUnmeteredTextVisibility() const;
 	EVisibility GetNoLicenceFoundVisibility() const;
@@ -45,5 +47,10 @@ private:
 	FSlateColor GetMinutesRemainingColor() const;
 	FReply OnAddMoreMinutesClicked();
 	FReply OnGetTrialMinutesClicked();
+
+	FReply OnEnableHardwareEncodersClick();
+	FText HardwareEncodersButtonText() const;
+	bool HardwareEncodersButtonEnabled() const;
+	EVisibility HardwareEncodersTextVisibility() const;
 
 };

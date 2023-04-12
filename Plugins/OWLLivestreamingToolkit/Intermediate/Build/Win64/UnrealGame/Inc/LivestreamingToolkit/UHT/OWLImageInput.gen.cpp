@@ -35,14 +35,12 @@ void EmptyLinkFunctionForGeneratedCodeOWLImageInput() {}
 	};
 	const UECodeGen_Private::FEnumeratorParam Z_Construct_UEnum_LivestreamingToolkit_EOWLOutputType_Statics::Enumerators[] = {
 		{ "EOWLOutputType::OT_Media", (int64)EOWLOutputType::OT_Media },
-		{ "EOWLOutputType::OT_MediaGPU", (int64)EOWLOutputType::OT_MediaGPU },
 		{ "EOWLOutputType::OT_VirtualWebcam", (int64)EOWLOutputType::OT_VirtualWebcam },
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_LivestreamingToolkit_EOWLOutputType_Statics::Enum_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Public/Tools/OWLImageInput.h" },
 		{ "OT_Media.Name", "EOWLOutputType::OT_Media" },
-		{ "OT_MediaGPU.Name", "EOWLOutputType::OT_MediaGPU" },
 		{ "OT_VirtualWebcam.Name", "EOWLOutputType::OT_VirtualWebcam" },
 	};
 #endif
@@ -71,9 +69,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLImageInput() {}
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 	};
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_Tools_OWLImageInput_h_Statics::EnumInfo[] = {
-		{ EOWLOutputType_StaticEnum, TEXT("EOWLOutputType"), &Z_Registration_Info_UEnum_EOWLOutputType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1607207063U) },
+		{ EOWLOutputType_StaticEnum, TEXT("EOWLOutputType"), &Z_Registration_Info_UEnum_EOWLOutputType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1939822597U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_Tools_OWLImageInput_h_3688605798(TEXT("/Script/LivestreamingToolkit"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_Tools_OWLImageInput_h_890433850(TEXT("/Script/LivestreamingToolkit"),
 		nullptr, 0,
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_Tools_OWLImageInput_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_Tools_OWLImageInput_h_Statics::EnumInfo));
