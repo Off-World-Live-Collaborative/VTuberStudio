@@ -172,19 +172,17 @@ template<> OWLSCREENCAPTURE_API UScriptStruct* StaticStruct<FOWLScreenCaptureOpt
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_MonitorName_MetaData[] = {
 		{ "Category", "OWLScreenCapture" },
-		{ "Comment", "// this will be marked hidden by details customisation\n" },
 		{ "ModuleRelativePath", "Public/OWLScreenCapturerOptions.h" },
-		{ "ToolTip", "this will be marked hidden by details customisation" },
 	};
 #endif
-	const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_MonitorName = { "MonitorName", nullptr, (EPropertyFlags)0x0010000000022015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLScreenCaptureOptions, MonitorName), METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_MonitorName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_MonitorName_MetaData)) };
+	const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_MonitorName = { "MonitorName", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLScreenCaptureOptions, MonitorName), METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_MonitorName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_MonitorName_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_WindowName_MetaData[] = {
 		{ "Category", "OWLScreenCapture" },
 		{ "ModuleRelativePath", "Public/OWLScreenCapturerOptions.h" },
 	};
 #endif
-	const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_WindowName = { "WindowName", nullptr, (EPropertyFlags)0x0010000000022015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLScreenCaptureOptions, WindowName), METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_WindowName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_WindowName_MetaData)) };
+	const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_WindowName = { "WindowName", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLScreenCaptureOptions, WindowName), METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_WindowName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_WindowName_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewProp_bHideRenderTarget_MetaData[] = {
 		{ "Category", "OWLScreenCapture" },
@@ -236,9 +234,9 @@ template<> OWLSCREENCAPTURE_API UScriptStruct* StaticStruct<FOWLScreenCaptureOpt
 		{ EOWLScreenCaptureType_StaticEnum, TEXT("EOWLScreenCaptureType"), &Z_Registration_Info_UEnum_EOWLScreenCaptureType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4213648923U) },
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapturerOptions_h_Statics::ScriptStructInfo[] = {
-		{ FOWLScreenCaptureOptions::StaticStruct, Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewStructOps, TEXT("OWLScreenCaptureOptions"), &Z_Registration_Info_UScriptStruct_OWLScreenCaptureOptions, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLScreenCaptureOptions), 1712815089U) },
+		{ FOWLScreenCaptureOptions::StaticStruct, Z_Construct_UScriptStruct_FOWLScreenCaptureOptions_Statics::NewStructOps, TEXT("OWLScreenCaptureOptions"), &Z_Registration_Info_UScriptStruct_OWLScreenCaptureOptions, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLScreenCaptureOptions), 2313322471U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapturerOptions_h_2833827460(TEXT("/Script/OWLScreenCapture"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapturerOptions_h_1374964490(TEXT("/Script/OWLScreenCapture"),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapturerOptions_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapturerOptions_h_Statics::ScriptStructInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapturerOptions_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLScreenCapture_Public_OWLScreenCapturerOptions_h_Statics::EnumInfo));

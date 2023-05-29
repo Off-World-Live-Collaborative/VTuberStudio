@@ -12,11 +12,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOWLCGElement() {}
 // Cross Module References
 	ACTORLAYERUTILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FActorLayer();
-	COMPOSURE_API UClass* Z_Construct_UClass_ACompositingElement();
 	COMPOSURE_API UClass* Z_Construct_UClass_UCompositingInputInterface_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FComponentReference();
+	OWLCOMPOSURE_API UClass* Z_Construct_UClass_AOWLBaseComp();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_AOWLCGElement();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_AOWLCGElement_NoRegister();
 	OWLCOMPOSURE_API UClass* Z_Construct_UClass_UOWLCGCaptureComponent_NoRegister();
@@ -251,13 +251,18 @@ template<> OWLCOMPOSURE_API UScriptStruct* StaticStruct<FOWLActorLayer>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_NoCameraTexture_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_NoCameraTexture;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bHasCheckedParents_MetaData[];
+#endif
+		static void NewProp_bHasCheckedParents_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bHasCheckedParents;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_AOWLCGElement_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_ACompositingElement,
+		(UObject* (*)())Z_Construct_UClass_AOWLBaseComp,
 		(UObject* (*)())Z_Construct_UPackage__Script_OWLComposure,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AOWLCGElement_Statics::FuncInfo[] = {
@@ -274,9 +279,8 @@ template<> OWLCOMPOSURE_API UScriptStruct* StaticStruct<FOWLActorLayer>()
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLCGElement_Statics::NewProp_CaptureComponent_MetaData[] = {
-		{ "Category", "Capture" },
+		{ "Category", "OffWorldLive" },
 		{ "Comment", "/** Component used to generate image data for this CG Layer */" },
-		{ "DisplayName", "Capture Settings" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/OWLCGElement.h" },
 		{ "ToolTip", "Component used to generate image data for this CG Layer" },
@@ -357,6 +361,16 @@ template<> OWLCOMPOSURE_API UScriptStruct* StaticStruct<FOWLActorLayer>()
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOWLCGElement_Statics::NewProp_NoCameraTexture = { "NoCameraTexture", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLCGElement, NoCameraTexture), Z_Construct_UClass_UTexture_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AOWLCGElement_Statics::NewProp_NoCameraTexture_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLCGElement_Statics::NewProp_NoCameraTexture_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLCGElement_Statics::NewProp_bHasCheckedParents_MetaData[] = {
+		{ "ModuleRelativePath", "Public/OWLCGElement.h" },
+	};
+#endif
+	void Z_Construct_UClass_AOWLCGElement_Statics::NewProp_bHasCheckedParents_SetBit(void* Obj)
+	{
+		((AOWLCGElement*)Obj)->bHasCheckedParents = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AOWLCGElement_Statics::NewProp_bHasCheckedParents = { "bHasCheckedParents", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(AOWLCGElement), &Z_Construct_UClass_AOWLCGElement_Statics::NewProp_bHasCheckedParents_SetBit, METADATA_PARAMS(Z_Construct_UClass_AOWLCGElement_Statics::NewProp_bHasCheckedParents_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLCGElement_Statics::NewProp_bHasCheckedParents_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AOWLCGElement_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLCGElement_Statics::NewProp_CaptureComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLCGElement_Statics::NewProp_CapturePassName,
@@ -368,6 +382,7 @@ template<> OWLCOMPOSURE_API UScriptStruct* StaticStruct<FOWLActorLayer>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLCGElement_Statics::NewProp_OriginalFocalLength,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLCGElement_Statics::NewProp_LastDistortionMID,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLCGElement_Statics::NewProp_NoCameraTexture,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLCGElement_Statics::NewProp_bHasCheckedParents,
 	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AOWLCGElement_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UCompositingInputInterface_NoRegister, (int32)VTABLE_OFFSET(AOWLCGElement, ICompositingInputInterface), false },  // 502734225
@@ -417,9 +432,9 @@ template<> OWLCOMPOSURE_API UScriptStruct* StaticStruct<FOWLActorLayer>()
 		{ FOWLActorLayer::StaticStruct, Z_Construct_UScriptStruct_FOWLActorLayer_Statics::NewStructOps, TEXT("OWLActorLayer"), &Z_Registration_Info_UScriptStruct_OWLActorLayer, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLActorLayer), 3165121034U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLCGElement, AOWLCGElement::StaticClass, TEXT("AOWLCGElement"), &Z_Registration_Info_UClass_AOWLCGElement, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLCGElement), 1654358798U) },
+		{ Z_Construct_UClass_AOWLCGElement, AOWLCGElement::StaticClass, TEXT("AOWLCGElement"), &Z_Registration_Info_UClass_AOWLCGElement, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLCGElement), 1841555000U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_3635151635(TEXT("/Script/OWLComposure"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_1824503375(TEXT("/Script/OWLComposure"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::ScriptStructInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::EnumInfo));

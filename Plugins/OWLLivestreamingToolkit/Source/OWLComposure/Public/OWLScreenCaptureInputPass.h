@@ -31,6 +31,7 @@ protected:
 
 private:
 	void OnEngineFrameEnd();
+	void OnEndPlay();
 	void Initialise();
 	void GenerateRenderTarget();
 
@@ -41,6 +42,7 @@ private:
 	bool bAwaitingStartup = false;
 
 	FDelegateHandle OnFrameEndHandle;
+	FDelegateHandle OnEndPlayHandle;
 	FOWLScreenCapturer* Capturer = nullptr;
 
 };

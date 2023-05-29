@@ -188,6 +188,7 @@ public:
 public:
 	static const FName VisTypeToFname(EOWLOutputBufferVisualisation Type);
 
+	static bool LandscapeInTheScene(UWorld* World);
 public:
 	FEngineShowFlags ShowFlags;
 	int32 ViewModeIndex;
