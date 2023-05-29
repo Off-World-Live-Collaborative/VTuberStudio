@@ -179,6 +179,10 @@
 		{
 			"Name": "VRM4U",
 			"Enabled": true
+		},
+		{
+			"Name": "StaticMeshEditorModeling",
+			"Enabled": true
 		}
 	]
 }
