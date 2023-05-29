@@ -18,6 +18,7 @@ struct FOWLScreenCaptureOptions
 {
 	GENERATED_BODY()
 
+public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = OWLScreenCapture)
 	EOWLScreenCaptureType ScreenCaptureType = EOWLScreenCaptureType::SCT_Monitor;
 
@@ -30,11 +31,10 @@ struct FOWLScreenCaptureOptions
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = OWLScreenCapture)
 	bool CaptureCursor = false;
 
-	// this will be marked hidden by details customisation
-	UPROPERTY(VisibleAnywhere, Transient, BlueprintReadOnly, Category = OWLScreenCapture)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = OWLScreenCapture)
 	FString MonitorName = "";
 
-	UPROPERTY(VisibleAnywhere, Transient, BlueprintReadOnly, Category = OWLScreenCapture)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = OWLScreenCapture)
 	FString WindowName = "";
 
 	UPROPERTY(VisibleAnywhere, Transient, BlueprintReadOnly, Category = OWLScreenCapture)

@@ -1,4 +1,4 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Copyright Off World Live Limited, 2020-2023
 
 #pragma once
 
@@ -6,6 +6,7 @@
 #include "CompositingElement.h"
 #include "CameraCalibrationTypes.h"
 #include "ActorLayerUtilities.h"
+#include "OWLBaseComp.h"
 #include "CompositingElements/CompositingElementInputs.h"
 #include "OWLCGElement.generated.h"
 
@@ -26,19 +27,19 @@ public:
 	FActorLayer ActorSet;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Composure")
-	EOWLIncludeExclude GroupType;
+	EOWLIncludeExclude GroupType = EOWLIncludeExclude::EICE_Include;
 };
 
 class ULensComponent;
 class UOWLCGCaptureComponent;
 
 UCLASS(BlueprintType, Category="OWL Composure")
-class OWLCOMPOSURE_API AOWLCGElement : public ACompositingElement, public ICompositingInputInterface
+class OWLCOMPOSURE_API AOWLCGElement : public AOWLBaseComp, public ICompositingInputInterface
 {
 	GENERATED_BODY()
 public:
 	/** Component used to generate image data for this CG Layer */
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Capture", DisplayName="Capture Settings")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category=OffWorldLive)
 	UOWLCGCaptureComponent* CaptureComponent;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Composure|Input", DisplayName="Capture Pass Name")
@@ -87,8 +88,6 @@ protected:
 	UPROPERTY()
 	TObjectPtr<UMaterialInstanceDynamic> LastDistortionMID = nullptr;
 
-	virtual int32 GetRenderPriority() const override;
-
 public:
 	/** Sets whether distortion should be applied or not */
 	void SetApplyDistortion(bool bInApplyDistortion);
@@ -101,4 +100,9 @@ private:
 	UTexture* NoCameraTexture = nullptr;
 
 	void UpdateActorsList();
+	/* Return true if no non-OWL Comp elements in scene */
+	bool SceneOnlyContainsOWLCompElements();
+
+	UPROPERTY()
+	bool bHasCheckedParents = false;
 };

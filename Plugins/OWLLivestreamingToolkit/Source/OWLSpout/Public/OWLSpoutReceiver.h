@@ -40,13 +40,14 @@ private:
 
 public:
 	bool Initialised = false;
+	bool bClosing = false;
 
 private:
 	bool InitDX();
 
 	void Receive(FString Name, UTextureRenderTarget2D* DestRenderTarget, bool useFirstAvailableSender, bool bFixGamma);
 	bool Receive_DX12(FString name, UTextureRenderTarget2D* DestRenderTarget, bool bFixGamma);
-	bool Receive_DX11_RT(FString name, HANDLE Handle, UTextureRenderTarget2D* DestRenderTarget);
+	bool Receive_DX11_RT(FString name, HANDLE Handle, UTextureRenderTarget2D* DestRenderTarget, bool bFixGamma);
 
 	bool InitD3D12(FRHICommandListImmediate& RHICmdList);
 	void CopyResourceD3D12(ID3D12Resource* DestResource);
@@ -55,6 +56,7 @@ private:
 	FTextureRHIRef CreateRHITexture(ID3D12Resource* Resource, EPixelFormat Format);
 	bool UpdateDestRenderTargetIfNeeded(int Width, int Height, ETextureRenderTargetFormat Format,
 	                                    UTextureRenderTarget2D* Target);
+	FTexture2DRHIRef DX11IntermediateTexture = nullptr;
 
 	bool bHasLoggedError = false;
 

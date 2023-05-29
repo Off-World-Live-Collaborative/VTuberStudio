@@ -62,7 +62,7 @@
 #define UE_DISABLE_INLINE_GEN_CPP 0
 #define UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_1 0
 #define OWL_AUTH_URL "https://plugin-api.offworld.live"
-#define RELEASE_DATE 2023-04-12T13:13:57.000Z
+#define RELEASE_DATE 2023-05-05T16:46:52.000Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
 #define AUTH_APP_NAME owl-licensing-utility.exe
@@ -214,7 +214,7 @@
 #define PROPERTYPATH_API 
 #define LIVESTREAMINGTOOLKITSHADERS_API 
 #define OWL_AUTH_URL "https://plugin-api.offworld.live"
-#define RELEASE_DATE 2023-04-12T13:13:57.000Z
+#define RELEASE_DATE 2023-05-05T16:46:52.000Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
 #define AUTH_APP_NAME owl-licensing-utility.exe

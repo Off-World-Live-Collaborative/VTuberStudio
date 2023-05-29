@@ -47,22 +47,20 @@ public class OWLComposure : ModuleRules
 		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"CinematicCamera",
-				"Composure",
 				"Core",
 				"CoreUObject",
+				"Composure",
+				"RenderCore",
 				"CoreUObject",
+				"MediaAssets",
 				"Engine",
+				"RHI",
 				"LivestreamingToolkit",
 				"LivestreamingToolkitShaders",
-				"MediaAssets",
 				"OWLCamera",
-				"OWLScreenCapture",
+				"CinematicCamera",
 				"OWLSpout",
-				"RHI",
-				"RHICore",
-				"RenderCore",
-				"Renderer",
+				"OWLScreenCapture",
 			}
 		);
 

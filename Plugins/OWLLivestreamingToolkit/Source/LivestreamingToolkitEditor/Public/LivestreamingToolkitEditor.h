@@ -48,8 +48,6 @@ private:
 	void RegisterMenus();
 	bool IsLogInButtonVisible();
 	bool IsLogOutButtonVisible();
-	bool IsEditorViewportRenderingButtonEnabled();
-	bool IsRuntimeViewportRenderingButtonEnabled();
 
 	TSharedRef<SDockTab> MakeLivestreamWizardTab( const FSpawnTabArgs& );
 	TSharedRef<SWidget> GetLivestreamWizard(const TSharedRef<SDockTab>& InParentTab);
@@ -62,8 +60,6 @@ private:
 	void RegisterWizardTabSpawner();
 	void RegisterAndMapPluginCommands();
 	void RegisterDetailsCustomisation();
-	/* Composure loads significantly later so we only execute this at the end */
-	void RegisterComposureDetailsCustomisations();
 	void RegisterPlacementModeExtensions();
 	void RegisterPlacementModeItems(const struct FPlacementCategoryInfo* Info);
 	void UnregisterPlacementModeExtensions();
