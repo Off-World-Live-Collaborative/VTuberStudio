@@ -8,7 +8,15 @@ public class BowtiConfigsVH : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[] {
+			"Core",
+			"CoreUObject",
+			"Engine",
+			"InputCore",
+			"OWL360Camera",
+			"OWLCamera",
+			"CinematicCamera"
+		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
