@@ -2,10 +2,10 @@
 
 ![Scene Preview](./ReadMe/VTS.gif)
 
-Welcome to OWL VTuber Studio open repository! 
+Welcome to the OWL VTuber Studio open repository! 
 VTuber Studio features the vast capabilities of the Off World Live Live-Streaming Toolkit for VTubers, game streamers, and content creators. 
 
-VTS provides streaming functionalities in-game and in-editor, providing an open-source project template for users to quickly customize and package their own VTuber Studio. 
+VTS provides streaming and capture functionalities in-game and in-editor, providing an open-source project template for users to quickly customize and package their own VTuber Studio. 
 
 
 ## VTuber Studio 
@@ -19,45 +19,81 @@ VTS provides streaming functionalities in-game and in-editor, providing an open-
   > - OWL Capture Systems: Viewport Capture, CineCam Capture, 360 Capture 
   > - Streaming and Media Output: Virtual Webcam, Spout Output, NDI Output, Streaming to RTMP, Save to File
   > - Media Input: Screen Capture, Spout Input, NDI Input
-  > - Actor Blueprint to connect 
+  > - Actor Blueprint to select desired capture systems, their respective render targets, and display materials
   > - LiveLink 
-  > - Example Avatars (VRM & Metahuman) and Studio Environment
+  > - Example assets such as avatars (VRM & Metahuman), environment meshes, and materials
 
+> ### Dependencies
+>>> - To explore all features in VTS and package your own application, you will need to download:
+>>> 1. Unreal Engine 5.2 (https://www.unrealengine.com/en-US/download)
+>>> 1. Visual Studio 2022 (https://visualstudio.microsoft.com/vs/)
+>>> 1. OBS Studio (https://obsproject.com/download)
+>>> 1. Spout Plugin for OBS Studio (https://github.com/Off-World-Live/obs-spout2-plugin/releases)
+>>> 1. NDI Tools (https://ndi.video/type/ndi-tools/)
 
 > ### How to use the VTuber Studio?
-> - Once GitHub 
-> - 
-
+>  #### Download from Releases or Download Center
+> - Download project from GitHub Releases or [Download Center](https://offworld.live/resources/download-center)
+> - The project should contain generated .sln files for Unreal Engine to open the project directly
+> - Unzip the folder
+> - Double-click *VTuberStudio.uproject* and open project in UE 5.2
+> 
+> #### Build from Source
+> - Clone project from GitHub or download project folder from [Download Center](https://offworld.live/resources/download-center)
+> - Unzip the folder
+> - Right-click *VTuberStudio.uproject* and select 'Generate Visual Studio project files'
+> - In Visual Studio 2022, open the VTuberStudio.sln file, select Solution *'VTuberStudio'* in Solution Explorer, and right-click to Build Solution
+> - Open the project in UE 5.2
 
 > ### How can I access VTS? 
-> VTS is available to download 
-Package version for release 
+> VTS is available on our [Download Center](https://offworld.live/resources/download-center) and GitHub repository.
+> 
+> We will be releasing updates regularly to provide new assets and blueprint for VTuber application development.
 
 
 > ### Licensing
-> The OWL VTuber Studio is an Apache-licensed open-source Unreal project file repository on GitHub.
+> The OWL VTuber Studio is an *Apache-licensed* open-source Unreal project file repository on GitHub.
+> 
 >  It allows users to use the software for any purpose, to distribute it, to modify it, and to distribute modified versions of the software under the terms of the license, without concern for royalties.
 
 > ### FAQ
-Open on `Command Prompt` 
-```
-VTuberStudio.exe -messaging to get livelink work 
-```
-> #### Contributions
-Changes, one BP at a time, --> pull request 
-Requests will be reviewed individually 
+>>#### How can I get LiveLink to work in packaged game?
+>> You may double-click *RunVTuberStudio.bat* to run the packaged game with messaging enabled under file path:  `../VTuberStudio/Builds/Windows/RunVTuberStudio.bat` 
+>>
+>> Alternatively, you may use `Command Prompt` and `cd` into the appropriate file path, such as `../VTuberStudio/Builds/Windows/`, and use the following command line:
+>> 
+>>```
+>> VTuberStudio.exe -messaging
+>>```
+
+> ### Contributions
+> VTS is a community-led and orientated project, encouraging collaboration and contribution among content creators with or without experience in game development.
+>
+> To contribute to VTuber Studio, it is recommended that you submit changes in one blueprint at a time. 
+> After you initiate a pull request, the OWL team will review/ approve each request individually to ensure that proposed changes are aligned with our style requirements.
 
 
 #### Acknowledgement
-VTS is 
+>VTS is 
+>VRM4U (https://github.com/ruyo/VRM4U)
 Links to OWL
 Links to VRM4U Plugin (MIT License)
 
+#### Contributors
+>VTuber Studio is created by @wesleyyuen and @jennnital with the support of the Off World Live team.
+>
+>Special thanks to @campbellwmorgan @fdomw for the development of VTuber Studio as well as @enpe23 and @HardcoreRick for creating key visual assets and environment design.
+
+
+>
+>
 
 ![Scene Preview](./ReadMe/OWLLogo.png)
 ### [Off World Live](https://offworld.live/)
 
 Off World Live is a creator-focused engineering and research group democratizing media content creation in Unreal Engine. 
 
-For more information about our products and relevant licenses, please click here 
+To learn more about our products and relevant licenses, please join our community on [Discord](https://discord.gg/EqR7FYjqPs). 
+
+
 
