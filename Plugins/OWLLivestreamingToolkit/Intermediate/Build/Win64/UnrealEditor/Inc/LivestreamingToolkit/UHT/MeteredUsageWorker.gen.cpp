@@ -17,7 +17,7 @@ class UScriptStruct* FDummyStruct::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_DummyStruct.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_DummyStruct.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FDummyStruct, Z_Construct_UPackage__Script_LivestreamingToolkit(), TEXT("DummyStruct"));
+		Z_Registration_Info_UScriptStruct_DummyStruct.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FDummyStruct, (UObject*)Z_Construct_UPackage__Script_LivestreamingToolkit(), TEXT("DummyStruct"));
 	}
 	return Z_Registration_Info_UScriptStruct_DummyStruct.OuterSingleton;
 }

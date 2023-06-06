@@ -24,7 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLFFmpegOutput() {}
 	{
 		if (!Z_Registration_Info_UEnum_EOWLMediaOutputType.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_EOWLMediaOutputType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLMedia_EOWLMediaOutputType, Z_Construct_UPackage__Script_OWLMedia(), TEXT("EOWLMediaOutputType"));
+			Z_Registration_Info_UEnum_EOWLMediaOutputType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLMedia_EOWLMediaOutputType, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("EOWLMediaOutputType"));
 		}
 		return Z_Registration_Info_UEnum_EOWLMediaOutputType.OuterSingleton;
 	}
@@ -85,7 +85,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLFFmpegOutput() {}
 	{
 		if (!Z_Registration_Info_UEnum_EOWLDestinationFormat.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_EOWLDestinationFormat.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLMedia_EOWLDestinationFormat, Z_Construct_UPackage__Script_OWLMedia(), TEXT("EOWLDestinationFormat"));
+			Z_Registration_Info_UEnum_EOWLDestinationFormat.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLMedia_EOWLDestinationFormat, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("EOWLDestinationFormat"));
 		}
 		return Z_Registration_Info_UEnum_EOWLDestinationFormat.OuterSingleton;
 	}
@@ -155,7 +155,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLFFmpegOutput() {}
 	{
 		if (!Z_Registration_Info_UEnum_EOWLSRTPubKeyLen.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_EOWLSRTPubKeyLen.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLMedia_EOWLSRTPubKeyLen, Z_Construct_UPackage__Script_OWLMedia(), TEXT("EOWLSRTPubKeyLen"));
+			Z_Registration_Info_UEnum_EOWLSRTPubKeyLen.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLMedia_EOWLSRTPubKeyLen, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("EOWLSRTPubKeyLen"));
 		}
 		return Z_Registration_Info_UEnum_EOWLSRTPubKeyLen.OuterSingleton;
 	}
@@ -215,7 +215,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLFFmpegOutput() {}
 	{
 		if (!Z_Registration_Info_UEnum_EOWLAudioChannelLayout.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_EOWLAudioChannelLayout.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLMedia_EOWLAudioChannelLayout, Z_Construct_UPackage__Script_OWLMedia(), TEXT("EOWLAudioChannelLayout"));
+			Z_Registration_Info_UEnum_EOWLAudioChannelLayout.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLMedia_EOWLAudioChannelLayout, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("EOWLAudioChannelLayout"));
 		}
 		return Z_Registration_Info_UEnum_EOWLAudioChannelLayout.OuterSingleton;
 	}
@@ -408,7 +408,7 @@ class UScriptStruct* FOWLSRTOptions::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLSRTOptions.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLSRTOptions.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLSRTOptions, Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLSRTOptions"));
+		Z_Registration_Info_UScriptStruct_OWLSRTOptions.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLSRTOptions, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLSRTOptions"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLSRTOptions.OuterSingleton;
 }
@@ -536,7 +536,7 @@ class UScriptStruct* FOWLAudioSampleBlock::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLAudioSampleBlock.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLAudioSampleBlock.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLAudioSampleBlock, Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLAudioSampleBlock"));
+		Z_Registration_Info_UScriptStruct_OWLAudioSampleBlock.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLAudioSampleBlock, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLAudioSampleBlock"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLAudioSampleBlock.OuterSingleton;
 }
@@ -587,7 +587,7 @@ class UScriptStruct* FOWLEncodedPacket::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLEncodedPacket.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLEncodedPacket.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLEncodedPacket, Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLEncodedPacket"));
+		Z_Registration_Info_UScriptStruct_OWLEncodedPacket.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLEncodedPacket, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLEncodedPacket"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLEncodedPacket.OuterSingleton;
 }
@@ -638,7 +638,7 @@ class UScriptStruct* FOWLFFmpegSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLFFmpegSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLFFmpegSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLFFmpegSettings, Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLFFmpegSettings"));
+		Z_Registration_Info_UScriptStruct_OWLFFmpegSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLFFmpegSettings, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLFFmpegSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLFFmpegSettings.OuterSingleton;
 }

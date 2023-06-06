@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLImageInput() {}
 	{
 		if (!Z_Registration_Info_UEnum_EOWLOutputType.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_EOWLOutputType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_LivestreamingToolkit_EOWLOutputType, Z_Construct_UPackage__Script_LivestreamingToolkit(), TEXT("EOWLOutputType"));
+			Z_Registration_Info_UEnum_EOWLOutputType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_LivestreamingToolkit_EOWLOutputType, (UObject*)Z_Construct_UPackage__Script_LivestreamingToolkit(), TEXT("EOWLOutputType"));
 		}
 		return Z_Registration_Info_UEnum_EOWLOutputType.OuterSingleton;
 	}

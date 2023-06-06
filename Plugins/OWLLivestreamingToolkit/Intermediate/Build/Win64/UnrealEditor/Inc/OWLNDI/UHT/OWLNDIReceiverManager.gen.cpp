@@ -25,7 +25,7 @@ class UScriptStruct* FOWLNDIReceiverInterface::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLNDIReceiverInterface.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLNDIReceiverInterface.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLNDIReceiverInterface, Z_Construct_UPackage__Script_OWLNDI(), TEXT("OWLNDIReceiverInterface"));
+		Z_Registration_Info_UScriptStruct_OWLNDIReceiverInterface.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLNDIReceiverInterface, (UObject*)Z_Construct_UPackage__Script_OWLNDI(), TEXT("OWLNDIReceiverInterface"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLNDIReceiverInterface.OuterSingleton;
 }
@@ -319,9 +319,9 @@ template<> OWLNDI_API UScriptStruct* StaticStruct<FOWLNDIReceiverInterface>()
 		{ FOWLNDIReceiverInterface::StaticStruct, Z_Construct_UScriptStruct_FOWLNDIReceiverInterface_Statics::NewStructOps, TEXT("OWLNDIReceiverInterface"), &Z_Registration_Info_UScriptStruct_OWLNDIReceiverInterface, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLNDIReceiverInterface), 3444417469U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDIReceiverManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLNDIReceiverManager, AOWLNDIReceiverManager::StaticClass, TEXT("AOWLNDIReceiverManager"), &Z_Registration_Info_UClass_AOWLNDIReceiverManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLNDIReceiverManager), 2717968641U) },
+		{ Z_Construct_UClass_AOWLNDIReceiverManager, AOWLNDIReceiverManager::StaticClass, TEXT("AOWLNDIReceiverManager"), &Z_Registration_Info_UClass_AOWLNDIReceiverManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLNDIReceiverManager), 3378806399U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDIReceiverManager_h_1389907227(TEXT("/Script/OWLNDI"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDIReceiverManager_h_3461465699(TEXT("/Script/OWLNDI"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDIReceiverManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDIReceiverManager_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDIReceiverManager_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDIReceiverManager_h_Statics::ScriptStructInfo),
 		nullptr, 0);

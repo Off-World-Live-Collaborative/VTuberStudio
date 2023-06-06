@@ -1,5 +1,5 @@
 {
 	"OutputFiles": [
-		"Module.LivestreamingToolkitShaders.cpp.obj"
+		"..\\..\\..\\x64\\UnrealGame\\Development\\LivestreamingToolkitShaders\\Module.LivestreamingToolkitShaders.cpp.obj"
 	]
 }

@@ -18,7 +18,7 @@ class UScriptStruct* FPluginUpdateSaveGameData::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_PluginUpdateSaveGameData.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_PluginUpdateSaveGameData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FPluginUpdateSaveGameData, Z_Construct_UPackage__Script_LivestreamingToolkit(), TEXT("PluginUpdateSaveGameData"));
+		Z_Registration_Info_UScriptStruct_PluginUpdateSaveGameData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FPluginUpdateSaveGameData, (UObject*)Z_Construct_UPackage__Script_LivestreamingToolkit(), TEXT("PluginUpdateSaveGameData"));
 	}
 	return Z_Registration_Info_UScriptStruct_PluginUpdateSaveGameData.OuterSingleton;
 }
@@ -102,7 +102,7 @@ class UScriptStruct* FPluginSettingsSaveGameData::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_PluginSettingsSaveGameData.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_PluginSettingsSaveGameData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FPluginSettingsSaveGameData, Z_Construct_UPackage__Script_LivestreamingToolkit(), TEXT("PluginSettingsSaveGameData"));
+		Z_Registration_Info_UScriptStruct_PluginSettingsSaveGameData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FPluginSettingsSaveGameData, (UObject*)Z_Construct_UPackage__Script_LivestreamingToolkit(), TEXT("PluginSettingsSaveGameData"));
 	}
 	return Z_Registration_Info_UScriptStruct_PluginSettingsSaveGameData.OuterSingleton;
 }

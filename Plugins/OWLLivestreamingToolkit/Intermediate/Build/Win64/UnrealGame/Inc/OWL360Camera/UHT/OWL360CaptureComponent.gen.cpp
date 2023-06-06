@@ -6,7 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "OWL360Camera/Public/OWL360CaptureComponent.h"
-#include "Engine/Classes/Components/SceneCaptureComponent.h"
+#include "../../Source/Runtime/Engine/Classes/Components/SceneCaptureComponent.h"
 #include "OWL360Camera/Public/PostProcessing/OWL360PostProcessSettings.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
@@ -34,7 +34,7 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 	{
 		if (!Z_Registration_Info_UEnum_EStreamResolution_360.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_EStreamResolution_360.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWL360Camera_EStreamResolution_360, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("EStreamResolution_360"));
+			Z_Registration_Info_UEnum_EStreamResolution_360.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWL360Camera_EStreamResolution_360, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("EStreamResolution_360"));
 		}
 		return Z_Registration_Info_UEnum_EStreamResolution_360.OuterSingleton;
 	}
@@ -125,7 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 	{
 		if (!Z_Registration_Info_UEnum_E360ProjectionType.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_E360ProjectionType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWL360Camera_E360ProjectionType, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("E360ProjectionType"));
+			Z_Registration_Info_UEnum_E360ProjectionType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWL360Camera_E360ProjectionType, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("E360ProjectionType"));
 		}
 		return Z_Registration_Info_UEnum_E360ProjectionType.OuterSingleton;
 	}
@@ -1030,7 +1030,7 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 		{ "ToolTip", "If changing these post-processing settings at run-time, remember to call the AOffWorldLiveThreeSixtyCamPawn::RefreshOffWorldPostProcessSettings() function afterwards to apply the settings" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_PostProcessSettings360 = { "PostProcessSettings360", nullptr, (EPropertyFlags)0x0010000200000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, PostProcessSettings360), Z_Construct_UScriptStruct_FOWL360PostProcessSettings, METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_PostProcessSettings360_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_PostProcessSettings360_MetaData)) }; // 3805123948
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_PostProcessSettings360 = { "PostProcessSettings360", nullptr, (EPropertyFlags)0x0010000200000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, PostProcessSettings360), Z_Construct_UScriptStruct_FOWL360PostProcessSettings, METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_PostProcessSettings360_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_PostProcessSettings360_MetaData)) }; // 358013124
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_PostProcessBlendWeight_MetaData[] = {
 		{ "Category", "Off World Live 360 Post Process Settings" },
@@ -1305,9 +1305,9 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 		{ E360ProjectionType_StaticEnum, TEXT("E360ProjectionType"), &Z_Registration_Info_UEnum_E360ProjectionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 844386497U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWL360CaptureComponent, UOWL360CaptureComponent::StaticClass, TEXT("UOWL360CaptureComponent"), &Z_Registration_Info_UClass_UOWL360CaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWL360CaptureComponent), 4040935079U) },
+		{ Z_Construct_UClass_UOWL360CaptureComponent, UOWL360CaptureComponent::StaticClass, TEXT("UOWL360CaptureComponent"), &Z_Registration_Info_UClass_UOWL360CaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWL360CaptureComponent), 1640014952U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_2225329449(TEXT("/Script/OWL360Camera"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_3550229638(TEXT("/Script/OWL360Camera"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::EnumInfo));

@@ -21,7 +21,7 @@ class UScriptStruct* FOWLSpoutReceiverInterface::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLSpoutReceiverInterface.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLSpoutReceiverInterface.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface, Z_Construct_UPackage__Script_OWLSpout(), TEXT("OWLSpoutReceiverInterface"));
+		Z_Registration_Info_UScriptStruct_OWLSpoutReceiverInterface.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface, (UObject*)Z_Construct_UPackage__Script_OWLSpout(), TEXT("OWLSpoutReceiverInterface"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLSpoutReceiverInterface.OuterSingleton;
 }
@@ -309,9 +309,9 @@ template<> OWLSPOUT_API UScriptStruct* StaticStruct<FOWLSpoutReceiverInterface>(
 		{ FOWLSpoutReceiverInterface::StaticStruct, Z_Construct_UScriptStruct_FOWLSpoutReceiverInterface_Statics::NewStructOps, TEXT("OWLSpoutReceiverInterface"), &Z_Registration_Info_UScriptStruct_OWLSpoutReceiverInterface, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLSpoutReceiverInterface), 297295365U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLSpoutReceiverManager, AOWLSpoutReceiverManager::StaticClass, TEXT("AOWLSpoutReceiverManager"), &Z_Registration_Info_UClass_AOWLSpoutReceiverManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLSpoutReceiverManager), 709667727U) },
+		{ Z_Construct_UClass_AOWLSpoutReceiverManager, AOWLSpoutReceiverManager::StaticClass, TEXT("AOWLSpoutReceiverManager"), &Z_Registration_Info_UClass_AOWLSpoutReceiverManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLSpoutReceiverManager), 1358833128U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_1433725892(TEXT("/Script/OWLSpout"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_3828313487(TEXT("/Script/OWLSpout"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLSpout_Public_OWLSpoutReceiverManager_h_Statics::ScriptStructInfo),
 		nullptr, 0);

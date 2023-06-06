@@ -6,7 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "OWLComposure/Public/OWLPlaneTransformPass.h"
-#include "Composure/Public/CompositingElements/CompositingMaterialPass.h"
+#include "../Public/CompositingElements/CompositingMaterialPass.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOWLPlaneTransformPass() {}
 // Cross Module References

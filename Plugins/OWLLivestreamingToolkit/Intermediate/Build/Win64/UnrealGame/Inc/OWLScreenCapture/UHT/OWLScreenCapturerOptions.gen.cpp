@@ -19,7 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLScreenCapturerOptions() {}
 	{
 		if (!Z_Registration_Info_UEnum_EOWLScreenCaptureType.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_EOWLScreenCaptureType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLScreenCapture_EOWLScreenCaptureType, Z_Construct_UPackage__Script_OWLScreenCapture(), TEXT("EOWLScreenCaptureType"));
+			Z_Registration_Info_UEnum_EOWLScreenCaptureType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLScreenCapture_EOWLScreenCaptureType, (UObject*)Z_Construct_UPackage__Script_OWLScreenCapture(), TEXT("EOWLScreenCaptureType"));
 		}
 		return Z_Registration_Info_UEnum_EOWLScreenCaptureType.OuterSingleton;
 	}
@@ -73,7 +73,7 @@ class UScriptStruct* FOWLScreenCaptureOptions::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLScreenCaptureOptions.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLScreenCaptureOptions.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLScreenCaptureOptions, Z_Construct_UPackage__Script_OWLScreenCapture(), TEXT("OWLScreenCaptureOptions"));
+		Z_Registration_Info_UScriptStruct_OWLScreenCaptureOptions.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLScreenCaptureOptions, (UObject*)Z_Construct_UPackage__Script_OWLScreenCapture(), TEXT("OWLScreenCaptureOptions"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLScreenCaptureOptions.OuterSingleton;
 }

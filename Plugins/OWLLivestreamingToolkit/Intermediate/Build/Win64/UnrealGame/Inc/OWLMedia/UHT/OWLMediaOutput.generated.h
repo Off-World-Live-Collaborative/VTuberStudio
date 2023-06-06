@@ -15,23 +15,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define OWLMEDIA_OWLMediaOutput_generated_h
 
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_18_DELEGATE \
-static inline void FOnMediaOutputStart_DelegateWrapper(const FMulticastScriptDelegate& OnMediaOutputStart) \
-{ \
-	OnMediaOutputStart.ProcessMulticastDelegate<UObject>(NULL); \
-}
+OWLMEDIA_API void FOnMediaOutputStart_DelegateWrapper(const FMulticastScriptDelegate& OnMediaOutputStart);
 
 
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_19_DELEGATE \
-struct _Script_OWLMedia_eventOnMediaOutputStop_Parms \
-{ \
-	bool bGraceful; \
-}; \
-static inline void FOnMediaOutputStop_DelegateWrapper(const FMulticastScriptDelegate& OnMediaOutputStop, bool bGraceful) \
-{ \
-	_Script_OWLMedia_eventOnMediaOutputStop_Parms Parms; \
-	Parms.bGraceful=bGraceful ? true : false; \
-	OnMediaOutputStop.ProcessMulticastDelegate<UObject>(&Parms); \
-}
+OWLMEDIA_API void FOnMediaOutputStop_DelegateWrapper(const FMulticastScriptDelegate& OnMediaOutputStop, bool bGraceful);
 
 
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_24_GENERATED_BODY \

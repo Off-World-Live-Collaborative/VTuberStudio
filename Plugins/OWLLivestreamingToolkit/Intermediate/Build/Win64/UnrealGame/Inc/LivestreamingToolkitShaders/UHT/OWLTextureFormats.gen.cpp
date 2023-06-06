@@ -18,7 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLTextureFormats() {}
 	{
 		if (!Z_Registration_Info_UEnum_EOWLOutputTextureFormat.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_EOWLOutputTextureFormat.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_LivestreamingToolkitShaders_EOWLOutputTextureFormat, Z_Construct_UPackage__Script_LivestreamingToolkitShaders(), TEXT("EOWLOutputTextureFormat"));
+			Z_Registration_Info_UEnum_EOWLOutputTextureFormat.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_LivestreamingToolkitShaders_EOWLOutputTextureFormat, (UObject*)Z_Construct_UPackage__Script_LivestreamingToolkitShaders(), TEXT("EOWLOutputTextureFormat"));
 		}
 		return Z_Registration_Info_UEnum_EOWLOutputTextureFormat.OuterSingleton;
 	}
@@ -106,7 +106,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLTextureFormats() {}
 	{
 		if (!Z_Registration_Info_UEnum_EOWLPixelLayoutFormat.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_EOWLPixelLayoutFormat.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_LivestreamingToolkitShaders_EOWLPixelLayoutFormat, Z_Construct_UPackage__Script_LivestreamingToolkitShaders(), TEXT("EOWLPixelLayoutFormat"));
+			Z_Registration_Info_UEnum_EOWLPixelLayoutFormat.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_LivestreamingToolkitShaders_EOWLPixelLayoutFormat, (UObject*)Z_Construct_UPackage__Script_LivestreamingToolkitShaders(), TEXT("EOWLPixelLayoutFormat"));
 		}
 		return Z_Registration_Info_UEnum_EOWLPixelLayoutFormat.OuterSingleton;
 	}

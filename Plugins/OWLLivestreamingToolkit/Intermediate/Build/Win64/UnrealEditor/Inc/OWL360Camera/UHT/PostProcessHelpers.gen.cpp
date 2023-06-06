@@ -20,7 +20,7 @@ void EmptyLinkFunctionForGeneratedCodePostProcessHelpers() {}
 	{
 		if (!Z_Registration_Info_UEnum_E360PostProcessPipeline.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_E360PostProcessPipeline.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWL360Camera_E360PostProcessPipeline, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("E360PostProcessPipeline"));
+			Z_Registration_Info_UEnum_E360PostProcessPipeline.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWL360Camera_E360PostProcessPipeline, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("E360PostProcessPipeline"));
 		}
 		return Z_Registration_Info_UEnum_E360PostProcessPipeline.OuterSingleton;
 	}
@@ -129,6 +129,7 @@ void EmptyLinkFunctionForGeneratedCodePostProcessHelpers() {}
 	{
 		return UPostProcessHelpers::StaticClass();
 	}
+	UPostProcessHelpers::UPostProcessHelpers(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UPostProcessHelpers);
 	UPostProcessHelpers::~UPostProcessHelpers() {}
 	struct Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_PostProcessing_PostProcessHelpers_h_Statics

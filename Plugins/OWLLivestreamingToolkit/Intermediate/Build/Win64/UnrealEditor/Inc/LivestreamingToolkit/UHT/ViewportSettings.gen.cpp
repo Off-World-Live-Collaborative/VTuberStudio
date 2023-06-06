@@ -156,6 +156,7 @@ void EmptyLinkFunctionForGeneratedCodeViewportSettings() {}
 	{
 		return UViewportSettings::StaticClass();
 	}
+	UViewportSettings::UViewportSettings(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UViewportSettings);
 	UViewportSettings::~UViewportSettings() {}
 	struct Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Private_Features_ViewportSettings_h_Statics

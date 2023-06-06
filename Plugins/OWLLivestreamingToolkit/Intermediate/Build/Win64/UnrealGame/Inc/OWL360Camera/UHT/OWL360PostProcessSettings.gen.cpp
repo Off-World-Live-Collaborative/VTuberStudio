@@ -62,7 +62,7 @@ class UScriptStruct* FOWL360BloomAdvancedSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360BloomAdvancedSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360BloomAdvancedSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360BloomAdvancedSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360BloomAdvancedSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360BloomAdvancedSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360BloomAdvancedSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360BloomAdvancedSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360BloomAdvancedSettings.OuterSingleton;
 }
@@ -594,7 +594,7 @@ class UScriptStruct* FOWL360LensBloomSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360LensBloomSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360LensBloomSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensBloomSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensBloomSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360LensBloomSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensBloomSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensBloomSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360LensBloomSettings.OuterSingleton;
 }
@@ -735,7 +735,7 @@ class UScriptStruct* FOWL360LensExposureSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360LensExposureSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360LensExposureSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensExposureSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensExposureSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360LensExposureSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensExposureSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensExposureSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360LensExposureSettings.OuterSingleton;
 }
@@ -906,7 +906,7 @@ class UScriptStruct* FOWL360LensCameraSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360LensCameraSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360LensCameraSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensCameraSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensCameraSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360LensCameraSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensCameraSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensCameraSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360LensCameraSettings.OuterSingleton;
 }
@@ -1146,7 +1146,7 @@ class UScriptStruct* FOWL360LensLocalExposureSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360LensLocalExposureSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360LensLocalExposureSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensLocalExposureSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensLocalExposureSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360LensLocalExposureSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensLocalExposureSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensLocalExposureSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360LensLocalExposureSettings.OuterSingleton;
 }
@@ -1423,7 +1423,7 @@ class UScriptStruct* FOWL360LensDepthOfFieldSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360LensDepthOfFieldSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360LensDepthOfFieldSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensDepthOfFieldSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensDepthOfFieldSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360LensDepthOfFieldSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensDepthOfFieldSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensDepthOfFieldSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360LensDepthOfFieldSettings.OuterSingleton;
 }
@@ -1592,7 +1592,7 @@ class UScriptStruct* FOWL360LensSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360LensSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360LensSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360LensSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360LensSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360LensSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360LensSettings.OuterSingleton;
 }
@@ -1713,7 +1713,7 @@ class UScriptStruct* FOWL360ColorGradingTemperatureSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360ColorGradingTemperatureSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360ColorGradingTemperatureSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingTemperatureSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingTemperatureSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360ColorGradingTemperatureSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingTemperatureSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingTemperatureSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360ColorGradingTemperatureSettings.OuterSingleton;
 }
@@ -1875,7 +1875,7 @@ class UScriptStruct* FOWL360ColorGradingGlobalSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360ColorGradingGlobalSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360ColorGradingGlobalSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingGlobalSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingGlobalSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360ColorGradingGlobalSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingGlobalSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingGlobalSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360ColorGradingGlobalSettings.OuterSingleton;
 }
@@ -2126,7 +2126,7 @@ class UScriptStruct* FOWL360ColorGradingShadowsSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360ColorGradingShadowsSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360ColorGradingShadowsSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingShadowsSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingShadowsSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360ColorGradingShadowsSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingShadowsSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingShadowsSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360ColorGradingShadowsSettings.OuterSingleton;
 }
@@ -2412,7 +2412,7 @@ class UScriptStruct* FOWL360ColorGradingHighlightsSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360ColorGradingHighlightsSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360ColorGradingHighlightsSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingHighlightsSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingHighlightsSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360ColorGradingHighlightsSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingHighlightsSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingHighlightsSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360ColorGradingHighlightsSettings.OuterSingleton;
 }
@@ -2735,7 +2735,7 @@ class UScriptStruct* FOWL360ColorGradingMidtonesSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360ColorGradingMidtonesSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360ColorGradingMidtonesSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingMidtonesSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingMidtonesSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360ColorGradingMidtonesSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingMidtonesSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingMidtonesSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360ColorGradingMidtonesSettings.OuterSingleton;
 }
@@ -2986,7 +2986,7 @@ class UScriptStruct* FOWL360ColorGradingMiscSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360ColorGradingMiscSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360ColorGradingMiscSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingMiscSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingMiscSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360ColorGradingMiscSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingMiscSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingMiscSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360ColorGradingMiscSettings.OuterSingleton;
 }
@@ -3150,7 +3150,7 @@ class UScriptStruct* FOWL360ColorGradingSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360ColorGradingSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360ColorGradingSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360ColorGradingSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ColorGradingSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ColorGradingSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360ColorGradingSettings.OuterSingleton;
 }
@@ -3277,7 +3277,7 @@ class UScriptStruct* FOWL360GlobalIlluminationLumenAdvancedSettings::StaticStruc
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationLumenAdvancedSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationLumenAdvancedSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360GlobalIlluminationLumenAdvancedSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360GlobalIlluminationLumenAdvancedSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationLumenAdvancedSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360GlobalIlluminationLumenAdvancedSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360GlobalIlluminationLumenAdvancedSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationLumenAdvancedSettings.OuterSingleton;
 }
@@ -3408,7 +3408,7 @@ class UScriptStruct* FOWL360GlobalIlluminationLumenSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationLumenSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationLumenSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360GlobalIlluminationLumenSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360GlobalIlluminationLumenSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationLumenSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360GlobalIlluminationLumenSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360GlobalIlluminationLumenSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationLumenSettings.OuterSingleton;
 }
@@ -3662,7 +3662,7 @@ class UScriptStruct* FOWL360GlobalIlluminationRayTracingSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationRayTracingSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationRayTracingSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360GlobalIlluminationRayTracingSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360GlobalIlluminationRayTracingSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationRayTracingSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360GlobalIlluminationRayTracingSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360GlobalIlluminationRayTracingSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationRayTracingSettings.OuterSingleton;
 }
@@ -3829,7 +3829,7 @@ class UScriptStruct* FOWL360GlobalIlluminationSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360GlobalIlluminationSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360GlobalIlluminationSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360GlobalIlluminationSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360GlobalIlluminationSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360GlobalIlluminationSettings.OuterSingleton;
 }
@@ -4016,7 +4016,7 @@ class UScriptStruct* FOWL360ReflectionsLumenSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360ReflectionsLumenSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360ReflectionsLumenSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ReflectionsLumenSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ReflectionsLumenSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360ReflectionsLumenSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ReflectionsLumenSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ReflectionsLumenSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360ReflectionsLumenSettings.OuterSingleton;
 }
@@ -4148,7 +4148,7 @@ class UScriptStruct* FOWL360ReflectionsScreenSpaceSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360ReflectionsScreenSpaceSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360ReflectionsScreenSpaceSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ReflectionsScreenSpaceSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ReflectionsScreenSpaceSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360ReflectionsScreenSpaceSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ReflectionsScreenSpaceSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ReflectionsScreenSpaceSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360ReflectionsScreenSpaceSettings.OuterSingleton;
 }
@@ -4316,7 +4316,7 @@ class UScriptStruct* FOWL360ReflectionsRayTracingSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360ReflectionsRayTracingSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360ReflectionsRayTracingSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ReflectionsRayTracingSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ReflectionsRayTracingSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360ReflectionsRayTracingSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ReflectionsRayTracingSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ReflectionsRayTracingSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360ReflectionsRayTracingSettings.OuterSingleton;
 }
@@ -4560,7 +4560,7 @@ class UScriptStruct* FOWL360ReflectionsSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360ReflectionsSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360ReflectionsSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ReflectionsSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ReflectionsSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360ReflectionsSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360ReflectionsSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360ReflectionsSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360ReflectionsSettings.OuterSingleton;
 }
@@ -4686,7 +4686,7 @@ class UScriptStruct* FOWL360RenderingFeaturesAmbientCubemapSettings::StaticStruc
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientCubemapSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientCubemapSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesAmbientCubemapSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesAmbientCubemapSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientCubemapSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesAmbientCubemapSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesAmbientCubemapSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientCubemapSettings.OuterSingleton;
 }
@@ -4831,7 +4831,7 @@ class UScriptStruct* FOWL360RenderingFeaturesAmbientOcclusionAdvancedSettings::S
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientOcclusionAdvancedSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientOcclusionAdvancedSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesAmbientOcclusionAdvancedSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesAmbientOcclusionAdvancedSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientOcclusionAdvancedSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesAmbientOcclusionAdvancedSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesAmbientOcclusionAdvancedSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientOcclusionAdvancedSettings.OuterSingleton;
 }
@@ -5296,7 +5296,7 @@ class UScriptStruct* FOWL360RenderingFeaturesAmbientOcclusionSettings::StaticStr
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientOcclusionSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientOcclusionSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesAmbientOcclusionSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesAmbientOcclusionSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientOcclusionSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesAmbientOcclusionSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesAmbientOcclusionSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesAmbientOcclusionSettings.OuterSingleton;
 }
@@ -5437,7 +5437,7 @@ class UScriptStruct* FOWL360RenderingFeaturesRayTracingAmbientOcclusionSettings:
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesRayTracingAmbientOcclusionSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesRayTracingAmbientOcclusionSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesRayTracingAmbientOcclusionSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesRayTracingAmbientOcclusionSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesRayTracingAmbientOcclusionSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesRayTracingAmbientOcclusionSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesRayTracingAmbientOcclusionSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesRayTracingAmbientOcclusionSettings.OuterSingleton;
 }
@@ -5643,7 +5643,7 @@ class UScriptStruct* FOWL360RenderingFeaturesMotionBlurSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesMotionBlurSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesMotionBlurSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesMotionBlurSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesMotionBlurSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesMotionBlurSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesMotionBlurSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesMotionBlurSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesMotionBlurSettings.OuterSingleton;
 }
@@ -5846,7 +5846,7 @@ class UScriptStruct* FOWL360RenderingFeaturesTranslucencySettings::StaticStruct(
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesTranslucencySettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesTranslucencySettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesTranslucencySettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesTranslucencySettings"));
+		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesTranslucencySettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesTranslucencySettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesTranslucencySettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesTranslucencySettings.OuterSingleton;
 }
@@ -5939,7 +5939,7 @@ class UScriptStruct* FOWL360RenderingFeaturesRayTracingTranslucencySettings::Sta
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesRayTracingTranslucencySettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesRayTracingTranslucencySettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesRayTracingTranslucencySettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesRayTracingTranslucencySettings"));
+		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesRayTracingTranslucencySettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesRayTracingTranslucencySettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesRayTracingTranslucencySettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesRayTracingTranslucencySettings.OuterSingleton;
 }
@@ -6183,7 +6183,7 @@ class UScriptStruct* FOWL360RenderingFeaturesPathTracingSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesPathTracingSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesPathTracingSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesPathTracingSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesPathTracingSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesPathTracingSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesPathTracingSettings.OuterSingleton;
 }
@@ -6213,10 +6213,10 @@ template<> OWL360CAMERA_API UScriptStruct* StaticStruct<FOWL360RenderingFeatures
 		static void NewProp_bOverride_PathTracingFilterWidth_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_bOverride_PathTracingFilterWidth;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_bOverride_PathTracingEnableEmissive_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bOverride_PathTracingIncludeEmissive_MetaData[];
 #endif
-		static void NewProp_bOverride_PathTracingEnableEmissive_SetBit(void* Obj);
-		static const UECodeGen_Private::FBoolPropertyParams NewProp_bOverride_PathTracingEnableEmissive;
+		static void NewProp_bOverride_PathTracingIncludeEmissive_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bOverride_PathTracingIncludeEmissive;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_bOverride_PathTracingMaxPathExposure_MetaData[];
 #endif
@@ -6316,18 +6316,18 @@ template<> OWL360CAMERA_API UScriptStruct* StaticStruct<FOWL360RenderingFeatures
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingFilterWidth = { "bOverride_PathTracingFilterWidth", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool , RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(uint8), sizeof(FOWL360RenderingFeaturesPathTracingSettings), &Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingFilterWidth_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingFilterWidth_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingFilterWidth_MetaData)) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingEnableEmissive_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingIncludeEmissive_MetaData[] = {
 		{ "Category", "Overrides" },
 		{ "InlineEditConditionToggle", "" },
 		{ "ModuleRelativePath", "Public/PostProcessing/OWL360PostProcessSettings.h" },
 		{ "PinHiddenByDefault", "" },
 	};
 #endif
-	void Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingEnableEmissive_SetBit(void* Obj)
+	void Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingIncludeEmissive_SetBit(void* Obj)
 	{
-		((FOWL360RenderingFeaturesPathTracingSettings*)Obj)->bOverride_PathTracingEnableEmissive = 1;
+		((FOWL360RenderingFeaturesPathTracingSettings*)Obj)->bOverride_PathTracingIncludeEmissive = 1;
 	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingEnableEmissive = { "bOverride_PathTracingEnableEmissive", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool , RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(uint8), sizeof(FOWL360RenderingFeaturesPathTracingSettings), &Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingEnableEmissive_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingEnableEmissive_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingEnableEmissive_MetaData)) };
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingIncludeEmissive = { "bOverride_PathTracingIncludeEmissive", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool , RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(uint8), sizeof(FOWL360RenderingFeaturesPathTracingSettings), &Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingIncludeEmissive_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingIncludeEmissive_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingIncludeEmissive_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingMaxPathExposure_MetaData[] = {
 		{ "Category", "Overrides" },
@@ -6411,7 +6411,7 @@ template<> OWL360CAMERA_API UScriptStruct* StaticStruct<FOWL360RenderingFeatures
 		{ "Category", "Rendering Features|PathTracing" },
 		{ "Comment", "/** Enables emissive materials for the path tracer. This can prevent double-counting of illumination from surfaces that are also represented by light sources, and noise from small emitters. */" },
 		{ "DisplayName", "Emissive Materials" },
-		{ "editcondition", "bOverride_PathTracingEnableEmissive" },
+		{ "editcondition", "bOverride_PathTracingIncludeEmissive" },
 		{ "ModuleRelativePath", "Public/PostProcessing/OWL360PostProcessSettings.h" },
 		{ "ToolTip", "Enables emissive materials for the path tracer. This can prevent double-counting of illumination from surfaces that are also represented by light sources, and noise from small emitters." },
 	};
@@ -6468,7 +6468,7 @@ template<> OWL360CAMERA_API UScriptStruct* StaticStruct<FOWL360RenderingFeatures
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingMaxBounces,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingSamplesPerPixel,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingFilterWidth,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingEnableEmissive,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingIncludeEmissive,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingMaxPathExposure,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingEnableReferenceDOF,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewProp_bOverride_PathTracingEnableDenoiser,
@@ -6506,7 +6506,7 @@ class UScriptStruct* FOWL360RenderingFeaturesTemporalAASettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesTemporalAASettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesTemporalAASettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesTemporalAASettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesTemporalAASettings"));
+		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesTemporalAASettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesTemporalAASettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesTemporalAASettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesTemporalAASettings.OuterSingleton;
 }
@@ -6599,7 +6599,7 @@ class UScriptStruct* FOWL360RenderingFeaturesSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360RenderingFeaturesSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesSettings.OuterSingleton;
 }
@@ -6708,7 +6708,7 @@ template<> OWL360CAMERA_API UScriptStruct* StaticStruct<FOWL360RenderingFeatures
 		{ "ModuleRelativePath", "Public/PostProcessing/OWL360PostProcessSettings.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings_Statics::NewProp_PathTracing = { "PathTracing", nullptr, (EPropertyFlags)0x0010000200000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWL360RenderingFeaturesSettings, PathTracing), Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings_Statics::NewProp_PathTracing_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings_Statics::NewProp_PathTracing_MetaData)) }; // 2954905959
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings_Statics::NewProp_PathTracing = { "PathTracing", nullptr, (EPropertyFlags)0x0010000200000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWL360RenderingFeaturesSettings, PathTracing), Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings_Statics::NewProp_PathTracing_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings_Statics::NewProp_PathTracing_MetaData)) }; // 1878985963
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings_Statics::NewProp_TemporalAA_MetaData[] = {
 		{ "Category", "Rendering Features" },
@@ -6754,7 +6754,7 @@ class UScriptStruct* FOWL360FilmGrainSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360FilmGrainSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360FilmGrainSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360FilmGrainSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360FilmGrainSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360FilmGrainSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360FilmGrainSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360FilmGrainSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360FilmGrainSettings.OuterSingleton;
 }
@@ -7121,7 +7121,7 @@ class UScriptStruct* FOWL360PostProcessSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWL360PostProcessSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWL360PostProcessSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360PostProcessSettings, Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360PostProcessSettings"));
+		Z_Registration_Info_UScriptStruct_OWL360PostProcessSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWL360PostProcessSettings, (UObject*)Z_Construct_UPackage__Script_OWL360Camera(), TEXT("OWL360PostProcessSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWL360PostProcessSettings.OuterSingleton;
 }
@@ -7210,7 +7210,7 @@ template<> OWL360CAMERA_API UScriptStruct* StaticStruct<FOWL360PostProcessSettin
 		{ "ModuleRelativePath", "Public/PostProcessing/OWL360PostProcessSettings.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FOWL360PostProcessSettings_Statics::NewProp_RenderingFeatures = { "RenderingFeatures", nullptr, (EPropertyFlags)0x0010000200000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWL360PostProcessSettings, RenderingFeatures), Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWL360PostProcessSettings_Statics::NewProp_RenderingFeatures_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWL360PostProcessSettings_Statics::NewProp_RenderingFeatures_MetaData)) }; // 2455089129
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FOWL360PostProcessSettings_Statics::NewProp_RenderingFeatures = { "RenderingFeatures", nullptr, (EPropertyFlags)0x0010000200000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWL360PostProcessSettings, RenderingFeatures), Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWL360PostProcessSettings_Statics::NewProp_RenderingFeatures_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWL360PostProcessSettings_Statics::NewProp_RenderingFeatures_MetaData)) }; // 512473529
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWL360PostProcessSettings_Statics::NewProp_FilmGrain_MetaData[] = {
 		{ "Category", "Off World Live 360 Post Process Settings" },
@@ -7281,13 +7281,13 @@ template<> OWL360CAMERA_API UScriptStruct* StaticStruct<FOWL360PostProcessSettin
 		{ FOWL360RenderingFeaturesMotionBlurSettings::StaticStruct, Z_Construct_UScriptStruct_FOWL360RenderingFeaturesMotionBlurSettings_Statics::NewStructOps, TEXT("OWL360RenderingFeaturesMotionBlurSettings"), &Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesMotionBlurSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWL360RenderingFeaturesMotionBlurSettings), 740463292U) },
 		{ FOWL360RenderingFeaturesTranslucencySettings::StaticStruct, Z_Construct_UScriptStruct_FOWL360RenderingFeaturesTranslucencySettings_Statics::NewStructOps, TEXT("OWL360RenderingFeaturesTranslucencySettings"), &Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesTranslucencySettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWL360RenderingFeaturesTranslucencySettings), 1062088169U) },
 		{ FOWL360RenderingFeaturesRayTracingTranslucencySettings::StaticStruct, Z_Construct_UScriptStruct_FOWL360RenderingFeaturesRayTracingTranslucencySettings_Statics::NewStructOps, TEXT("OWL360RenderingFeaturesRayTracingTranslucencySettings"), &Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesRayTracingTranslucencySettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWL360RenderingFeaturesRayTracingTranslucencySettings), 2582689049U) },
-		{ FOWL360RenderingFeaturesPathTracingSettings::StaticStruct, Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewStructOps, TEXT("OWL360RenderingFeaturesPathTracingSettings"), &Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesPathTracingSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWL360RenderingFeaturesPathTracingSettings), 2954905959U) },
+		{ FOWL360RenderingFeaturesPathTracingSettings::StaticStruct, Z_Construct_UScriptStruct_FOWL360RenderingFeaturesPathTracingSettings_Statics::NewStructOps, TEXT("OWL360RenderingFeaturesPathTracingSettings"), &Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesPathTracingSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWL360RenderingFeaturesPathTracingSettings), 1878985963U) },
 		{ FOWL360RenderingFeaturesTemporalAASettings::StaticStruct, Z_Construct_UScriptStruct_FOWL360RenderingFeaturesTemporalAASettings_Statics::NewStructOps, TEXT("OWL360RenderingFeaturesTemporalAASettings"), &Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesTemporalAASettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWL360RenderingFeaturesTemporalAASettings), 3068153326U) },
-		{ FOWL360RenderingFeaturesSettings::StaticStruct, Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings_Statics::NewStructOps, TEXT("OWL360RenderingFeaturesSettings"), &Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWL360RenderingFeaturesSettings), 2455089129U) },
+		{ FOWL360RenderingFeaturesSettings::StaticStruct, Z_Construct_UScriptStruct_FOWL360RenderingFeaturesSettings_Statics::NewStructOps, TEXT("OWL360RenderingFeaturesSettings"), &Z_Registration_Info_UScriptStruct_OWL360RenderingFeaturesSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWL360RenderingFeaturesSettings), 512473529U) },
 		{ FOWL360FilmGrainSettings::StaticStruct, Z_Construct_UScriptStruct_FOWL360FilmGrainSettings_Statics::NewStructOps, TEXT("OWL360FilmGrainSettings"), &Z_Registration_Info_UScriptStruct_OWL360FilmGrainSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWL360FilmGrainSettings), 2867091173U) },
-		{ FOWL360PostProcessSettings::StaticStruct, Z_Construct_UScriptStruct_FOWL360PostProcessSettings_Statics::NewStructOps, TEXT("OWL360PostProcessSettings"), &Z_Registration_Info_UScriptStruct_OWL360PostProcessSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWL360PostProcessSettings), 3805123948U) },
+		{ FOWL360PostProcessSettings::StaticStruct, Z_Construct_UScriptStruct_FOWL360PostProcessSettings_Statics::NewStructOps, TEXT("OWL360PostProcessSettings"), &Z_Registration_Info_UScriptStruct_OWL360PostProcessSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWL360PostProcessSettings), 358013124U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_PostProcessing_OWL360PostProcessSettings_h_2210605390(TEXT("/Script/OWL360Camera"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_PostProcessing_OWL360PostProcessSettings_h_4200138827(TEXT("/Script/OWL360Camera"),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_PostProcessing_OWL360PostProcessSettings_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_PostProcessing_OWL360PostProcessSettings_h_Statics::ScriptStructInfo),
 		nullptr, 0);

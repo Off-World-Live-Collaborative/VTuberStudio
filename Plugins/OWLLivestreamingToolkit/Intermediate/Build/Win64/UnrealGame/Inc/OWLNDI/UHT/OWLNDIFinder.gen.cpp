@@ -17,7 +17,7 @@ class UScriptStruct* FNDISource::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_NDISource.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_NDISource.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FNDISource, Z_Construct_UPackage__Script_OWLNDI(), TEXT("NDISource"));
+		Z_Registration_Info_UScriptStruct_NDISource.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FNDISource, (UObject*)Z_Construct_UPackage__Script_OWLNDI(), TEXT("NDISource"));
 	}
 	return Z_Registration_Info_UScriptStruct_NDISource.OuterSingleton;
 }

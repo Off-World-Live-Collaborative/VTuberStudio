@@ -23,7 +23,7 @@ class UScriptStruct* FOWLNDISenderInterface::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLNDISenderInterface.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLNDISenderInterface.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLNDISenderInterface, Z_Construct_UPackage__Script_OWLNDI(), TEXT("OWLNDISenderInterface"));
+		Z_Registration_Info_UScriptStruct_OWLNDISenderInterface.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLNDISenderInterface, (UObject*)Z_Construct_UPackage__Script_OWLNDI(), TEXT("OWLNDISenderInterface"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLNDISenderInterface.OuterSingleton;
 }
@@ -261,9 +261,9 @@ template<> OWLNDI_API UScriptStruct* StaticStruct<FOWLNDISenderInterface>()
 		{ FOWLNDISenderInterface::StaticStruct, Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewStructOps, TEXT("OWLNDISenderInterface"), &Z_Registration_Info_UScriptStruct_OWLNDISenderInterface, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLNDISenderInterface), 1224176795U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLNDISenderManager, AOWLNDISenderManager::StaticClass, TEXT("AOWLNDISenderManager"), &Z_Registration_Info_UClass_AOWLNDISenderManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLNDISenderManager), 3792358314U) },
+		{ Z_Construct_UClass_AOWLNDISenderManager, AOWLNDISenderManager::StaticClass, TEXT("AOWLNDISenderManager"), &Z_Registration_Info_UClass_AOWLNDISenderManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLNDISenderManager), 1683710539U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_637850665(TEXT("/Script/OWLNDI"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_3755489106(TEXT("/Script/OWLNDI"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ScriptStructInfo),
 		nullptr, 0);

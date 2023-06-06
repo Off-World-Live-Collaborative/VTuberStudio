@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeNDIEnums() {}
 	{
 		if (!Z_Registration_Info_UEnum_ENDIVideoConversionFormat.OuterSingleton)
 		{
-			Z_Registration_Info_UEnum_ENDIVideoConversionFormat.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLNDI_ENDIVideoConversionFormat, Z_Construct_UPackage__Script_OWLNDI(), TEXT("ENDIVideoConversionFormat"));
+			Z_Registration_Info_UEnum_ENDIVideoConversionFormat.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLNDI_ENDIVideoConversionFormat, (UObject*)Z_Construct_UPackage__Script_OWLNDI(), TEXT("ENDIVideoConversionFormat"));
 		}
 		return Z_Registration_Info_UEnum_ENDIVideoConversionFormat.OuterSingleton;
 	}

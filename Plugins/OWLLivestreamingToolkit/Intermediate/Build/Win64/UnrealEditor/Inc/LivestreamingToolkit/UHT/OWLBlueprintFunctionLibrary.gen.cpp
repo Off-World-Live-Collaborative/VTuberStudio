@@ -690,6 +690,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLBlueprintFunctionLibrary() {}
 	{
 		return UOWLBlueprintFunctionLibrary::StaticClass();
 	}
+	UOWLBlueprintFunctionLibrary::UOWLBlueprintFunctionLibrary(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UOWLBlueprintFunctionLibrary);
 	UOWLBlueprintFunctionLibrary::~UOWLBlueprintFunctionLibrary() {}
 	struct Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_LivestreamingToolkit_Public_OWLBlueprintFunctionLibrary_h_Statics

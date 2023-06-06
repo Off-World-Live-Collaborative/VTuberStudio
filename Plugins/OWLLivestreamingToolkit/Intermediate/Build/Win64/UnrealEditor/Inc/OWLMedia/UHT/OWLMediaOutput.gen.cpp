@@ -49,6 +49,10 @@ void EmptyLinkFunctionForGeneratedCodeOWLMediaOutput() {}
 		}
 		return ReturnFunction;
 	}
+void FOnMediaOutputStart_DelegateWrapper(const FMulticastScriptDelegate& OnMediaOutputStart)
+{
+	OnMediaOutputStart.ProcessMulticastDelegate<UObject>(NULL);
+}
 	struct Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature_Statics
 	{
 		struct _Script_OWLMedia_eventOnMediaOutputStop_Parms
@@ -86,12 +90,22 @@ void EmptyLinkFunctionForGeneratedCodeOWLMediaOutput() {}
 		}
 		return ReturnFunction;
 	}
+void FOnMediaOutputStop_DelegateWrapper(const FMulticastScriptDelegate& OnMediaOutputStop, bool bGraceful)
+{
+	struct _Script_OWLMedia_eventOnMediaOutputStop_Parms
+	{
+		bool bGraceful;
+	};
+	_Script_OWLMedia_eventOnMediaOutputStop_Parms Parms;
+	Parms.bGraceful=bGraceful ? true : false;
+	OnMediaOutputStop.ProcessMulticastDelegate<UObject>(&Parms);
+}
 	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_OWLSaveToFileSettings;
 class UScriptStruct* FOWLSaveToFileSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLSaveToFileSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLSaveToFileSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLSaveToFileSettings, Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLSaveToFileSettings"));
+		Z_Registration_Info_UScriptStruct_OWLSaveToFileSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLSaveToFileSettings, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLSaveToFileSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLSaveToFileSettings.OuterSingleton;
 }
@@ -191,7 +205,7 @@ class UScriptStruct* FOWLRTMPSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLRTMPSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLRTMPSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLRTMPSettings, Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLRTMPSettings"));
+		Z_Registration_Info_UScriptStruct_OWLRTMPSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLRTMPSettings, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLRTMPSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLRTMPSettings.OuterSingleton;
 }
@@ -274,7 +288,7 @@ class UScriptStruct* FOWLRTSPSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLRTSPSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLRTSPSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLRTSPSettings, Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLRTSPSettings"));
+		Z_Registration_Info_UScriptStruct_OWLRTSPSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLRTSPSettings, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLRTSPSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLRTSPSettings.OuterSingleton;
 }
@@ -343,7 +357,7 @@ class UScriptStruct* FOWLSRTSettings::StaticStruct()
 {
 	if (!Z_Registration_Info_UScriptStruct_OWLSRTSettings.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_OWLSRTSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLSRTSettings, Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLSRTSettings"));
+		Z_Registration_Info_UScriptStruct_OWLSRTSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLSRTSettings, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLSRTSettings"));
 	}
 	return Z_Registration_Info_UScriptStruct_OWLSRTSettings.OuterSingleton;
 }
@@ -896,9 +910,9 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		{ FOWLSRTSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLSRTSettings_Statics::NewStructOps, TEXT("OWLSRTSettings"), &Z_Registration_Info_UScriptStruct_OWLSRTSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLSRTSettings), 2754173353U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLMediaOutput, AOWLMediaOutput::StaticClass, TEXT("AOWLMediaOutput"), &Z_Registration_Info_UClass_AOWLMediaOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLMediaOutput), 1244238782U) },
+		{ Z_Construct_UClass_AOWLMediaOutput, AOWLMediaOutput::StaticClass, TEXT("AOWLMediaOutput"), &Z_Registration_Info_UClass_AOWLMediaOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLMediaOutput), 4185381044U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_2820318882(TEXT("/Script/OWLMedia"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_3475361891(TEXT("/Script/OWLMedia"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ScriptStructInfo),
 		nullptr, 0);
