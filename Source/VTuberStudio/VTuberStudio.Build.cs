@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class BowtiConfigsVH : ModuleRules
+public class VTuberStudio : ModuleRules
 {
-	public BowtiConfigsVH(ReadOnlyTargetRules Target) : base(Target)
+	public VTuberStudio(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	

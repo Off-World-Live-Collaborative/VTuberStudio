@@ -69,8 +69,8 @@
 #define UE_DISABLE_INLINE_GEN_CPP 0
 #define UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_1 1
 #define UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_2 1
-#define UE_PROJECT_NAME BowtiConfigsVH
-#define UE_TARGET_NAME BowtiConfigsVHEditor
+#define UE_PROJECT_NAME VTuberStudio
+#define UE_TARGET_NAME VTuberStudioEditor
 #define UE_MODULE_NAME "LivestreamingToolkitShaders"
 #define UE_PLUGIN_NAME "OWLLivestreamingToolkit"
 #define IMPLEMENT_ENCRYPTION_KEY_REGISTRATION() 

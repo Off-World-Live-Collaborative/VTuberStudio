@@ -7,7 +7,7 @@
 /**
  * 
  */
-class BOWTICONFIGSVH_API MyClass
+class VTUBERSTUDIO_API MyClass
 {
 public:
 	MyClass();

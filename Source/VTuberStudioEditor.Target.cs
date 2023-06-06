@@ -3,13 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class BowtiConfigsVHEditorTarget : TargetRules
+public class VTuberStudioEditorTarget : TargetRules
 {
-	public BowtiConfigsVHEditorTarget(TargetInfo Target) : base(Target)
+	public VTuberStudioEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 
-		ExtraModuleNames.AddRange( new string[] { "BowtiConfigsVH" } );
+		ExtraModuleNames.AddRange( new string[] { "VTuberStudio" } );
 	}
 }

@@ -5,7 +5,7 @@
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "BowtiConfigsVH",
+			"Name": "VTuberStudio",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
