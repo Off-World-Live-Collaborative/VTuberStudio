@@ -49,7 +49,7 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
  VTS is available on our [Download Center](https://offworld.live/resources/download-center) and GitHub repository.
  
 We will be releasing updates regularly to provide new assets and blueprint for VTuber application development.
-V
+
 
  ### Licensing
 The OWL VTuber Studio is an *Apache-licensed* open-source Unreal project file repository on GitHub.
