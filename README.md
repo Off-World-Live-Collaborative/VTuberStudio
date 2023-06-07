@@ -80,9 +80,9 @@ VTS relies on the VRM4U plugin created by [@ruyo_h](https://twitter.com/ruyo_h).
 OWLStreamingToolkit is Copyright © 2021 Off World Live Limited. All rights reserved.
 
 #### Contributors
-VTuber Studio is created by @wesleyyuen and @jennnital with the support of the Off World Live team.
-
-Special thanks to @campbellwmorgan @fdomw for the development of VTuber Studio as well as @enpe23 and @HardcoreRick for creating key visual assets and environment design.
+VTuber Studio is created by [@wesleyyuen](https://github.com/wesleyyuen) and [@jennnital](https://github.com/jennnital) with the support of the Off World Live team.
+Key visual assets and environment design by [@enpe23](https://github.com/enpe23) and [@HardcoreRick](https://github.com/HardcoreRick).
+Special thanks to [@campbellwmorgan](https://github.com/campbellwmorgan) [@fdomw](https://github.com/fdomw) for the development of VTuber Studio.
 
 
 ![Scene Preview](./ReadMe/OWLLogo.png)
