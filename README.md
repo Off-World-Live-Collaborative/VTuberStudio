@@ -74,10 +74,8 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
 
 
 #### Acknowledgement
->VTS is 
->VRM4U (https://github.com/ruyo/VRM4U)
-Links to OWL
-Links to VRM4U Plugin (MIT License)
+>VTS relies on the VRM4U plugin created by [@ruyo_h](https://twitter.com/ruyo_h). VRM4U plugin can be found here (https://github.com/ruyo/VRM4U). The plugin is licensed under the MIT license.
+>OWLStreamingToolkit is Copyright © 2021 Off World Live Limited. All rights reserved.
 
 #### Contributors
 >VTuber Studio is created by @wesleyyuen and @jennnital with the support of the Off World Live team.
