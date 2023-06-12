@@ -69,10 +69,10 @@
 #define UE_DISABLE_INLINE_GEN_CPP 0
 #define UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_1 1
 #define UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_2 1
-#define UE_PROJECT_NAME BowtiConfigsVH
-#define UE_TARGET_NAME BowtiConfigsVHEditor
+#define UE_PROJECT_NAME VTuberStudio
+#define UE_TARGET_NAME VTuberStudioEditor
 #define OWL_AUTH_URL "https://plugin-api.offworld.live"
-#define RELEASE_DATE 2023-06-06T15:46:19.516Z
+#define RELEASE_DATE 2023-06-06T16:01:00.035Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
 #define AUTH_APP_NAME owl-licensing-utility.exe
@@ -393,7 +393,7 @@
 #define ANIMATIONDATACONTROLLER_API DLLIMPORT
 #define LIVESTREAMINGTOOLKITSHADERS_API DLLIMPORT
 #define OWL_AUTH_URL "https://plugin-api.offworld.live"
-#define RELEASE_DATE 2023-06-06T15:46:19.516Z
+#define RELEASE_DATE 2023-06-06T16:01:00.035Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
 #define AUTH_APP_NAME owl-licensing-utility.exe

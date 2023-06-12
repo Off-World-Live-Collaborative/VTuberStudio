@@ -1,4 +1,4 @@
-!ThirdParty/assimp/lib/x64/*.lib
+!ThirdParty/assimp/lib/x64/Release/*.lib
 
 
 # Prerequisites
