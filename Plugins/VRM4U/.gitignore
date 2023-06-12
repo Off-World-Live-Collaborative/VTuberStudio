@@ -1,3 +1,6 @@
+!ThirdParty/assimp/lib/x64/*.lib
+
+
 # Prerequisites
 *.d
 
