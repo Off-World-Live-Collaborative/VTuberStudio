@@ -33,7 +33,7 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
 
 ### How to use the VTuber Studio?
 #### Download from GitHub or Download Center
-- Download project from GitHub or [Download Center](https://offworld.live/resources/download-center)
+- Download project from [GitHub Releases] (https://github.com/Off-World-Live-Collaborative/VTuberStudio/releases) or [Download Center](https://offworld.live/resources/download-center)
 - Unzip the folder
 - Right-click *VTuberStudio.uproject* and select 'Generate Visual Studio project files'
 - In Visual Studio 2022, open the VTuberStudio.sln file, select Solution *'VTuberStudio'* in Solution Explorer, and right-click to Build Solution
