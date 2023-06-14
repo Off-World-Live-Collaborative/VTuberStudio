@@ -32,24 +32,18 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
  5. NDI Tools (https://ndi.video/type/ndi-tools/)
 
 ### How to use the VTuber Studio?
-#### Download from Releases or Download Center
-- Download project from GitHub Releases or [Download Center](https://offworld.live/resources/download-center)
-- The project should contain generated .sln files for Unreal Engine to open the project directly
-- Unzip the folder
-- Double-click *VTuberStudio.uproject* and open project in UE 5.2
-
-#### Build from Source
-- Clone project from GitHub or download project folder from [Download Center](https://offworld.live/resources/download-center)
+#### Download from GitHub or Download Center
+- Download project from GitHub or [Download Center](https://offworld.live/resources/download-center)
 - Unzip the folder
 - Right-click *VTuberStudio.uproject* and select 'Generate Visual Studio project files'
 - In Visual Studio 2022, open the VTuberStudio.sln file, select Solution *'VTuberStudio'* in Solution Explorer, and right-click to Build Solution
-- Open the project in UE 5.2
+- Double-click *VTuberStudio.uproject* and open project in UE 5.2
 
 ### How can I access VTS? 
- VTS is available on our [Download Center](https://offworld.live/resources/download-center) and GitHub repository.
+VTS is available on our [Download Center](https://offworld.live/resources/download-center) and GitHub repository.
  
 We will be releasing updates regularly to provide new assets and blueprint for VTuber application development.
-V
+
 
  ### Licensing
 The OWL VTuber Studio is an *Apache-licensed* open-source Unreal project file repository on GitHub.
