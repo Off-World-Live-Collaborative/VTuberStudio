@@ -212,6 +212,10 @@
 		{
 			"Name": "LinuxDeviceProfileSelector",
 			"Enabled": false
+		},
+		{
+			"Name": "HardwareEncoders",
+			"Enabled": true
 		}
 	]
 }
