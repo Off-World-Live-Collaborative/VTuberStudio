@@ -19,5 +19,4 @@ private:
 	FDelegateHandle EndFrameHandle;
 	void OnEndFrame();
 	void* SpoutDXDLLHandle = nullptr;
-	void* SpoutDX12DLLHandle = nullptr;
 };

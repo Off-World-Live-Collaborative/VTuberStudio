@@ -637,6 +637,11 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_EncoderSettings;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bUseTimecodeProviderWhereAvailable_MetaData[];
+#endif
+		static void NewProp_bUseTimecodeProviderWhereAvailable_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseTimecodeProviderWhereAvailable;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_HasStarted_MetaData[];
 #endif
 		static void NewProp_HasStarted_SetBit(void* Obj);
@@ -667,6 +672,10 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_OnStart_MetaData[];
 #endif
 		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnStart;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_IntermediateTarget_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_IntermediateTarget;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -781,7 +790,20 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings = { "EncoderSettings", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, EncoderSettings), Z_Construct_UScriptStruct_FOWLFFmpegSettings, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings_MetaData)) }; // 2204005794
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings = { "EncoderSettings", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, EncoderSettings), Z_Construct_UScriptStruct_FOWLFFmpegSettings, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings_MetaData)) }; // 2666962910
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bUseTimecodeProviderWhereAvailable_MetaData[] = {
+		{ "Category", "Output Settings" },
+		{ "Comment", "/* When set true, the media output will attempt to read timecode data from the default TimecodeProvider. NB This has the side-effect of quantising frames to the nearest timestamp frame */" },
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+		{ "ToolTip", "When set true, the media output will attempt to read timecode data from the default TimecodeProvider. NB This has the side-effect of quantising frames to the nearest timestamp frame" },
+	};
+#endif
+	void Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bUseTimecodeProviderWhereAvailable_SetBit(void* Obj)
+	{
+		((AOWLMediaOutput*)Obj)->bUseTimecodeProviderWhereAvailable = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bUseTimecodeProviderWhereAvailable = { "bUseTimecodeProviderWhereAvailable", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(AOWLMediaOutput), &Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bUseTimecodeProviderWhereAvailable_SetBit, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bUseTimecodeProviderWhereAvailable_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bUseTimecodeProviderWhereAvailable_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_HasStarted_MetaData[] = {
 		{ "Category", "Output Settings" },
@@ -847,6 +869,12 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 	};
 #endif
 	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart = { "OnStart", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, OnStart), Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart_MetaData)) }; // 3792492496
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_IntermediateTarget_MetaData[] = {
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_IntermediateTarget = { "IntermediateTarget", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, IntermediateTarget), Z_Construct_UClass_UTextureRenderTarget2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_IntermediateTarget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_IntermediateTarget_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AOWLMediaOutput_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OutputType_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OutputType,
@@ -859,6 +887,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bHideAPIOptions,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_InputRenderTarget,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bUseTimecodeProviderWhereAvailable,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_HasStarted,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_DurationMs,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_IsMeteredPricing,
@@ -866,6 +895,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_LoadingMinutesRemaining,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStop,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OnStart,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_IntermediateTarget,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AOWLMediaOutput_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AOWLMediaOutput>::IsAbstract,
@@ -910,9 +940,9 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		{ FOWLSRTSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLSRTSettings_Statics::NewStructOps, TEXT("OWLSRTSettings"), &Z_Registration_Info_UScriptStruct_OWLSRTSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLSRTSettings), 2754173353U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLMediaOutput, AOWLMediaOutput::StaticClass, TEXT("AOWLMediaOutput"), &Z_Registration_Info_UClass_AOWLMediaOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLMediaOutput), 4185381044U) },
+		{ Z_Construct_UClass_AOWLMediaOutput, AOWLMediaOutput::StaticClass, TEXT("AOWLMediaOutput"), &Z_Registration_Info_UClass_AOWLMediaOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLMediaOutput), 147183681U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_3475361891(TEXT("/Script/OWLMedia"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_2706726407(TEXT("/Script/OWLMedia"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ScriptStructInfo),
 		nullptr, 0);

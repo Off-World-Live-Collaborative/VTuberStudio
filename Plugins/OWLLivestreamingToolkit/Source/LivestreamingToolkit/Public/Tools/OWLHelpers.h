@@ -17,6 +17,7 @@ enum ERHIType
 	Vulkan,
 	Null
 };
+class FSceneViewport;
 
 class LIVESTREAMINGTOOLKIT_API FOWLHelpers
 {
@@ -28,6 +29,7 @@ public:
 	static void SetVirtualWebcamModuleEnabled(bool Enabled);
 	static bool GetVirtualWebcamModuleEnabled();
 	static ERHIType StringToRHIType(FString rhiString);
+	static void FindSceneViewport(TWeakPtr<FSceneViewport>& OutSceneViewport);
 
 
 private:

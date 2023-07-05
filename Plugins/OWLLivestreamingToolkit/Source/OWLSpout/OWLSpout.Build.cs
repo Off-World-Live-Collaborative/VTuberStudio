@@ -63,9 +63,9 @@ public class OWLSpout : ModuleRules
 
 		string SpoutDLLPath = "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/Spout.dll";
 		PublicDefinitions.Add("OWL_SPOUT_DLL_PATH=\"" + SpoutDLLPath + "\"");
-
-		string Spout12DLLPath = "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/SpoutDX12.dll";
-		PublicDefinitions.Add("OWL_SPOUT_12_DLL_PATH=\"" + Spout12DLLPath + "\"");
+		PublicDefinitions.Add("DBG=0");
+		PublicDefinitions.Add("BETA=0");
+		PublicDefinitions.Add("OFFICIAL_BUILD=1");
 
 		DynamicallyLoadedModuleNames.AddRange(
 				new string[]

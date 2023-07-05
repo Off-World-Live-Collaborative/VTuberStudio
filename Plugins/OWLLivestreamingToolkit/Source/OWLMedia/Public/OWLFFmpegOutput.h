@@ -3,9 +3,11 @@
 #pragma once
 #include "AudioMixerDevice.h"
 #include "FFastRunningMean.h"
+#include "FOWLEncoderProfiles.h"
 #include "MediaPacket.h"
 #include "Containers/CircularQueue.h"
 #include "OWLVideoEncoder.h"
+#include "Misc/Timecode.h"
 
 extern "C"
 {
@@ -157,6 +159,8 @@ struct OWLMEDIA_API FOWLEncodedPacket
 	bool bIsFinalPacket;
 };
 
+class USoundSubmix;
+
 USTRUCT(BlueprintType)
 struct OWLMEDIA_API FOWLFFmpegSettings
 {
@@ -168,7 +172,7 @@ struct OWLMEDIA_API FOWLFFmpegSettings
 
 	/* When ticked, this uses the Unreal Engine Hardware encoder. This is more performant
 	 but may not work in all situations */
-	UPROPERTY(BlueprintReadOnly, Category = "Encoder Settings", meta=(HideInDetailPanel))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Encoder Settings", meta=(HideInDetailPanel))
 	bool UseUEHardwareEncoder = true;
 
 	/* The output bitrate in kbs -- for 1080p, we recommend 5000kps */
@@ -178,6 +182,10 @@ struct OWLMEDIA_API FOWLFFmpegSettings
 	/* The audio bitrate in kbs -- we recommend either 128 or 160 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Encoder Settings", meta=(ClampMin="80", ClampMax="320", EditCondition="EncodeAudio"))
 	int AudioBitrate = 128;
+
+	/* Optionally add a submix here to be the source of the recorded/streamed audio */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Encoder Settings", meta=(EditCondition="EncodeAudio"))
+	USoundSubmix* Submix = nullptr;
 
 	/* The speaker layout of your audio stream */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Encoder Settings", meta=(EditCondition="EncodeAudio"))
@@ -191,13 +199,30 @@ struct OWLMEDIA_API FOWLFFmpegSettings
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings", meta=(ClampMin="15", ClampMax="50"))
 	int QMin = 15;
 
-	/* The H264 GOP (Group of Pictures) Size -- describes use of I, P and B frames */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings", meta=(ClampMin="10", ClampMax="30",EditCondition="!UseUEHardwareEncoder", EditConditionHides))
+	/* The H264 Profile to use. N.B. The `Baseline` profile will be replaced with `Main` when not using the Hardware Encoders plugin */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings")
+	EOWLEncoderProfile Profile = EOWLEncoderProfile::P_HIGH;
+
+	/* The H264 GOP (Group of Pictures) Size -- describes use of I, P and B frames (Only Available when not using Hardware Encoder) */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings", meta=(ClampMin="10", ClampMax="30",EditCondition="!UseUEHardwareEncoder"))
 	int GOPSize = 15;
 
-	/* Number of Iframes per frames encoded -- use to set the interval of Iframes in your encoded video */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings", meta=(ClampMin="5", ClampMax="240",EditCondition="UseUEHardwareEncoder", EditConditionHides))
+	/* Number of Iframes per frames encoded -- use to set the interval of Iframes in your encoded video (Only available when using Hardware Encoder plugin) */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings", meta=(ClampMin="5", ClampMax="240",EditCondition="UseUEHardwareEncoder"))
 	int FramesPerIframe = 30;
+
+
+	/* In some circumstances you may wish to scale the input render target size up or down before encoding */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings")
+	bool bOutputCustomResolution = false;
+
+	/* The custom resolution to output to. If you source render target is smaller than this, an upscale will be performed, if larger a downscale */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings", meta=(EditCondition="bOutputCustomResolution"))
+	FIntPoint CustomOutputResolution = FIntPoint(1920,1080);
+
+	/* In some circumstances when there are known delays, you may want to adjust the audio forward or backwards. This number is in milliseconds. N.B This will have no effect when modified mid-record/stream */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings", meta=(ClampMin="-1500", ClampMax="1500", UIMin="-500", UIMax="500"))
+	float AudioOffsetMs = 0;
 
 	FString FormatShortName = "mp4";
 	FString Destination = "";
@@ -226,6 +251,10 @@ public:
 	bool ProcessVideoFrame_RT(class UTextureRenderTarget2D* FrameTex, int64 MsElapsed, bool bIsFirstFrame);
 	/* Check FIFO buffer for new frames and render */
 	bool ProcessAudioFrame_RT();
+
+	/* Stores the timestamp at the render point for receiving the first frame */
+	void SetFirstFrameTime(FDateTime FrameTime);
+	void SetFirstFrameTime(FDateTime FrameTime, FTimecode TC, FFrameRate FrameRate);
 
 public:
 	bool CaptureAudio = true;
@@ -281,7 +310,7 @@ private:
 	/* Callback on AudioMixer interface that periodically sends new audio */
 	void OnNewSubmixBuffer(const USoundSubmix* OwningSubmix, float* AudioData, int32 NumSamples, int32 NumChannels, const int32 SampleRate, double AudioClock) override;
 	/* Converts a sample from input-> output format and adds to Fifo */
-	bool ConvertAudioFrame_RT();
+	bool ConvertAudioFrame_RT(int SamplesPerChannelCopied);
 	/* Adds TotalTicks amount to the Fifo buffer of silence */
 	bool InjectSilence_RT(int64 TotalTicks);
 	/* Reads from Fifo buffer, encodes frame, listens for output and sends to output */
@@ -294,6 +323,7 @@ private:
 	bool SendAudioFrame_RT(const AVFrame* Frame, bool LoopForFrames);
 	/* Sends a null packet into the encoder and waits for any final packets to be output */
 	bool FlushAudioEncoder();
+
 private:
 	// LibAV video setup
 	/* Stores the list of available hardware encoding devices */
@@ -301,7 +331,7 @@ private:
 	bool SendVideoFrame_RT(const AVFrame* Frame, bool LoopForFrames, int currentFrame = 0);
 	bool SendVideoFrame_RT(const AVEncoder::FMediaPacket& Frame);
 	void FlushVideoEncoder();
-	bool InitVideoCodec();
+	bool InitVideoCodec(EOWLEncoderProfile Profile);
 	bool OpenVideo();
 	bool InitVideoFrame();
 	bool InitVideoResampler();
@@ -314,6 +344,7 @@ private:
 	EOWLAudioChannelLayout GetAVAudioChannelLayoutFromChannels(int NumChannels);
 	int GetNumChannelsFromLayout(EOWLAudioChannelLayout Layout);
 	void CheckPacketLossTimeout();
+	void SetTimecodeMetadata();
 	/* Works out whether a fixed frame rate has been applied to this project
 	 * and guesses the expected framerate for video metadata as best as possible
 	 */
@@ -362,15 +393,17 @@ private:
 	 * our OnSubmixBuffer method.
 	 */
 	const int InitialAudioClockOffsetMs = 5;
-	int64 NumAudioSamplesReceived =0;
+	int64 NumAudioSamplesReceived = 0;
 	/* Stores the Unreal audio clock time when the first audio packet was received */
 	double FirstAudioClock = 0;
+	int64 UserAudioTickOffset = 0;
+	USoundSubmix* SelectedSubmix = nullptr;
 	/* Stores a running mean of the diff between audio clock and system clock */
 	FFastRunningMean* MeanAudioClockDiff = new FFastRunningMean(8);
 	int64 LastMeanClockAudioClockOffset = 0;
 	int64 FirstAudioSampleTicks = 0;
 	int64 AdjustmentTicksApplied = 0;
-	int64_t ConvertedAudioSamples = 0;
+	int64_t ConvertedAudioSamples = 1024;
 
 	// LibAV Video State
 	TArray<AVHWDeviceType> HardwareDevices;
@@ -393,6 +426,13 @@ private:
 	int VideoQMax = 25;
 	int VideoGOPSize = 15;
 	int64 VideoStartTimeMs = 0;
+
+	FDateTime FirstFrameTime = FDateTime(0);
+	bool bUseTimecode = false;
+	FFrameRate CurrentFramerate;
+	FTimecode FirstFrameTimeCode;
+
+	int64 LastGPUPacketTicks = -1;
 
 	FOWLSRTOptions SRTOptions;
 

@@ -184,6 +184,19 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Alpha Settings")
 	bool InvertAlpha = true;
 
+	/** Tick to enable plugins like DLSS -- warning certain anti-aliasing settings may cause crashes when screen percentage on this actor is adjusted. WARNING: this feature is experimental and
+		may cause crashes especially in conjuction with the Seamless Bloom!! */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Advanced", Experimental, DisplayName="Enable Upscaling (Experimental)")
+	bool bEnableUpscaling = false;
+
+	/** ScreenPercentage affects impact of upscaling (ie DLSS, TAA ...) */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Advanced", Experimental, meta = (UIMin = "25", UIMax = "200", ClampMin="25", ClampMax="200", EditCondition="bEnableUpscaling"))
+	float ScreenPercentage = 100;
+
+	/** Secondary Screen Percentage affects impact of upscaling (ie DLSS, TAA ...) */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Advanced", Experimental, meta = (UIMin = "25", UIMax = "200", ClampMin="25", ClampMax="200", EditCondition="bEnableUpscaling"))
+	float SecondaryScreenPercentage = 100;
+
 public:
 	UFUNCTION(BlueprintPure, Category = "OWL360Capture")
 	UCameraComponent* GetTargetCamera() const;

@@ -770,6 +770,19 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxViewDistanceOverride;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bEnableUpscaling_MetaData[];
+#endif
+		static void NewProp_bEnableUpscaling_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bEnableUpscaling;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ScreenPercentage_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_ScreenPercentage;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SecondaryScreenPercentage_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_SecondaryScreenPercentage;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_bUseRTOverride_MetaData[];
 #endif
 		static void NewProp_bUseRTOverride_SetBit(void* Obj);
@@ -1048,6 +1061,47 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_MaxViewDistanceOverride = { "MaxViewDistanceOverride", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, MaxViewDistanceOverride), METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_MaxViewDistanceOverride_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_MaxViewDistanceOverride_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bEnableUpscaling_MetaData[] = {
+		{ "Category", "Off World Live Capture Settings|Advanced" },
+		{ "Comment", "/** Tick to enable plugins like DLSS -- warning certain anti-aliasing settings may cause crashes when screen percentage on this actor is adjusted */" },
+		{ "ModuleRelativePath", "Public/OWLCaptureComponent.h" },
+		{ "ToolTip", "Tick to enable plugins like DLSS -- warning certain anti-aliasing settings may cause crashes when screen percentage on this actor is adjusted" },
+	};
+#endif
+	void Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bEnableUpscaling_SetBit(void* Obj)
+	{
+		((UOWLCaptureComponent*)Obj)->bEnableUpscaling = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bEnableUpscaling = { "bEnableUpscaling", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(UOWLCaptureComponent), &Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bEnableUpscaling_SetBit, METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bEnableUpscaling_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bEnableUpscaling_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ScreenPercentage_MetaData[] = {
+		{ "Category", "Off World Live Capture Settings|Advanced" },
+		{ "ClampMax", "200" },
+		{ "ClampMin", "25" },
+		{ "Comment", "/** ScreenPercentage affects impact of upscaling (ie DLSS, TAA ...) */" },
+		{ "EditCondition", "bEnableUpscaling" },
+		{ "ModuleRelativePath", "Public/OWLCaptureComponent.h" },
+		{ "ToolTip", "ScreenPercentage affects impact of upscaling (ie DLSS, TAA ...)" },
+		{ "UIMax", "200" },
+		{ "UIMin", "25" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ScreenPercentage = { "ScreenPercentage", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, ScreenPercentage), METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ScreenPercentage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ScreenPercentage_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_SecondaryScreenPercentage_MetaData[] = {
+		{ "Category", "Off World Live Capture Settings|Advanced" },
+		{ "ClampMax", "200" },
+		{ "ClampMin", "25" },
+		{ "Comment", "/** Secondary ScreenPercentage affects impact of upscaling (ie DLSS, TAA ...) */" },
+		{ "EditCondition", "bEnableUpscaling" },
+		{ "ModuleRelativePath", "Public/OWLCaptureComponent.h" },
+		{ "ToolTip", "Secondary ScreenPercentage affects impact of upscaling (ie DLSS, TAA ...)" },
+		{ "UIMax", "200" },
+		{ "UIMin", "25" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_SecondaryScreenPercentage = { "SecondaryScreenPercentage", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWLCaptureComponent, SecondaryScreenPercentage), METADATA_PARAMS(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_SecondaryScreenPercentage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_SecondaryScreenPercentage_MetaData)) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bUseRTOverride_MetaData[] = {
 		{ "Category", "Internal" },
 		{ "ModuleRelativePath", "Public/OWLCaptureComponent.h" },
@@ -1151,6 +1205,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_InvertAlpha,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_LODDistanceFactor,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_MaxViewDistanceOverride,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bEnableUpscaling,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_ScreenPercentage,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_SecondaryScreenPercentage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bUseRTOverride,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_bHideBufferOption,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWLCaptureComponent_Statics::NewProp_AlphaOnlyMaterial,
@@ -1204,9 +1261,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLCaptureComponent() {}
 		{ EOWLOutputBufferVisualisation_StaticEnum, TEXT("EOWLOutputBufferVisualisation"), &Z_Registration_Info_UEnum_EOWLOutputBufferVisualisation, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3729483045U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWLCaptureComponent, UOWLCaptureComponent::StaticClass, TEXT("UOWLCaptureComponent"), &Z_Registration_Info_UClass_UOWLCaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLCaptureComponent), 1890626426U) },
+		{ Z_Construct_UClass_UOWLCaptureComponent, UOWLCaptureComponent::StaticClass, TEXT("UOWLCaptureComponent"), &Z_Registration_Info_UClass_UOWLCaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWLCaptureComponent), 3837297644U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_637628593(TEXT("/Script/OWLCamera"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_1544353919(TEXT("/Script/OWLCamera"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLCamera_Public_OWLCaptureComponent_h_Statics::EnumInfo));

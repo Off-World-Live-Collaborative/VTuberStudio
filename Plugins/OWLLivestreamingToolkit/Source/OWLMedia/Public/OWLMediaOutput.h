@@ -10,6 +10,7 @@ extern "C"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Tools/OWLImageInput.h"
+#include "Misc/Timecode.h"
 #include "OWLFFmpegOutput.h"
 
 #include "OWLMediaOutput.generated.h"
@@ -126,6 +127,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Output Settings")
 	FOWLFFmpegSettings EncoderSettings;
 
+	/* When set true, the media output will attempt to read timecode data from the default TimecodeProvider. NB This has the side-effect of quantising frames to the nearest timestamp frame */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Output Settings")
+	bool bUseTimecodeProviderWhereAvailable = false;
+
 	// this will be marked hidden by details customisation
 	UPROPERTY(VisibleAnywhere, Transient, BlueprintReadOnly, Category = "Output Settings")
 	bool HasStarted = false;
@@ -194,6 +199,9 @@ private:
 	const float ReconnectionWaitTime = 10.0f;
 	EOWLDestinationFormat FFMpegDestinationFormat = EOWLDestinationFormat::F_MP4;
 	int64 SendStart = 0;
+	FDateTime FirstFrameTime = 0;
+	FTimecode FirstFrameTimecode;
+	FTimecode LastFrameTimecode;
 	int64 FrameCount = 0;
 	bool bSentFirstFrame = false;
 	FCriticalSection CleanupCS;
@@ -214,11 +222,14 @@ private:
 
 	bool IsStopping = false;
 
+	UPROPERTY()
+	UTextureRenderTarget2D* IntermediateTarget = nullptr;
+
 	void Cleanup();
 	void TryReconnect();
 	void RemoveFFmpegTicker();
 	void SendFrame();
-	bool SendVideoFrame_RT(FRHICommandListImmediate& RHICmdList);
+	bool SendVideoFrame_RT(FRHICommandListImmediate& RHICmdList, int MsElapsed);
 	void SetDurationMs();
 	bool CheckMinutesRemaining();
 	void OnMeteredRunnableStopped();

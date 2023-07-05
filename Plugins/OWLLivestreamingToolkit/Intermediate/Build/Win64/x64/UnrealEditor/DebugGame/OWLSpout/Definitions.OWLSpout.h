@@ -72,7 +72,9 @@
 #define UE_PROJECT_NAME BuildTemp
 #define UE_TARGET_NAME BuildTempEditor
 #define OWL_SPOUT_DLL_PATH "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/Spout.dll"
-#define OWL_SPOUT_12_DLL_PATH "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/SpoutDX12.dll"
+#define DBG 0
+#define BETA 0
+#define OFFICIAL_BUILD 1
 #define UE_MODULE_NAME "OWLSpout"
 #define UE_PLUGIN_NAME "OWLLivestreamingToolkit"
 #define IMPLEMENT_ENCRYPTION_KEY_REGISTRATION() 
@@ -389,7 +391,7 @@
 #define MOVIESCENECAPTURE_API DLLIMPORT
 #define ANIMATIONDATACONTROLLER_API DLLIMPORT
 #define OWL_AUTH_URL "https://plugin-api.offworld.live"
-#define RELEASE_DATE 2023-05-17T16:40:04.000Z
+#define RELEASE_DATE 2023-06-29T14:15:40.000Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
 #define AUTH_APP_NAME owl-licensing-utility.exe
@@ -416,5 +418,7 @@
 #define DXGI_MAX_SWAPCHAIN_INTERFACE 4
 #define NV_AFTERMATH 1
 #define OWL_SPOUT_DLL_PATH "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/Spout.dll"
-#define OWL_SPOUT_12_DLL_PATH "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/SpoutDX12.dll"
+#define DBG 0
+#define BETA 0
+#define OFFICIAL_BUILD 1
 #define OWLSPOUT_API DLLEXPORT

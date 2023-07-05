@@ -231,7 +231,7 @@
 #define PROJECTS_API 
 #define OPENCOLORIO_API 
 #define OWL_AUTH_URL "https://plugin-api.offworld.live"
-#define RELEASE_DATE 2023-05-17T16:40:04.000Z
+#define RELEASE_DATE 2023-06-29T14:15:40.000Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
 #define AUTH_APP_NAME owl-licensing-utility.exe
@@ -255,7 +255,9 @@
 #define WITH_CUSTOM_SQ_STRUCTURE UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
 #define LANDSCAPE_API 
 #define OWL_SPOUT_DLL_PATH "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/Spout.dll"
-#define OWL_SPOUT_12_DLL_PATH "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/SpoutDX12.dll"
+#define DBG 0
+#define BETA 0
+#define OFFICIAL_BUILD 1
 #define OWLSPOUT_API 
 #define OWLSCREENCAPTURE_API 
 #define OWLCOMPOSURE_API 

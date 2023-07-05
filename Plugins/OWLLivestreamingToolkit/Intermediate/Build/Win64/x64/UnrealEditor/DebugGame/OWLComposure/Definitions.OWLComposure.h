@@ -402,7 +402,7 @@
 #define LEVELSEQUENCE_API DLLIMPORT
 #define OPENCOLORIO_API DLLIMPORT
 #define OWL_AUTH_URL "https://plugin-api.offworld.live"
-#define RELEASE_DATE 2023-05-17T16:40:04.000Z
+#define RELEASE_DATE 2023-06-29T14:15:40.000Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
 #define AUTH_APP_NAME owl-licensing-utility.exe
@@ -411,7 +411,9 @@
 #define OWLCAMERA_API DLLIMPORT
 #define RHICORE_API DLLIMPORT
 #define OWL_SPOUT_DLL_PATH "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/Spout.dll"
-#define OWL_SPOUT_12_DLL_PATH "/Source/ThirdParty/Spout/Spout2/BUILD/Binaries/x64/SpoutDX12.dll"
+#define DBG 0
+#define BETA 0
+#define OFFICIAL_BUILD 1
 #define OWLSPOUT_API DLLIMPORT
 #define OWLSCREENCAPTURE_API DLLIMPORT
 #define OWLCOMPOSURE_API DLLEXPORT

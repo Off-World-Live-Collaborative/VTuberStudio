@@ -37,7 +37,6 @@ public:
 	void RenderViewportToTexture_RT(FRHICommandListImmediate& RHICmdList, const FSceneViewport* SourceViewport);
 
 private:
-	void FindSceneViewport(TWeakPtr<FSceneViewport>& OutSceneViewport);
 	void UpdateTextureTargetResolution(FIntPoint ExpectedResolution);
 private:
 	FCriticalSection AccessingCapturingSource;

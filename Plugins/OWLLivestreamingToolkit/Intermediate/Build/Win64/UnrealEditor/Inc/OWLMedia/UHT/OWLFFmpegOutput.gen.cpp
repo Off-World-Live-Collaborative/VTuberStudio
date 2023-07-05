@@ -9,8 +9,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOWLFFmpegOutput() {}
 // Cross Module References
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntPoint();
+	ENGINE_API UClass* Z_Construct_UClass_USoundSubmix_NoRegister();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLAudioChannelLayout();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLDestinationFormat();
+	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLEncoderProfile();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLMediaOutputType();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLSRTPubKeyLen();
 	OWLMEDIA_API UScriptStruct* Z_Construct_UScriptStruct_FOWLAudioSampleBlock();
@@ -670,6 +673,10 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_AudioBitrate_MetaData[];
 #endif
 		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_AudioBitrate;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Submix_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Submix;
 		static const UECodeGen_Private::FBytePropertyParams NewProp_AudioChannelLayout_Underlying;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_AudioChannelLayout_MetaData[];
@@ -683,6 +690,11 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_QMin_MetaData[];
 #endif
 		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_QMin;
+		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_Profile_Underlying;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Profile_MetaData[];
+#endif
+		static const UECodeGen_Private::FEnumPropertyParams NewProp_Profile;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_GOPSize_MetaData[];
 #endif
@@ -691,6 +703,19 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_FramesPerIframe_MetaData[];
 #endif
 		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_FramesPerIframe;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bOutputCustomResolution_MetaData[];
+#endif
+		static void NewProp_bOutputCustomResolution_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bOutputCustomResolution;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_CustomOutputResolution_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_CustomOutputResolution;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_AudioOffsetMs_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_AudioOffsetMs;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -730,7 +755,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 	{
 		((FOWLFFmpegSettings*)Obj)->UseUEHardwareEncoder = 1;
 	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_UseUEHardwareEncoder = { "UseUEHardwareEncoder", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(FOWLFFmpegSettings), &Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_UseUEHardwareEncoder_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_UseUEHardwareEncoder_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_UseUEHardwareEncoder_MetaData)) };
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_UseUEHardwareEncoder = { "UseUEHardwareEncoder", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(FOWLFFmpegSettings), &Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_UseUEHardwareEncoder_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_UseUEHardwareEncoder_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_UseUEHardwareEncoder_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_VideoBitrate_MetaData[] = {
 		{ "Category", "Encoder Settings" },
@@ -754,6 +779,16 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioBitrate = { "AudioBitrate", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLFFmpegSettings, AudioBitrate), METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioBitrate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioBitrate_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Submix_MetaData[] = {
+		{ "Category", "Encoder Settings" },
+		{ "Comment", "/* Optionally add a submix here to be the source of the recorded/streamed audio */" },
+		{ "EditCondition", "EncodeAudio" },
+		{ "ModuleRelativePath", "Public/OWLFFmpegOutput.h" },
+		{ "ToolTip", "Optionally add a submix here to be the source of the recorded/streamed audio" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Submix = { "Submix", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLFFmpegSettings, Submix), Z_Construct_UClass_USoundSubmix_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Submix_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Submix_MetaData)) };
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioChannelLayout_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioChannelLayout_MetaData[] = {
@@ -787,16 +822,25 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_QMin = { "QMin", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLFFmpegSettings, QMin), METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_QMin_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_QMin_MetaData)) };
+	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Profile_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Profile_MetaData[] = {
+		{ "Category", "Advanced Encoder Settings" },
+		{ "Comment", "/* The H264 Profile to use. N.B. The `Baseline` profile will be replaced with `Main` when not using the Hardware Encoders plugin */" },
+		{ "ModuleRelativePath", "Public/OWLFFmpegOutput.h" },
+		{ "ToolTip", "The H264 Profile to use. N.B. The `Baseline` profile will be replaced with `Main` when not using the Hardware Encoders plugin" },
+	};
+#endif
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Profile = { "Profile", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLFFmpegSettings, Profile), Z_Construct_UEnum_OWLMedia_EOWLEncoderProfile, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Profile_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Profile_MetaData)) }; // 3118128600
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_GOPSize_MetaData[] = {
 		{ "Category", "Advanced Encoder Settings" },
 		{ "ClampMax", "30" },
 		{ "ClampMin", "10" },
-		{ "Comment", "/* The H264 GOP (Group of Pictures) Size -- describes use of I, P and B frames */" },
+		{ "Comment", "/* The H264 GOP (Group of Pictures) Size -- describes use of I, P and B frames (Only Available when not using Hardware Encoder) */" },
 		{ "EditCondition", "!UseUEHardwareEncoder" },
-		{ "EditConditionHides", "" },
 		{ "ModuleRelativePath", "Public/OWLFFmpegOutput.h" },
-		{ "ToolTip", "The H264 GOP (Group of Pictures) Size -- describes use of I, P and B frames" },
+		{ "ToolTip", "The H264 GOP (Group of Pictures) Size -- describes use of I, P and B frames (Only Available when not using Hardware Encoder)" },
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_GOPSize = { "GOPSize", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLFFmpegSettings, GOPSize), METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_GOPSize_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_GOPSize_MetaData)) };
@@ -805,25 +849,66 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 		{ "Category", "Advanced Encoder Settings" },
 		{ "ClampMax", "240" },
 		{ "ClampMin", "5" },
-		{ "Comment", "/* Number of Iframes per frames encoded -- use to set the interval of Iframes in your encoded video */" },
+		{ "Comment", "/* Number of Iframes per frames encoded -- use to set the interval of Iframes in your encoded video (Only available when using Hardware Encoder plugin) */" },
 		{ "EditCondition", "UseUEHardwareEncoder" },
-		{ "EditConditionHides", "" },
 		{ "ModuleRelativePath", "Public/OWLFFmpegOutput.h" },
-		{ "ToolTip", "Number of Iframes per frames encoded -- use to set the interval of Iframes in your encoded video" },
+		{ "ToolTip", "Number of Iframes per frames encoded -- use to set the interval of Iframes in your encoded video (Only available when using Hardware Encoder plugin)" },
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_FramesPerIframe = { "FramesPerIframe", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLFFmpegSettings, FramesPerIframe), METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_FramesPerIframe_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_FramesPerIframe_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bOutputCustomResolution_MetaData[] = {
+		{ "Category", "Advanced Encoder Settings" },
+		{ "Comment", "/* In some circumstances you may wish to scale the input render target size up or down before encoding */" },
+		{ "ModuleRelativePath", "Public/OWLFFmpegOutput.h" },
+		{ "ToolTip", "In some circumstances you may wish to scale the input render target size up or down before encoding" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bOutputCustomResolution_SetBit(void* Obj)
+	{
+		((FOWLFFmpegSettings*)Obj)->bOutputCustomResolution = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bOutputCustomResolution = { "bOutputCustomResolution", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(FOWLFFmpegSettings), &Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bOutputCustomResolution_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bOutputCustomResolution_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bOutputCustomResolution_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_CustomOutputResolution_MetaData[] = {
+		{ "Category", "Advanced Encoder Settings" },
+		{ "Comment", "/* The custom resolution to output to. If you source render target is smaller than this, an upscale will be performed, if larger a downscale */" },
+		{ "EditCondition", "bOutputCustomResolution" },
+		{ "ModuleRelativePath", "Public/OWLFFmpegOutput.h" },
+		{ "ToolTip", "The custom resolution to output to. If you source render target is smaller than this, an upscale will be performed, if larger a downscale" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_CustomOutputResolution = { "CustomOutputResolution", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLFFmpegSettings, CustomOutputResolution), Z_Construct_UScriptStruct_FIntPoint, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_CustomOutputResolution_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_CustomOutputResolution_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioOffsetMs_MetaData[] = {
+		{ "Category", "Advanced Encoder Settings" },
+		{ "ClampMax", "1500" },
+		{ "ClampMin", "-1500" },
+		{ "Comment", "/* In some circumstances when there are known delays, you may want to adjust the audio forward or backwards. This number is in milliseconds. N.B This will have no effect when modified mid-record/stream */" },
+		{ "ModuleRelativePath", "Public/OWLFFmpegOutput.h" },
+		{ "ToolTip", "In some circumstances when there are known delays, you may want to adjust the audio forward or backwards. This number is in milliseconds. N.B This will have no effect when modified mid-record/stream" },
+		{ "UIMax", "500" },
+		{ "UIMin", "-500" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioOffsetMs = { "AudioOffsetMs", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLFFmpegSettings, AudioOffsetMs), METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioOffsetMs_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioOffsetMs_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_EncodeAudio,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_UseUEHardwareEncoder,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_VideoBitrate,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioBitrate,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Submix,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioChannelLayout_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioChannelLayout,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_QMax,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_QMin,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Profile_Underlying,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_Profile,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_GOPSize,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_FramesPerIframe,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bOutputCustomResolution,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_CustomOutputResolution,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioOffsetMs,
 	};
 	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_OWLMedia,
@@ -861,9 +946,9 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 		{ FOWLSRTOptions::StaticStruct, Z_Construct_UScriptStruct_FOWLSRTOptions_Statics::NewStructOps, TEXT("OWLSRTOptions"), &Z_Registration_Info_UScriptStruct_OWLSRTOptions, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLSRTOptions), 4116997552U) },
 		{ FOWLAudioSampleBlock::StaticStruct, Z_Construct_UScriptStruct_FOWLAudioSampleBlock_Statics::NewStructOps, TEXT("OWLAudioSampleBlock"), &Z_Registration_Info_UScriptStruct_OWLAudioSampleBlock, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLAudioSampleBlock), 3146865514U) },
 		{ FOWLEncodedPacket::StaticStruct, Z_Construct_UScriptStruct_FOWLEncodedPacket_Statics::NewStructOps, TEXT("OWLEncodedPacket"), &Z_Registration_Info_UScriptStruct_OWLEncodedPacket, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLEncodedPacket), 2322824884U) },
-		{ FOWLFFmpegSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewStructOps, TEXT("OWLFFmpegSettings"), &Z_Registration_Info_UScriptStruct_OWLFFmpegSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLFFmpegSettings), 2204005794U) },
+		{ FOWLFFmpegSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewStructOps, TEXT("OWLFFmpegSettings"), &Z_Registration_Info_UScriptStruct_OWLFFmpegSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLFFmpegSettings), 2666962910U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_4020692864(TEXT("/Script/OWLMedia"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_3401655792(TEXT("/Script/OWLMedia"),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_Statics::ScriptStructInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_Statics::EnumInfo));

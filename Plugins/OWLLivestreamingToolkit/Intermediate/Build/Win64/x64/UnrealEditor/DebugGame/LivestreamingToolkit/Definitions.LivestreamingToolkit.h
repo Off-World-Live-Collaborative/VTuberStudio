@@ -72,7 +72,7 @@
 #define UE_PROJECT_NAME BuildTemp
 #define UE_TARGET_NAME BuildTempEditor
 #define OWL_AUTH_URL "https://plugin-api.offworld.live"
-#define RELEASE_DATE 2023-05-17T16:40:04.000Z
+#define RELEASE_DATE 2023-06-29T14:15:40.000Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
 #define AUTH_APP_NAME owl-licensing-utility.exe
@@ -393,7 +393,7 @@
 #define ANIMATIONDATACONTROLLER_API DLLIMPORT
 #define LIVESTREAMINGTOOLKITSHADERS_API DLLIMPORT
 #define OWL_AUTH_URL "https://plugin-api.offworld.live"
-#define RELEASE_DATE 2023-05-17T16:40:04.000Z
+#define RELEASE_DATE 2023-06-29T14:15:40.000Z
 #define OFFWORLDLIVE_DEBUG 0
 #define DEBUG_APP_LICENCE 0
 #define AUTH_APP_NAME owl-licensing-utility.exe

@@ -136,6 +136,18 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Off World Live Capture Settings|Advanced", meta = (UIMin = "100", UIMax = "10000"))
 	float MaxViewDistanceOverride = -1;
 
+	/** Tick to enable plugins like DLSS -- warning certain anti-aliasing settings may cause crashes when screen percentage on this actor is adjusted */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Advanced")
+	bool bEnableUpscaling = false;
+
+	/** ScreenPercentage affects impact of upscaling (ie DLSS, TAA ...) */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Advanced", meta = (UIMin = "25", UIMax = "200", ClampMax="200", ClampMin="25", EditCondition="bEnableUpscaling"))
+	float ScreenPercentage = 100;
+
+	/** Secondary ScreenPercentage affects impact of upscaling (ie DLSS, TAA ...) */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Off World Live Capture Settings|Advanced", meta = (UIMin = "25", UIMax = "200", ClampMax="200", ClampMin="25", EditCondition="bEnableUpscaling"))
+	float SecondaryScreenPercentage = 100;
+
 public:
 	UFUNCTION(BlueprintPure, Category = "OWLCapture")
 	virtual UCameraComponent* GetTargetCamera() const;

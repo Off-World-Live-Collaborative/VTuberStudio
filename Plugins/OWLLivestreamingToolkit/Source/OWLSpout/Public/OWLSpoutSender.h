@@ -14,9 +14,13 @@ THIRD_PARTY_INCLUDES_START
 #pragma warning(disable: 4005)
 #include <d3d11.h>
 #include <d3d12.h>
+#include <d3d11on12.h>
+#include <wrl/client.h>
 #pragma warning(pop)
 THIRD_PARTY_INCLUDES_END
 #include "Windows/HideWindowsPlatformTypes.h"
+
+class FOWLSpoutD3D12Helper;
 
 class OWLSPOUT_API FOWLSpoutSender
 {
@@ -24,28 +28,33 @@ private:
 	ERHIType RHIType = ERHIType::Null;
 
 public:
-	// spout DX12 Interface
-	class spoutDX12* Sender_DX12 = nullptr;
-	// spout DX11 Interface
-	class spoutSenderNames* SenderNames_DX11 = nullptr;
+	class spoutSenderNames* SenderNames = nullptr;
 	// DX11 Interface
-	ID3D11Device* Device11 = nullptr;
-	ID3D11DeviceContext* DeviceContext11 = nullptr;
+	Microsoft::WRL::ComPtr<ID3D11Device> Device11 = nullptr;
+	Microsoft::WRL::ComPtr<ID3D11DeviceContext> DeviceContext11 = nullptr;
 	// DX11 Sending resources
 	HANDLE SenderHandle_DX11;
-	ID3D11Texture2D* SendingTexture_DX11;
+	// DX11 texture that we send to spout
+	Microsoft::WRL::ComPtr<ID3D11Texture2D> SendingTexture_DX11;
+	Microsoft::WRL::ComPtr<ID3D11On12Device> Device11on12 = nullptr;
 	FString SenderName_DX11;
 
 	FTexture2DRHIRef SendingTextureRHI;
 
+	FOWLSpoutD3D12Helper* D3DHelper = nullptr;
+
 	bool Initialised = false;
 	bool FailedToInitialise = false;
+
+
 
 private:
 	bool InitDX();
 	void Send(FString InName, UTextureRenderTarget2D* srcRenderTarget, bool bFixGamma);
+	void Send_RHI(FRHICommandListImmediate& RHICmdList, FString InName, UTextureRenderTarget2D* srcRenderTarget, bool bFixGamma);
 
 public:
+	FOWLSpoutSender();
 	~FOWLSpoutSender();
 	void SendRenderTarget(FString name, UTextureRenderTarget2D* textureRenderTarget2D, bool bFixGamma = true);
 	void Close();
@@ -56,7 +65,7 @@ private:
 		const unsigned int Height,
 		const unsigned long Format,
 		HANDLE& Handle,
-		ID3D11Texture2D*& Texture);
+		Microsoft::WRL::ComPtr<ID3D11Texture2D>& Texture);
 
 	bool bHasLogged32BitRGIssue = false;
 	bool SetupSendingTextureRHI(UTextureRenderTarget2D* srcRenderTarget, FRHICommandListImmediate& RHICmdList, bool bFixGamma);

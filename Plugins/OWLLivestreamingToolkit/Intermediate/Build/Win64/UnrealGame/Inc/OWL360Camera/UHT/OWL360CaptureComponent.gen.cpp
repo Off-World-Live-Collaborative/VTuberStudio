@@ -842,6 +842,19 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 #endif
 		static void NewProp_InvertAlpha_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_InvertAlpha;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bEnableUpscaling_MetaData[];
+#endif
+		static void NewProp_bEnableUpscaling_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bEnableUpscaling;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ScreenPercentage_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_ScreenPercentage;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SecondaryScreenPercentage_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_SecondaryScreenPercentage;
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_InternalRTs_Inner;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_InternalRTs_MetaData[];
@@ -1207,6 +1220,51 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 		((UOWL360CaptureComponent*)Obj)->InvertAlpha = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_InvertAlpha = { "InvertAlpha", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(UOWL360CaptureComponent), &Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_InvertAlpha_SetBit, METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_InvertAlpha_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_InvertAlpha_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_bEnableUpscaling_MetaData[] = {
+		{ "Category", "Off World Live Capture Settings|Advanced" },
+		{ "Comment", "/** Tick to enable plugins like DLSS -- warning certain anti-aliasing settings may cause crashes when screen percentage on this actor is adjusted. WARNING: this feature is experimental and\n\x09\x09may cause crashes especially in conjuction with the Seamless Bloom!! */" },
+		{ "DevelopmentStatus", "Experimental" },
+		{ "DisplayName", "Enable Upscaling (Experimental)" },
+		{ "ModuleRelativePath", "Public/OWL360CaptureComponent.h" },
+		{ "ToolTip", "Tick to enable plugins like DLSS -- warning certain anti-aliasing settings may cause crashes when screen percentage on this actor is adjusted. WARNING: this feature is experimental and\n              may cause crashes especially in conjuction with the Seamless Bloom!!" },
+	};
+#endif
+	void Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_bEnableUpscaling_SetBit(void* Obj)
+	{
+		((UOWL360CaptureComponent*)Obj)->bEnableUpscaling = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_bEnableUpscaling = { "bEnableUpscaling", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(UOWL360CaptureComponent), &Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_bEnableUpscaling_SetBit, METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_bEnableUpscaling_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_bEnableUpscaling_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ScreenPercentage_MetaData[] = {
+		{ "Category", "Off World Live Capture Settings|Advanced" },
+		{ "ClampMax", "200" },
+		{ "ClampMin", "25" },
+		{ "Comment", "/** ScreenPercentage affects impact of upscaling (ie DLSS, TAA ...) */" },
+		{ "DevelopmentStatus", "Experimental" },
+		{ "EditCondition", "bEnableUpscaling" },
+		{ "ModuleRelativePath", "Public/OWL360CaptureComponent.h" },
+		{ "ToolTip", "ScreenPercentage affects impact of upscaling (ie DLSS, TAA ...)" },
+		{ "UIMax", "200" },
+		{ "UIMin", "25" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ScreenPercentage = { "ScreenPercentage", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, ScreenPercentage), METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ScreenPercentage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ScreenPercentage_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_SecondaryScreenPercentage_MetaData[] = {
+		{ "Category", "Off World Live Capture Settings|Advanced" },
+		{ "ClampMax", "200" },
+		{ "ClampMin", "25" },
+		{ "Comment", "/** Secondary Screen Percentage affects impact of upscaling (ie DLSS, TAA ...) */" },
+		{ "DevelopmentStatus", "Experimental" },
+		{ "EditCondition", "bEnableUpscaling" },
+		{ "ModuleRelativePath", "Public/OWL360CaptureComponent.h" },
+		{ "ToolTip", "Secondary Screen Percentage affects impact of upscaling (ie DLSS, TAA ...)" },
+		{ "UIMax", "200" },
+		{ "UIMin", "25" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_SecondaryScreenPercentage = { "SecondaryScreenPercentage", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UOWL360CaptureComponent, SecondaryScreenPercentage), METADATA_PARAMS(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_SecondaryScreenPercentage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_SecondaryScreenPercentage_MetaData)) };
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_InternalRTs_Inner = { "InternalRTs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UClass_UTextureRenderTarget2D_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_InternalRTs_MetaData[] = {
@@ -1259,6 +1317,9 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ShowOnlyActors_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ShowOnlyActors,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_InvertAlpha,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_bEnableUpscaling,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_ScreenPercentage,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_SecondaryScreenPercentage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_InternalRTs_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_InternalRTs,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOWL360CaptureComponent_Statics::NewProp_CameraMesh,
@@ -1305,9 +1366,9 @@ void EmptyLinkFunctionForGeneratedCodeOWL360CaptureComponent() {}
 		{ E360ProjectionType_StaticEnum, TEXT("E360ProjectionType"), &Z_Registration_Info_UEnum_E360ProjectionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 844386497U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UOWL360CaptureComponent, UOWL360CaptureComponent::StaticClass, TEXT("UOWL360CaptureComponent"), &Z_Registration_Info_UClass_UOWL360CaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWL360CaptureComponent), 1640014952U) },
+		{ Z_Construct_UClass_UOWL360CaptureComponent, UOWL360CaptureComponent::StaticClass, TEXT("UOWL360CaptureComponent"), &Z_Registration_Info_UClass_UOWL360CaptureComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOWL360CaptureComponent), 793377288U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_3550229638(TEXT("/Script/OWL360Camera"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_365381870(TEXT("/Script/OWL360Camera"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWL360Camera_Public_OWL360CaptureComponent_h_Statics::EnumInfo));
