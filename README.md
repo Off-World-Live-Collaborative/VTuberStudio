@@ -20,8 +20,8 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
  - Streaming and Media Output: Virtual Webcam, Spout Output, NDI Output, Streaming to RTMP, Save to File
  - Media Input: Screen Capture, Spout Input, NDI Input
  - Actor Blueprint to select desired capture systems, their respective render targets, and display materials
- - LiveLink 
- - Example assets such as avatars (VRM & Metahuman), environment meshes, and materials
+ - LiveLink, OSC, VMC support
+ - Example assets such as avatars (VRM & Metahuman), environment meshes, materials, Animation Retargetters, and MoCap blueprints
 
 ### Dependencies
 - To explore all features in VTS and package your own application, you will need to download:
