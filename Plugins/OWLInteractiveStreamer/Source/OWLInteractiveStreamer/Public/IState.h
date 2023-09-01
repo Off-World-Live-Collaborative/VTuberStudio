@@ -14,6 +14,7 @@ public:
 	virtual void TickState(float DeltaSeconds);
 
 	// Called when message is received via websocket
+	// TODO: try removing?
 	virtual void OnMessage(const FString& Message);
 	
 	// Called once when exiting state
