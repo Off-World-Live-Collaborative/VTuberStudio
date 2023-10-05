@@ -19,8 +19,10 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
  - OWL Capture Systems: Viewport Capture, CineCam Capture, 360 Capture 
  - Streaming and Media Output: Virtual Webcam, Spout Output, NDI Output, Streaming to RTMP, Save to File
  - Media Input: Screen Capture, Spout Input, NDI Input
+ - LiveLink and VMC support
+ - Face tracking and pose tracking via VMC for sending ARKit data to MetaHumans
+ - Twitch Integration for listening and sending chat messages to your stream
  - Actor Blueprint to select desired capture systems, their respective render targets, and display materials
- - LiveLink, OSC, VMC support
  - Example assets such as avatars (VRM & Metahuman), environment meshes, materials, Animation Retargetters, and MoCap blueprints
 
 ### Dependencies
