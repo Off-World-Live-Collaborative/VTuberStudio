@@ -15,6 +15,8 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
   
   Using persistent levels, you can seamlessly import your own environments and avatars to recreate and customize your own VTuber application with preconfigured capabilities for streaming. 
 
+  This project uses Git LFS (Large File Storage), please clone VTuber Studio with 'git lfs pull' to receive all assets.
+
 ### Features
  - OWL Capture Systems: Viewport Capture, CineCam Capture, 360 Capture 
  - Streaming and Media Output: Virtual Webcam, Spout Output, NDI Output, Streaming to RTMP, Save to File
