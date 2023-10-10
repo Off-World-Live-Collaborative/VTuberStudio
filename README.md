@@ -23,7 +23,7 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
  - Media Input: Screen Capture, Spout Input, NDI Input
  - LiveLink and VMC support
  - Face tracking and pose tracking via VMC for sending ARKit data to MetaHumans
- - Twitch Integration for listening and sending chat messages to your stream
+ - Twitch Integration for sending and receiving chat messages, as well as event subscription 
  - Actor Blueprint to select desired capture systems, their respective render targets, and display materials
  - Example assets such as avatars (VRM & Metahuman), environment meshes, materials, Animation Retargetters, and MoCap blueprints
 
@@ -56,9 +56,7 @@ It allows users to use the software for any purpose, to distribute it, to modify
 
 ### FAQ
 #### How can I get LiveLink to work in packaged game?
-You may double-click *RunVTuberStudio.bat* to run the packaged game with messaging enabled under file path:  `../VTuberStudio/Builds/Windows/RunVTuberStudio.bat` 
-
-Alternatively, you may use `Command Prompt` and `cd` into the appropriate file path, such as `../VTuberStudio/Builds/Windows/`, and use the following command line:
+You may use `Command Prompt` and `cd` into the appropriate file path, such as `../VTuberStudio/Builds/Windows/`, and use the following command line:
 
 ```
  VTuberStudio.exe -messaging
