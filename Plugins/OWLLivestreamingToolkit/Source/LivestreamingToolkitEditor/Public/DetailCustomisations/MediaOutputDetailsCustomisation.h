@@ -31,8 +31,8 @@ private:
 
 	FReply OnClickStart(TWeakObjectPtr<AOWLMediaOutput> ClassPtr) const;
 	FReply OnClickStop(TWeakObjectPtr<AOWLMediaOutput> ClassPtr) const;
-	bool IsStartEnabled() const;
-	bool IsStopEnabled() const;
+	bool IsStartEnabled(TWeakObjectPtr<AOWLMediaOutput> ClassPtr) const;
+	bool IsStopEnabled(TWeakObjectPtr<AOWLMediaOutput> ClassPtr) const;
 
 	bool IsHardwareEncodingEnabled() const;
 
@@ -42,7 +42,8 @@ private:
 	EVisibility GetTrialButtonVisibility() const;
 	bool HasValidLicence() const;
 
-	FText GetDurationMsText() const;
+	FText GetDurationMsText(TWeakObjectPtr<AOWLMediaOutput> ClassPtr) const;
+	FSlateColor GetDurationMsTextColor(TWeakObjectPtr<AOWLMediaOutput> ClassPtr) const;
 	FText GetMinutesRemainingText() const;
 	FSlateColor GetMinutesRemainingColor() const;
 	FReply OnAddMoreMinutesClicked();

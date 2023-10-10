@@ -33,7 +33,8 @@ public class OWLInteractiveStreamer : ModuleRules
 			"Engine",
 			"Slate",
 			"SlateCore",
-			"Http"
+			"Http",
+			"Json"
 		});
 		
 		

@@ -5,6 +5,7 @@
 #include "OWLNDIOutputPass.generated.h"
 
 class FOWLNDISender;
+class USoundSubmix;
 
 UCLASS()
 class OWLCOMPOSURE_API UOWLNDIOutputPass : public UCompositingElementOutput
@@ -22,6 +23,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="NDI")
 	bool bCaptureAudio = false;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="NDI")
+	USoundSubmix* Submix = nullptr;
 
 public:
 	virtual void RelayOutput_Implementation(UTexture* FinalResult, UComposurePostProcessingPassProxy* PostProcessProxy) override;

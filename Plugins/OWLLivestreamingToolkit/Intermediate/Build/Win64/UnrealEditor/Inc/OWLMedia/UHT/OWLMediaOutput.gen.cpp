@@ -16,10 +16,12 @@ void EmptyLinkFunctionForGeneratedCodeOWLMediaOutput() {}
 	OWLMEDIA_API UClass* Z_Construct_UClass_AOWLMediaOutput();
 	OWLMEDIA_API UClass* Z_Construct_UClass_AOWLMediaOutput_NoRegister();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLDestinationFormat();
+	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLHttpFormat();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLMediaOutputType();
 	OWLMEDIA_API UFunction* Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStart__DelegateSignature();
 	OWLMEDIA_API UFunction* Z_Construct_UDelegateFunction_OWLMedia_OnMediaOutputStop__DelegateSignature();
 	OWLMEDIA_API UScriptStruct* Z_Construct_UScriptStruct_FOWLFFmpegSettings();
+	OWLMEDIA_API UScriptStruct* Z_Construct_UScriptStruct_FOWLHTTPSettings();
 	OWLMEDIA_API UScriptStruct* Z_Construct_UScriptStruct_FOWLRTMPSettings();
 	OWLMEDIA_API UScriptStruct* Z_Construct_UScriptStruct_FOWLRTSPSettings();
 	OWLMEDIA_API UScriptStruct* Z_Construct_UScriptStruct_FOWLSaveToFileSettings();
@@ -433,6 +435,97 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		}
 		return Z_Registration_Info_UScriptStruct_OWLSRTSettings.InnerSingleton;
 	}
+	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_OWLHTTPSettings;
+class UScriptStruct* FOWLHTTPSettings::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_OWLHTTPSettings.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_OWLHTTPSettings.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FOWLHTTPSettings, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("OWLHTTPSettings"));
+	}
+	return Z_Registration_Info_UScriptStruct_OWLHTTPSettings.OuterSingleton;
+}
+template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLHTTPSettings>()
+{
+	return FOWLHTTPSettings::StaticStruct();
+}
+	struct Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_StreamURL_MetaData[];
+#endif
+		static const UECodeGen_Private::FStrPropertyParams NewProp_StreamURL;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_Format_Underlying;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Format_MetaData[];
+#endif
+		static const UECodeGen_Private::FEnumPropertyParams NewProp_Format;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FOWLHTTPSettings>();
+	}
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_StreamURL_MetaData[] = {
+		{ "Category", "Output Settings" },
+		{ "Comment", "/* The http destination for the post request */" },
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+		{ "ToolTip", "The http destination for the post request" },
+	};
+#endif
+	const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_StreamURL = { "StreamURL", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLHTTPSettings, StreamURL), METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_StreamURL_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_StreamURL_MetaData)) };
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_Format_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_Format_MetaData[] = {
+		{ "Category", "Output Settings" },
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+	};
+#endif
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_Format = { "Format", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLHTTPSettings, Format), Z_Construct_UEnum_OWLMedia_EOWLHttpFormat, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_Format_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_Format_MetaData)) }; // 1883633365
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_StreamURL,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_Format_Underlying,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewProp_Format,
+	};
+	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_OWLMedia,
+		nullptr,
+		&NewStructOps,
+		"OWLHTTPSettings",
+		sizeof(FOWLHTTPSettings),
+		alignof(FOWLHTTPSettings),
+		Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000201),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FOWLHTTPSettings()
+	{
+		if (!Z_Registration_Info_UScriptStruct_OWLHTTPSettings.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_OWLHTTPSettings.InnerSingleton, Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::ReturnStructParams);
+		}
+		return Z_Registration_Info_UScriptStruct_OWLHTTPSettings.InnerSingleton;
+	}
+	DEFINE_FUNCTION(AOWLMediaOutput::execIsReconnecting)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsReconnecting();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AOWLMediaOutput::execStop)
 	{
 		P_FINISH;
@@ -465,12 +558,51 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 	{
 		UClass* Class = AOWLMediaOutput::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "IsReconnecting", &AOWLMediaOutput::execIsReconnecting },
 			{ "OnAuthChanged", &AOWLMediaOutput::execOnAuthChanged },
 			{ "Start", &AOWLMediaOutput::execStart },
 			{ "StartWhenAuthReady", &AOWLMediaOutput::execStartWhenAuthReady },
 			{ "Stop", &AOWLMediaOutput::execStop },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics
+	{
+		struct OWLMediaOutput_eventIsReconnecting_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OWLMediaOutput_eventIsReconnecting_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(OWLMediaOutput_eventIsReconnecting_Parms), &Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Connection State" },
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AOWLMediaOutput, nullptr, "IsReconnecting", nullptr, nullptr, sizeof(Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::OWLMediaOutput_eventIsReconnecting_Parms), Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AOWLMediaOutput_OnAuthChanged_Statics
 	{
@@ -611,6 +743,10 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_RTSPSettings;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_HTTPSettings_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_HTTPSettings;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SRTSettings_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_SRTSettings;
@@ -685,6 +821,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		(UObject* (*)())Z_Construct_UPackage__Script_OWLMedia,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AOWLMediaOutput_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AOWLMediaOutput_IsReconnecting, "IsReconnecting" }, // 1533328716
 		{ &Z_Construct_UFunction_AOWLMediaOutput_OnAuthChanged, "OnAuthChanged" }, // 269876075
 		{ &Z_Construct_UFunction_AOWLMediaOutput_Start, "Start" }, // 3176851834
 		{ &Z_Construct_UFunction_AOWLMediaOutput_StartWhenAuthReady, "StartWhenAuthReady" }, // 2391243290
@@ -705,7 +842,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		{ "ToolTip", "Media Output Type" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OutputType = { "OutputType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, OutputType), Z_Construct_UEnum_OWLMedia_EOWLMediaOutputType, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OutputType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OutputType_MetaData)) }; // 915807175
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OutputType = { "OutputType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, OutputType), Z_Construct_UEnum_OWLMedia_EOWLMediaOutputType, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OutputType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_OutputType_MetaData)) }; // 2135331803
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_SaveToFileSettings_MetaData[] = {
 		{ "Category", "Output Settings" },
@@ -733,6 +870,15 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_RTSPSettings = { "RTSPSettings", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, RTSPSettings), Z_Construct_UScriptStruct_FOWLRTSPSettings, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_RTSPSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_RTSPSettings_MetaData)) }; // 1381896110
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_HTTPSettings_MetaData[] = {
+		{ "Category", "Output Settings" },
+		{ "EditCondition", "OutputType == EOWLMediaOutputType::T_HTTP" },
+		{ "EditConditionHides", "" },
+		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_HTTPSettings = { "HTTPSettings", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, HTTPSettings), Z_Construct_UScriptStruct_FOWLHTTPSettings, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_HTTPSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_HTTPSettings_MetaData)) }; // 3097621621
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_SRTSettings_MetaData[] = {
 		{ "Category", "Output Settings" },
@@ -790,7 +936,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		{ "ModuleRelativePath", "Public/OWLMediaOutput.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings = { "EncoderSettings", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, EncoderSettings), Z_Construct_UScriptStruct_FOWLFFmpegSettings, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings_MetaData)) }; // 2666962910
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings = { "EncoderSettings", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLMediaOutput, EncoderSettings), Z_Construct_UScriptStruct_FOWLFFmpegSettings, METADATA_PARAMS(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_EncoderSettings_MetaData)) }; // 3120480242
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bUseTimecodeProviderWhereAvailable_MetaData[] = {
 		{ "Category", "Output Settings" },
@@ -881,6 +1027,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_SaveToFileSettings,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_RTMPSettings,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_RTSPSettings,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_HTTPSettings,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_SRTSettings,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_APIKey,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLMediaOutput_Statics::NewProp_bOverrideAPIKey,
@@ -938,11 +1085,12 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLSRTSettings>()
 		{ FOWLRTMPSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLRTMPSettings_Statics::NewStructOps, TEXT("OWLRTMPSettings"), &Z_Registration_Info_UScriptStruct_OWLRTMPSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLRTMPSettings), 1013268214U) },
 		{ FOWLRTSPSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLRTSPSettings_Statics::NewStructOps, TEXT("OWLRTSPSettings"), &Z_Registration_Info_UScriptStruct_OWLRTSPSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLRTSPSettings), 1381896110U) },
 		{ FOWLSRTSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLSRTSettings_Statics::NewStructOps, TEXT("OWLSRTSettings"), &Z_Registration_Info_UScriptStruct_OWLSRTSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLSRTSettings), 2754173353U) },
+		{ FOWLHTTPSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLHTTPSettings_Statics::NewStructOps, TEXT("OWLHTTPSettings"), &Z_Registration_Info_UScriptStruct_OWLHTTPSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLHTTPSettings), 3097621621U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLMediaOutput, AOWLMediaOutput::StaticClass, TEXT("AOWLMediaOutput"), &Z_Registration_Info_UClass_AOWLMediaOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLMediaOutput), 147183681U) },
+		{ Z_Construct_UClass_AOWLMediaOutput, AOWLMediaOutput::StaticClass, TEXT("AOWLMediaOutput"), &Z_Registration_Info_UClass_AOWLMediaOutput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLMediaOutput), 3434875546U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_2706726407(TEXT("/Script/OWLMedia"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_514418634(TEXT("/Script/OWLMedia"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLMediaOutput_h_Statics::ScriptStructInfo),
 		nullptr, 0);

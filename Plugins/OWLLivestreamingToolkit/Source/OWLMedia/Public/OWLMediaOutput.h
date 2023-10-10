@@ -68,6 +68,18 @@ struct OWLMEDIA_API FOWLSRTSettings
 	FOWLSRTOptions Options;
 };
 
+USTRUCT(BlueprintType)
+struct OWLMEDIA_API FOWLHTTPSettings
+{
+	GENERATED_BODY()
+	/* The http destination for the post request */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Output Settings")
+	FString StreamURL = "";
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Output Settings")
+	EOWLHttpFormat Format = EOWLHttpFormat::OF_MP4;
+};
+
 UCLASS()
 class OWLMEDIA_API AOWLMediaOutput : public AActor
 {
@@ -103,6 +115,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Output Settings", meta=(EditCondition = "OutputType == EOWLMediaOutputType::T_RTSP", EditConditionHides))
 	FOWLRTSPSettings RTSPSettings ;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Output Settings", meta=(EditCondition = "OutputType == EOWLMediaOutputType::T_HTTP", EditConditionHides))
+	FOWLHTTPSettings HTTPSettings ;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Output Settings", meta=(EditCondition = "OutputType == EOWLMediaOutputType::T_SRT", EditConditionHides))
 	FOWLSRTSettings SRTSettings;
@@ -240,10 +255,13 @@ public:
 	/* Start recording / streaming
 	 * @return bool has recording been successful
 	 */
-	UFUNCTION(BlueprintCallable, BlueprintCallable, Category="Output Controls")
+	UFUNCTION(BlueprintCallable, Category="Output Controls")
 	bool Start();
 
 	/* Stop the current recording / stream */
-	UFUNCTION(BlueprintCallable, BlueprintCallable, Category="Output Controls")
+	UFUNCTION(BlueprintCallable, Category="Output Controls")
 	void Stop();
+
+	UFUNCTION(BlueprintCallable, Category="Connection State")
+	bool IsReconnecting();
 };

@@ -23,7 +23,7 @@ class OWLNDI_API FOWLNDISender : public ISubmixBufferListener
 public:
 	FOWLNDISender();
 	virtual ~FOWLNDISender();
-	bool Init(FString Name, bool ShouldCaptureAudio, FAudioDevice* InAudioDevice = nullptr);
+	bool Init(FString Name, bool ShouldCaptureAudio, FAudioDevice* InAudioDevice = nullptr, USoundSubmix* SelectedSubmix = nullptr);
 
 	void DeInit();
 	void SendVideoFrame(UTextureRenderTarget2D* SrcTarget, ENDIVideoConversionFormat VideoConversionFormat);
@@ -50,6 +50,7 @@ private:
 
 	FCriticalSection Audio_CS;
 	FAudioDevice* AudioDevice = nullptr;
+	USoundSubmix* ActiveSubmix = nullptr;
 	bool Audio_Initialised = false;
 	TArray<float> Audio_ConversionBuffer;
 };

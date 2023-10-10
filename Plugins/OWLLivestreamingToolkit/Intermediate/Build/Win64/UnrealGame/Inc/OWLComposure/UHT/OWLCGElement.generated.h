@@ -55,7 +55,7 @@ public: \
 
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_39_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AOWLCGElement(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AOWLCGElement(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AOWLCGElement) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AOWLCGElement); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AOWLCGElement); \
@@ -75,7 +75,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AOWLCGElement); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AOWLCGElement); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AOWLCGElement) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AOWLCGElement) \
 	NO_API virtual ~AOWLCGElement();
 
 

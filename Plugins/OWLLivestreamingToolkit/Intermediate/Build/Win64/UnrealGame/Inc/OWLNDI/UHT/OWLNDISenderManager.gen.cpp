@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOWLNDISenderManager() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	ENGINE_API UClass* Z_Construct_UClass_USoundSubmix_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UTextureRenderTarget2D_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UWorld_NoRegister();
 	OWLNDI_API UClass* Z_Construct_UClass_AOWLNDISenderManager();
@@ -64,6 +65,10 @@ template<> OWLNDI_API UScriptStruct* StaticStruct<FOWLNDISenderInterface>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SourceRenderTarget_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_SourceRenderTarget;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Submix_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Submix;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_World_MetaData[];
 #endif
@@ -137,6 +142,15 @@ template<> OWLNDI_API UScriptStruct* StaticStruct<FOWLNDISenderInterface>()
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_SourceRenderTarget = { "SourceRenderTarget", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLNDISenderInterface, SourceRenderTarget), Z_Construct_UClass_UTextureRenderTarget2D_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_SourceRenderTarget_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_SourceRenderTarget_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_Submix_MetaData[] = {
+		{ "Category", "OWLNDISender" },
+		{ "Comment", "/* Optional submix to narrow down audio you send to the NDI stream */" },
+		{ "ModuleRelativePath", "Public/OWLNDISenderManager.h" },
+		{ "ToolTip", "Optional submix to narrow down audio you send to the NDI stream" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_Submix = { "Submix", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLNDISenderInterface, Submix), Z_Construct_UClass_USoundSubmix_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_Submix_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_Submix_MetaData)) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_World_MetaData[] = {
 		{ "ModuleRelativePath", "Public/OWLNDISenderManager.h" },
 	};
@@ -150,6 +164,7 @@ template<> OWLNDI_API UScriptStruct* StaticStruct<FOWLNDISenderInterface>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_VideoConversionFormat_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_VideoConversionFormat,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_SourceRenderTarget,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_Submix,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewProp_World,
 	};
 	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::ReturnStructParams = {
@@ -208,14 +223,14 @@ template<> OWLNDI_API UScriptStruct* StaticStruct<FOWLNDISenderInterface>()
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders_Inner = { "NDISenders", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UScriptStruct_FOWLNDISenderInterface, METADATA_PARAMS(nullptr, 0) }; // 1224176795
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders_Inner = { "NDISenders", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, Z_Construct_UScriptStruct_FOWLNDISenderInterface, METADATA_PARAMS(nullptr, 0) }; // 1236470930
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders_MetaData[] = {
 		{ "Category", "Off World Live NDI Sender Settings" },
 		{ "ModuleRelativePath", "Public/OWLNDISenderManager.h" },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders = { "NDISenders", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLNDISenderManager, NDISenders), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders_MetaData)) }; // 1224176795
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders = { "NDISenders", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(AOWLNDISenderManager, NDISenders), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders_MetaData)) }; // 1236470930
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AOWLNDISenderManager_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOWLNDISenderManager_Statics::NewProp_NDISenders,
@@ -258,12 +273,12 @@ template<> OWLNDI_API UScriptStruct* StaticStruct<FOWLNDISenderInterface>()
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ScriptStructInfo[] = {
-		{ FOWLNDISenderInterface::StaticStruct, Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewStructOps, TEXT("OWLNDISenderInterface"), &Z_Registration_Info_UScriptStruct_OWLNDISenderInterface, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLNDISenderInterface), 1224176795U) },
+		{ FOWLNDISenderInterface::StaticStruct, Z_Construct_UScriptStruct_FOWLNDISenderInterface_Statics::NewStructOps, TEXT("OWLNDISenderInterface"), &Z_Registration_Info_UScriptStruct_OWLNDISenderInterface, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLNDISenderInterface), 1236470930U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLNDISenderManager, AOWLNDISenderManager::StaticClass, TEXT("AOWLNDISenderManager"), &Z_Registration_Info_UClass_AOWLNDISenderManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLNDISenderManager), 1683710539U) },
+		{ Z_Construct_UClass_AOWLNDISenderManager, AOWLNDISenderManager::StaticClass, TEXT("AOWLNDISenderManager"), &Z_Registration_Info_UClass_AOWLNDISenderManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLNDISenderManager), 1114202021U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_3755489106(TEXT("/Script/OWLNDI"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_2090713718(TEXT("/Script/OWLNDI"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLNDI_Public_OWLNDISenderManager_h_Statics::ScriptStructInfo),
 		nullptr, 0);

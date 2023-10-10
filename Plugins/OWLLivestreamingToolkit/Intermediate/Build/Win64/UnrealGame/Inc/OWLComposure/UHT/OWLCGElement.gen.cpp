@@ -274,7 +274,6 @@ template<> OWLCOMPOSURE_API UScriptStruct* StaticStruct<FOWLActorLayer>()
 		{ "Category", "OWL Composure" },
 		{ "IncludePath", "OWLCGElement.h" },
 		{ "ModuleRelativePath", "Public/OWLCGElement.h" },
-		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 #if WITH_METADATA
@@ -432,9 +431,9 @@ template<> OWLCOMPOSURE_API UScriptStruct* StaticStruct<FOWLActorLayer>()
 		{ FOWLActorLayer::StaticStruct, Z_Construct_UScriptStruct_FOWLActorLayer_Statics::NewStructOps, TEXT("OWLActorLayer"), &Z_Registration_Info_UScriptStruct_OWLActorLayer, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLActorLayer), 3165121034U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLCGElement, AOWLCGElement::StaticClass, TEXT("AOWLCGElement"), &Z_Registration_Info_UClass_AOWLCGElement, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLCGElement), 2476533887U) },
+		{ Z_Construct_UClass_AOWLCGElement, AOWLCGElement::StaticClass, TEXT("AOWLCGElement"), &Z_Registration_Info_UClass_AOWLCGElement, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLCGElement), 2319919357U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_934570467(TEXT("/Script/OWLComposure"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_3405892650(TEXT("/Script/OWLComposure"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::ScriptStructInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGElement_h_Statics::EnumInfo));

@@ -8,6 +8,8 @@
 #include "NDIEnums.h"
 #include "OWLNDISenderManager.generated.h"
 
+class USoundSubmix;
+
 USTRUCT(BlueprintType)
 struct OWLNDI_API FOWLNDISenderInterface
 {
@@ -33,6 +35,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = OWLNDISender)
 	UTextureRenderTarget2D* SourceRenderTarget = nullptr;
 
+	/* Optional submix to narrow down audio you send to the NDI stream */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category = OWLNDISender)
+	USoundSubmix* Submix = nullptr;
+
 	UPROPERTY()
 	UWorld* World = nullptr;
 
@@ -41,9 +47,12 @@ public:
 	void SendFrame();
 	bool UseStandaloneName() const;
 
+	void Initialise();
+
 private:
 	FString GUID = FGuid::NewGuid().ToString();
 	FString StandaloneGUID = FGuid::NewGuid().ToString();
+	bool bInitialised = false;
 
 };
 

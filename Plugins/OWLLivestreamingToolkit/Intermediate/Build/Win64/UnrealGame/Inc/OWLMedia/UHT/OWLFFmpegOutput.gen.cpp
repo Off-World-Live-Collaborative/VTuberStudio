@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeOWLFFmpegOutput() {}
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLAudioChannelLayout();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLDestinationFormat();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLEncoderProfile();
+	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLHttpFormat();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLMediaOutputType();
 	OWLMEDIA_API UEnum* Z_Construct_UEnum_OWLMedia_EOWLSRTPubKeyLen();
 	OWLMEDIA_API UScriptStruct* Z_Construct_UScriptStruct_FOWLAudioSampleBlock();
@@ -48,12 +49,16 @@ void EmptyLinkFunctionForGeneratedCodeOWLFFmpegOutput() {}
 		{ "EOWLMediaOutputType::T_RTMP", (int64)EOWLMediaOutputType::T_RTMP },
 		{ "EOWLMediaOutputType::T_FILEOUTPUT", (int64)EOWLMediaOutputType::T_FILEOUTPUT },
 		{ "EOWLMediaOutputType::T_RTSP", (int64)EOWLMediaOutputType::T_RTSP },
+		{ "EOWLMediaOutputType::T_HTTP", (int64)EOWLMediaOutputType::T_HTTP },
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_OWLMedia_EOWLMediaOutputType_Statics::Enum_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Public/OWLFFmpegOutput.h" },
 		{ "T_FILEOUTPUT.DisplayName", "Save to File" },
 		{ "T_FILEOUTPUT.Name", "EOWLMediaOutputType::T_FILEOUTPUT" },
+		{ "T_HTTP.DisplayName", "HTTP (Experimental)" },
+		{ "T_HTTP.Name", "EOWLMediaOutputType::T_HTTP" },
+		{ "T_HTTP.Tooltip", "Experimental format that progressively sends video via multipart http POST request" },
 		{ "T_RTMP.DisplayName", "Stream to RTMP" },
 		{ "T_RTMP.Name", "EOWLMediaOutputType::T_RTMP" },
 		{ "T_RTSP.DisplayName", "RTSP (Experimental)" },
@@ -152,6 +157,63 @@ void EmptyLinkFunctionForGeneratedCodeOWLFFmpegOutput() {}
 			UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EOWLDestinationFormat.InnerSingleton, Z_Construct_UEnum_OWLMedia_EOWLDestinationFormat_Statics::EnumParams);
 		}
 		return Z_Registration_Info_UEnum_EOWLDestinationFormat.InnerSingleton;
+	}
+	static FEnumRegistrationInfo Z_Registration_Info_UEnum_EOWLHttpFormat;
+	static UEnum* EOWLHttpFormat_StaticEnum()
+	{
+		if (!Z_Registration_Info_UEnum_EOWLHttpFormat.OuterSingleton)
+		{
+			Z_Registration_Info_UEnum_EOWLHttpFormat.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_OWLMedia_EOWLHttpFormat, (UObject*)Z_Construct_UPackage__Script_OWLMedia(), TEXT("EOWLHttpFormat"));
+		}
+		return Z_Registration_Info_UEnum_EOWLHttpFormat.OuterSingleton;
+	}
+	template<> OWLMEDIA_API UEnum* StaticEnum<EOWLHttpFormat>()
+	{
+		return EOWLHttpFormat_StaticEnum();
+	}
+	struct Z_Construct_UEnum_OWLMedia_EOWLHttpFormat_Statics
+	{
+		static const UECodeGen_Private::FEnumeratorParam Enumerators[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FEnumParams EnumParams;
+	};
+	const UECodeGen_Private::FEnumeratorParam Z_Construct_UEnum_OWLMedia_EOWLHttpFormat_Statics::Enumerators[] = {
+		{ "EOWLHttpFormat::OF_MP4", (int64)EOWLHttpFormat::OF_MP4 },
+		{ "EOWLHttpFormat::OF_FLV", (int64)EOWLHttpFormat::OF_FLV },
+		{ "EOWLHttpFormat::OF_MOV", (int64)EOWLHttpFormat::OF_MOV },
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_OWLMedia_EOWLHttpFormat_Statics::Enum_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/OWLFFmpegOutput.h" },
+		{ "OF_FLV.DisplayName", "FLV" },
+		{ "OF_FLV.Name", "EOWLHttpFormat::OF_FLV" },
+		{ "OF_MOV.DisplayName", "MOV" },
+		{ "OF_MOV.Name", "EOWLHttpFormat::OF_MOV" },
+		{ "OF_MP4.DisplayName", "MP4" },
+		{ "OF_MP4.Name", "EOWLHttpFormat::OF_MP4" },
+	};
+#endif
+	const UECodeGen_Private::FEnumParams Z_Construct_UEnum_OWLMedia_EOWLHttpFormat_Statics::EnumParams = {
+		(UObject*(*)())Z_Construct_UPackage__Script_OWLMedia,
+		nullptr,
+		"EOWLHttpFormat",
+		"EOWLHttpFormat",
+		Z_Construct_UEnum_OWLMedia_EOWLHttpFormat_Statics::Enumerators,
+		UE_ARRAY_COUNT(Z_Construct_UEnum_OWLMedia_EOWLHttpFormat_Statics::Enumerators),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EEnumFlags::None,
+		(uint8)UEnum::ECppForm::EnumClass,
+		METADATA_PARAMS(Z_Construct_UEnum_OWLMedia_EOWLHttpFormat_Statics::Enum_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UEnum_OWLMedia_EOWLHttpFormat_Statics::Enum_MetaDataParams))
+	};
+	UEnum* Z_Construct_UEnum_OWLMedia_EOWLHttpFormat()
+	{
+		if (!Z_Registration_Info_UEnum_EOWLHttpFormat.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EOWLHttpFormat.InnerSingleton, Z_Construct_UEnum_OWLMedia_EOWLHttpFormat_Statics::EnumParams);
+		}
+		return Z_Registration_Info_UEnum_EOWLHttpFormat.InnerSingleton;
 	}
 	static FEnumRegistrationInfo Z_Registration_Info_UEnum_EOWLSRTPubKeyLen;
 	static UEnum* EOWLSRTPubKeyLen_StaticEnum()
@@ -716,6 +778,11 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_AudioOffsetMs_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_AudioOffsetMs;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bFragmentFile_MetaData[];
+#endif
+		static void NewProp_bFragmentFile_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bFragmentFile;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -892,6 +959,19 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioOffsetMs = { "AudioOffsetMs", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(FOWLFFmpegSettings, AudioOffsetMs), METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioOffsetMs_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioOffsetMs_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bFragmentFile_MetaData[] = {
+		{ "Category", "Advanced Container Settings" },
+		{ "Comment", "/* In some formats, when using media for streaming, it may be necessary to fragment the files. In particular this applies to mp4 and mov file formats */" },
+		{ "ModuleRelativePath", "Public/OWLFFmpegOutput.h" },
+		{ "ToolTip", "In some formats, when using media for streaming, it may be necessary to fragment the files. In particular this applies to mp4 and mov file formats" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bFragmentFile_SetBit(void* Obj)
+	{
+		((FOWLFFmpegSettings*)Obj)->bFragmentFile = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bFragmentFile = { "bFragmentFile", nullptr, (EPropertyFlags)0x0010040000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(FOWLFFmpegSettings), &Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bFragmentFile_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bFragmentFile_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bFragmentFile_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_EncodeAudio,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_UseUEHardwareEncoder,
@@ -909,6 +989,7 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bOutputCustomResolution,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_CustomOutputResolution,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_AudioOffsetMs,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewProp_bFragmentFile,
 	};
 	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_OWLMedia,
@@ -937,8 +1018,9 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
 	};
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_Statics::EnumInfo[] = {
-		{ EOWLMediaOutputType_StaticEnum, TEXT("EOWLMediaOutputType"), &Z_Registration_Info_UEnum_EOWLMediaOutputType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 915807175U) },
+		{ EOWLMediaOutputType_StaticEnum, TEXT("EOWLMediaOutputType"), &Z_Registration_Info_UEnum_EOWLMediaOutputType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2135331803U) },
 		{ EOWLDestinationFormat_StaticEnum, TEXT("EOWLDestinationFormat"), &Z_Registration_Info_UEnum_EOWLDestinationFormat, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 302659846U) },
+		{ EOWLHttpFormat_StaticEnum, TEXT("EOWLHttpFormat"), &Z_Registration_Info_UEnum_EOWLHttpFormat, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1883633365U) },
 		{ EOWLSRTPubKeyLen_StaticEnum, TEXT("EOWLSRTPubKeyLen"), &Z_Registration_Info_UEnum_EOWLSRTPubKeyLen, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1179267474U) },
 		{ EOWLAudioChannelLayout_StaticEnum, TEXT("EOWLAudioChannelLayout"), &Z_Registration_Info_UEnum_EOWLAudioChannelLayout, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 986277226U) },
 	};
@@ -946,9 +1028,9 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<FOWLFFmpegSettings>()
 		{ FOWLSRTOptions::StaticStruct, Z_Construct_UScriptStruct_FOWLSRTOptions_Statics::NewStructOps, TEXT("OWLSRTOptions"), &Z_Registration_Info_UScriptStruct_OWLSRTOptions, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLSRTOptions), 4116997552U) },
 		{ FOWLAudioSampleBlock::StaticStruct, Z_Construct_UScriptStruct_FOWLAudioSampleBlock_Statics::NewStructOps, TEXT("OWLAudioSampleBlock"), &Z_Registration_Info_UScriptStruct_OWLAudioSampleBlock, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLAudioSampleBlock), 3146865514U) },
 		{ FOWLEncodedPacket::StaticStruct, Z_Construct_UScriptStruct_FOWLEncodedPacket_Statics::NewStructOps, TEXT("OWLEncodedPacket"), &Z_Registration_Info_UScriptStruct_OWLEncodedPacket, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLEncodedPacket), 2322824884U) },
-		{ FOWLFFmpegSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewStructOps, TEXT("OWLFFmpegSettings"), &Z_Registration_Info_UScriptStruct_OWLFFmpegSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLFFmpegSettings), 2666962910U) },
+		{ FOWLFFmpegSettings::StaticStruct, Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics::NewStructOps, TEXT("OWLFFmpegSettings"), &Z_Registration_Info_UScriptStruct_OWLFFmpegSettings, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FOWLFFmpegSettings), 3120480242U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_3401655792(TEXT("/Script/OWLMedia"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_83416086(TEXT("/Script/OWLMedia"),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_Statics::ScriptStructInfo),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_Statics::EnumInfo));

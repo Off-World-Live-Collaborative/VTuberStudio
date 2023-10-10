@@ -35,8 +35,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = OWLSpoutSender)
 	UTextureRenderTarget2D* SourceRenderTarget = nullptr;
 
-	FString UUID = FGuid::NewGuid().ToString();
-	FString StandaloneUUID = FGuid::NewGuid().ToString();
+	FString UUID = "";
+
+	FString StandaloneUUID = "";
+
+	bool bInitialised = false;
+
+	/* Call because default struct values appear not to be set when blueprints create them */
+	void Initialise();
 
 };
 
@@ -52,6 +58,22 @@ public:
 public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Off World Live Spout Sender Settings")
 	TArray<FOWLSpoutSenderInterface> SpoutSenders;
+
+	/* Utility function to add a sender to the list - returns the struct created which has been added to the SpoutSenders array */
+	UFUNCTION(BlueprintCallable, Category = "OWL Spout Sender Manager")
+	FOWLSpoutSenderInterface AddSender(FString Name, UTextureRenderTarget2D* TextureTarget, FString StandaloneName = "", bool bActive = true, bool bFixGamma = true);
+
+	/* Utility function for removing a sender via blueprints with matching name. Returns true if matched */
+	UFUNCTION(BlueprintCallable, Category = "OWL Spout Sender Manager")
+	bool RemoveSenderByName(FString Name);
+
+	/* Activates a sender by the spout sender name. Returns true if found. */
+	UFUNCTION(BlueprintCallable, Category = "OWL Spout Sender Manager")
+	bool ActivateSender(FString Name);
+
+	/* Deactivates a sender by the spout sender name. Returns true if found. */
+	UFUNCTION(BlueprintCallable, Category = "OWL Spout Sender Manager")
+	bool DeactivateSender(FString Name);
 
 private:
 	TEnumAsByte<EWorldType::Type> StartingWorldType = EWorldType::None;

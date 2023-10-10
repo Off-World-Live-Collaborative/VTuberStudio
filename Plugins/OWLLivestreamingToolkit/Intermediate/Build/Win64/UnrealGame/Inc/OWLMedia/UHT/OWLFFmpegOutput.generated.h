@@ -14,28 +14,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define OWLMEDIA_OWLFFmpegOutput_generated_h
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_124_GENERATED_BODY \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_133_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOWLSRTOptions_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> OWLMEDIA_API UScriptStruct* StaticStruct<struct FOWLSRTOptions>();
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_145_GENERATED_BODY \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_154_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOWLAudioSampleBlock_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> OWLMEDIA_API UScriptStruct* StaticStruct<struct FOWLAudioSampleBlock>();
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_157_GENERATED_BODY \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_166_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOWLEncodedPacket_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> OWLMEDIA_API UScriptStruct* StaticStruct<struct FOWLEncodedPacket>();
 
-#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_167_GENERATED_BODY \
+#define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLMedia_Public_OWLFFmpegOutput_h_176_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOWLFFmpegSettings_Statics; \
 	static class UScriptStruct* StaticStruct();
 
@@ -50,7 +50,8 @@ template<> OWLMEDIA_API UScriptStruct* StaticStruct<struct FOWLFFmpegSettings>()
 	op(EOWLMediaOutputType::T_SRT) \
 	op(EOWLMediaOutputType::T_RTMP) \
 	op(EOWLMediaOutputType::T_FILEOUTPUT) \
-	op(EOWLMediaOutputType::T_RTSP) 
+	op(EOWLMediaOutputType::T_RTSP) \
+	op(EOWLMediaOutputType::T_HTTP) 
 
 enum class EOWLMediaOutputType : uint8;
 template<> struct TIsUEnumClass<EOWLMediaOutputType> { enum { Value = true }; };
@@ -68,6 +69,15 @@ template<> OWLMEDIA_API UEnum* StaticEnum<EOWLMediaOutputType>();
 enum class EOWLDestinationFormat : uint8;
 template<> struct TIsUEnumClass<EOWLDestinationFormat> { enum { Value = true }; };
 template<> OWLMEDIA_API UEnum* StaticEnum<EOWLDestinationFormat>();
+
+#define FOREACH_ENUM_EOWLHTTPFORMAT(op) \
+	op(EOWLHttpFormat::OF_MP4) \
+	op(EOWLHttpFormat::OF_FLV) \
+	op(EOWLHttpFormat::OF_MOV) 
+
+enum class EOWLHttpFormat : uint8;
+template<> struct TIsUEnumClass<EOWLHttpFormat> { enum { Value = true }; };
+template<> OWLMEDIA_API UEnum* StaticEnum<EOWLHttpFormat>();
 
 #define FOREACH_ENUM_EOWLSRTPUBKEYLEN(op) \
 	op(EOWLSRTPubKeyLen::SRT_PKL_16) \

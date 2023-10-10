@@ -103,7 +103,6 @@ void EmptyLinkFunctionForGeneratedCodeOWLCGMatte() {}
 		{ "Category", "OWL Composure" },
 		{ "IncludePath", "OWLCGMatte.h" },
 		{ "ModuleRelativePath", "Public/OWLCGMatte.h" },
-		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_AOWLCGMatte_Statics::NewProp_MatteType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
@@ -160,9 +159,9 @@ void EmptyLinkFunctionForGeneratedCodeOWLCGMatte() {}
 		{ EOWLComposureMatteType_StaticEnum, TEXT("EOWLComposureMatteType"), &Z_Registration_Info_UEnum_EOWLComposureMatteType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2725483384U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGMatte_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AOWLCGMatte, AOWLCGMatte::StaticClass, TEXT("AOWLCGMatte"), &Z_Registration_Info_UClass_AOWLCGMatte, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLCGMatte), 1184354128U) },
+		{ Z_Construct_UClass_AOWLCGMatte, AOWLCGMatte::StaticClass, TEXT("AOWLCGMatte"), &Z_Registration_Info_UClass_AOWLCGMatte, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AOWLCGMatte), 2923962700U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGMatte_h_2841044774(TEXT("/Script/OWLComposure"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGMatte_h_3012641993(TEXT("/Script/OWLComposure"),
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGMatte_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGMatte_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGMatte_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGMatte_h_Statics::EnumInfo));

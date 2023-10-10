@@ -18,7 +18,7 @@ class AOWLCGMatte : public AOWLCGElement
 {
 	GENERATED_BODY()
 public:
-	AOWLCGMatte(const FObjectInitializer& ObjectInitializer);
+	AOWLCGMatte();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Matte Pass", meta=(ToolTip="Holdout makes the current selection white and the background black, Garbage Matte is the reverse"))
 	EOWLComposureMatteType MatteType = EOWLComposureMatteType::CMT_HOLDOUT;

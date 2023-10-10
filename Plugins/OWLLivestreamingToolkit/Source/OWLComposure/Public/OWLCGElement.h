@@ -38,6 +38,8 @@ class OWLCOMPOSURE_API AOWLCGElement : public AOWLBaseComp, public ICompositingI
 {
 	GENERATED_BODY()
 public:
+	AOWLCGElement();
+public:
 	/** Component used to generate image data for this CG Layer */
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category=OffWorldLive)
 	UOWLCGCaptureComponent* CaptureComponent;
@@ -49,8 +51,6 @@ public:
 	TArray<FOWLActorLayer> CaptureActors;
 
 public:
-	// Sets default values for this actor's properties
-	AOWLCGElement(const FObjectInitializer& ObjectInitializer);
 	virtual void BeginDestroy() override;
 
 	virtual void PostInitProperties() override;

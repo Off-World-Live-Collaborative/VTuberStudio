@@ -32,6 +32,7 @@ enum class EOWLMediaOutputType : uint8
 	T_RTMP UMETA(DisplayName = "Stream to RTMP"),
 	T_FILEOUTPUT UMETA(DisplayName = "Save to File"),
 	T_RTSP UMETA(DisplayName = "RTSP (Experimental)", Tooltip="Warning: Known issues when streaming to non-existent RTSP server"),
+	T_HTTP UMETA(DisplayName = "HTTP (Experimental)", Tooltip="Experimental format that progressively sends video via multipart http POST request"),
 };
 
 UENUM()
@@ -44,6 +45,14 @@ enum class EOWLDestinationFormat : uint8
 	F_MKV UMETA(DisplayName = "Matroska Video container"),
 	F_AVI UMETA(DisplayName = "AVI container"),
 	F_MOV UMETA(DisplayName = "MOV container"),
+};
+
+UENUM()
+enum class EOWLHttpFormat : uint8
+{
+	OF_MP4 UMETA(DisplayName = "MP4"),
+	OF_FLV UMETA(DisplayName = "FLV"),
+	OF_MOV UMETA(DisplayName = "MOV"),
 };
 
 UENUM()
@@ -211,7 +220,6 @@ struct OWLMEDIA_API FOWLFFmpegSettings
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings", meta=(ClampMin="5", ClampMax="240",EditCondition="UseUEHardwareEncoder"))
 	int FramesPerIframe = 30;
 
-
 	/* In some circumstances you may wish to scale the input render target size up or down before encoding */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings")
 	bool bOutputCustomResolution = false;
@@ -223,6 +231,10 @@ struct OWLMEDIA_API FOWLFFmpegSettings
 	/* In some circumstances when there are known delays, you may want to adjust the audio forward or backwards. This number is in milliseconds. N.B This will have no effect when modified mid-record/stream */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Encoder Settings", meta=(ClampMin="-1500", ClampMax="1500", UIMin="-500", UIMax="500"))
 	float AudioOffsetMs = 0;
+
+	/* In some formats, when using media for streaming, it may be necessary to fragment the files. In particular this applies to mp4 and mov file formats */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category="Advanced Container Settings")
+	bool bFragmentFile = false;
 
 	FString FormatShortName = "mp4";
 	FString Destination = "";
@@ -356,6 +368,7 @@ private:
 	class FFFmpegRunnable* FFmpegRunnable = nullptr;
 	FString OutputFileName = "D:/tmp/audio_encode.264";
 	FString OutputShortName = "264";
+	bool bFragmentOutput = false;
 	EOWLMediaOutputType OutputType = EOWLMediaOutputType::T_FILEOUTPUT;
 
 	/* Queue for incoming audio samples */

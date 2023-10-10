@@ -38,7 +38,7 @@ public: \
 
 #define FID_toolkit_tmp_Plugins_OWLLivestreamingToolkit_Source_OWLComposure_Public_OWLCGMatte_h_19_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AOWLCGMatte(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AOWLCGMatte(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AOWLCGMatte) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AOWLCGMatte); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AOWLCGMatte); \
@@ -58,7 +58,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AOWLCGMatte); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AOWLCGMatte); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AOWLCGMatte) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AOWLCGMatte) \
 	NO_API virtual ~AOWLCGMatte();
 
 

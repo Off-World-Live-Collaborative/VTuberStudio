@@ -4,7 +4,7 @@
 
 	Functions to manage DirectX 12 texture sharing by way of the D3D11On12
 
-	Copyright (c) 2020-2021, Lynn Jarvis. All rights reserved.
+	Copyright (c) 2020-2022, Lynn Jarvis. All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without modification, 
 	are permitted provided that the following conditions are met:
@@ -78,7 +78,7 @@ struct DX12_HEAP_PROPERTIES : public D3D12_HEAP_PROPERTIES
 };
 
 
-class SPOUT_DLLEXP spoutDX12 : public spoutDX {
+class spoutDX12 : public spoutDX {
 
 	public:
 
