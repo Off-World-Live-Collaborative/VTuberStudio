@@ -44,13 +44,13 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
 - In Visual Studio 2022, open the VTuberStudio.sln file, select Solution *'VTuberStudio'* in Solution Explorer, and right-click to Build Solution
 - Double-click *VTuberStudio.uproject* and open project in UE 5.2
 
-### Full-Body Tracking for MetaHumans
+#### Full-Body Tracking for MetaHumans
 ![Scene Preview](./ReadMe/Tracking.PNG)
 - Use XR Animator to stream bone data and blendshape data via VMC
 - Use VMC Receiver inside level to listen to OSC Server
 - Apply data in Animation Blueprints
 
-### Twitch Integration (OWLInteractiveStreamer)
+#### Twitch Integration (OWLInteractiveStreamer)
 ![Scene Preview](./ReadMe/Twitch.PNG)
 - Use MyTwitchChatListener, MyTwitchChatSender, and MyTwitchEventSubManager inside OWLINteractiveStreamer plugins folder
 - Drag and Drop into level and configure in blueprints
