@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           lfs: true
-          path: OWLVTuberStudio
+          path: VTuberStudio
           submodules: true
       - name: Creates zip file
         shell: bash
