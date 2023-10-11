@@ -18,6 +18,7 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
   This project uses Git LFS (Large File Storage), please clone VTuber Studio with 'git lfs pull' to receive all assets.
 
 ### Features
+![Scene Preview](./ReadMe/Features.PNG)
  - OWL Capture Systems: Viewport Capture, CineCam Capture, 360 Capture 
  - Streaming and Media Output: Virtual Webcam, Spout Output, NDI Output, Streaming to RTMP, Save to File
  - Media Input: Screen Capture, Spout Input, NDI Input
@@ -43,13 +44,22 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
 - In Visual Studio 2022, open the VTuberStudio.sln file, select Solution *'VTuberStudio'* in Solution Explorer, and right-click to Build Solution
 - Double-click *VTuberStudio.uproject* and open project in UE 5.2
 
+#### Full-Body Tracking for MetaHumans
+![Scene Preview](./ReadMe/Tracking.PNG)
+- Use XR Animator to stream bone data and blendshape data via VMC
+- Use VMC Receiver inside level to listen to OSC Server
+- Apply data in Animation Blueprints
+
+#### Twitch Integration (OWLInteractiveStreamer)
+![Scene Preview](./ReadMe/Twitch.PNG)
+- Use MyTwitchChatListener, MyTwitchChatSender, and MyTwitchEventSubManager inside OWLINteractiveStreamer plugins folder
+- Drag and Drop into level and configure in blueprints
+
 ### How can I access VTS? 
 VTS is available on our [Download Center](https://offworld.live/resources/download-center) and GitHub repository.
- 
 We will be releasing updates regularly to provide new assets and blueprint for VTuber application development.
 
-
- ### Licensing
+### Licensing
 The OWL VTuber Studio is an *Apache-licensed* open-source Unreal project file repository on GitHub.
 
 It allows users to use the software for any purpose, to distribute it, to modify it, and to distribute modified versions of the software under the terms of the license, without concern for royalties.

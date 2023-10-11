@@ -1,0 +1,53 @@
+# This works when you push any tag to github starting with `v` e.g `v0.12.135_beta` 
+name: Generates Zip File, Uploads to Cloud Storage, Links in Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  
+jobs:
+  zip_and_upload:
+    runs-on: ubuntu-latest
+    name: Checks out LFS, compresses archive, uploads to S3
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout LFS Repo
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+          path: OWLVirtualProduction
+          submodules: true
+      - name: Creates zip file
+        shell: bash
+        run: |
+          VERSION=`echo "$GITHUB_REF_NAME" | sed "s%/%.%g"`
+          ZIP_FILE_NAME="OWLVirtualProduction.$VERSION.zip"
+          zip -r $ZIP_FILE_NAME ./OWLVirtualProduction -x '*.git*' -x 'Intermediate*' -x '.github*' -x '.gitignore' -x '*Saved*'
+          ZIP_FILE_PATH=`realpath $ZIP_FILE_NAME`
+          echo "zip_file_name=$ZIP_FILE_NAME" >> $GITHUB_ENV
+          echo "zip_file_path=$ZIP_FILE_PATH" >> $GITHUB_ENV
+
+      - name: Setup S3Cmd cli tool
+        uses: s3-actions/s3cmd@v1.5.0
+        with:
+          provider: cloudflare
+          account_id: ${{ secrets.CF_ACCOUNT_ID }}
+          access_key: ${{ secrets.S3_ACCESS_KEY }}
+          secret_key: ${{ secrets.S3_SECRET_KEY }}
+      - name: Upload to Cloudflare R2
+        run: |
+          s3cmd put ${{ env.zip_file_path }} --acl-public --mime-type 'application/x-zip' s3://owl-projects/vtuber-studio/${{ env.zip_file_name }}
+        
+      - name: Create release with link to file
+        uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          removeArtifacts: true
+          body: |
+            **N.B do not download the zip files in the `Assets` section of this release - they do not contain the full file structure due to git-lfs**
+
+            ## Download
+
+            Instead, download here [${{ env.zip_file_name }}](https://projects.offworld.live/vtuber-studio/${{ env.zip_file_name}})
