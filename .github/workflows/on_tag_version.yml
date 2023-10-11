@@ -17,14 +17,14 @@ jobs:
         uses: actions/checkout@v2
         with:
           lfs: true
-          path: OWLVirtualProduction
+          path: OWLVTuberStudio
           submodules: true
       - name: Creates zip file
         shell: bash
         run: |
           VERSION=`echo "$GITHUB_REF_NAME" | sed "s%/%.%g"`
-          ZIP_FILE_NAME="OWLVirtualProduction.$VERSION.zip"
-          zip -r $ZIP_FILE_NAME ./OWLVirtualProduction -x '*.git*' -x 'Intermediate*' -x '.github*' -x '.gitignore' -x '*Saved*'
+          ZIP_FILE_NAME="OWLVTuberStudio.$VERSION.zip"
+          zip -r $ZIP_FILE_NAME ./OWLVTuberStudio -x '*.git*' -x 'Intermediate*' -x '.github*' -x '.gitignore' -x '*Saved*'
           ZIP_FILE_PATH=`realpath $ZIP_FILE_NAME`
           echo "zip_file_name=$ZIP_FILE_NAME" >> $GITHUB_ENV
           echo "zip_file_path=$ZIP_FILE_PATH" >> $GITHUB_ENV
