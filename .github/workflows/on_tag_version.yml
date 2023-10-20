@@ -14,10 +14,10 @@ jobs:
       contents: write
     steps:
       - name: Checkout LFS Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           lfs: true
-          path: OWLVirtualProduction
+          path: OWLVTuberStudio
           submodules: true
       - name: Creates zip file
         shell: bash
