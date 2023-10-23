@@ -35,6 +35,7 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
  3. OBS Studio (https://obsproject.com/download)
  4. Spout Plugin for OBS Studio (https://github.com/Off-World-Live/obs-spout2-plugin/releases)
  5. NDI Tools (https://ndi.video/type/ndi-tools/)
+ 6. DLSS Unreal Engine Plugin (https://developer.nvidia.com/rtx/dlss/get-started)
 
 ### How to use the VTuber Studio?
 #### Download from GitHub or Download Center
