@@ -23,7 +23,7 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
  - Streaming and Media Output: Virtual Webcam, Spout Output, NDI Output, Streaming to RTMP, Save to File
  - Media Input: Screen Capture, Spout Input, NDI Input
  - LiveLink and VMC support
- - Face tracking and pose tracking via VMC for sending ARKit data to MetaHumans
+ - Face tracking and pose tracking via Mediapipe & VMC for sending ARKit data to MetaHumans
  - Twitch Integration for sending and receiving chat messages, as well as event subscription 
  - Actor Blueprint to select desired capture systems, their respective render targets, and display materials
  - Example assets such as avatars (VRM & Metahuman), environment meshes, materials, Animation Retargetters, and MoCap blueprints
@@ -47,7 +47,7 @@ VTS provides streaming and capture functionalities in-game and in-editor, provid
 
 #### Full-Body Tracking for MetaHumans
 ![Scene Preview](./ReadMe/Tracking.PNG)
-- Use XR Animator to stream bone data and blendshape data via VMC
+- Use XR Animator (Mediapipe full-body tracking solution) to stream bone data and blendshape data via VMC
 - Use VMC Receiver inside level to listen to OSC Server
 - Apply data in Animation Blueprints
 
