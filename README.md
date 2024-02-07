@@ -88,7 +88,7 @@ OWLStreamingToolkit is Copyright © 2021 Off World Live Limited. All rights rese
 
 #### Contributors
 VTuber Studio is created by [@jennnital](https://github.com/jennnital)  and [@wesleyyuen](https://github.com/wesleyyuen) with the support of the Off World Live team.
-Key visual assets and environment design by [@enpe23](https://github.com/enpe23) and [@HardcoreRick](https://github.com/HardcoreRick).
+Key visual assets and environment design by [@jennnital](https://github.com/jennnital),[@enpe23](https://github.com/enpe23) and [@HardcoreRick](https://github.com/HardcoreRick).
 Special thanks to [@campbellwmorgan](https://github.com/campbellwmorgan) [@fdomw](https://github.com/fdomw) for the development of VTuber Studio.
 
 
